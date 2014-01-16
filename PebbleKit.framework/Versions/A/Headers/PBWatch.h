@@ -40,7 +40,7 @@
 
 /**
  *  YES if the receiver is connected and NO if the receiver is disconnected.
- *  @discussion This property is KVO-capable.
+ *  @discussion This property is KVO-compliant.
  */
 @property (nonatomic, readonly, getter=isConnected) BOOL connected;
 

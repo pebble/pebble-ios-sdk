@@ -35,6 +35,9 @@ typedef enum {
   PBErrorCodePebbleAppRequestTimeout,
   PBErrorCodePebbleAppEmptyResponse,
   PBErrorCodePebbleAppUnexpectedResponse,
+  PBErrorCodeServerNotAvailable,
+  PBErrorCodeDownloadFailed,
+  PBErrorCodePebbleNotConnected
 } PBErrorCode;
 
 @interface NSError (Pebble)
