@@ -83,10 +83,15 @@
 - (NSComparisonResult)compare:(PBFirmwareVersion *)aVersion;
 
 /**
- *  Convenience wrapper around -compare:
+ *  Convenience wrappers around -compare:
  */
 - (BOOL)isEqualOrNewer:(PBFirmwareVersion *)other;
+- (BOOL)isNewer:(PBFirmwareVersion *)other;
+- (BOOL)isEqualVersionOnly:(PBFirmwareVersion *)other;
+
 @end
+
+
 
 /**
  *  Values specifying the Pebble hardware platform variant.

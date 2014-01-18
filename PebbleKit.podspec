@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PebbleKit"
-  s.version      = "2.0.0.beta5"
+  s.version      = "2.0.0.beta6"
   s.summary      = "Embed PebbleKit iOS into your app to communicate with Pebble"
   s.homepage     = "http://developer.getpebble.com"
   s.license      = {
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     LICENSE
   }
   s.author       = { "Pebble Technology Corp." => "devsupport@getpebble.com" }
-  s.source       = { :git => "https://github.com/HBehrens/PebbleKit.git", :tag => "2.0.0.beta5" }
+  s.source       = { :git => "https://github.com/HBehrens/PebbleKit.git", :tag => "2.0.0.beta6" }
   s.platform     = :ios, '5.0'
 
   s.preserve_paths = "PebbleKit.framework", "PebbleVendor.framework"
