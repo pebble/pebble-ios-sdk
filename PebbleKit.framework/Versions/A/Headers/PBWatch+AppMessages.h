@@ -8,10 +8,10 @@
 
 #import <PebbleKit/PebbleKit.h>
 
-typedef enum {
+typedef NS_ENUM(UInt8, PBAppState) {
   PBAppStateNotRunning = 0x00,
   PBAppStateRunning = 0x01,
-} PBAppState;
+};
 
 @interface PBWatch (AppMessages)
 

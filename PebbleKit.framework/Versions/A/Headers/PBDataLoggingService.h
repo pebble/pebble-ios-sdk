@@ -24,7 +24,7 @@ typedef UInt8 PBDataLoggingType;
 /**
  *  The metadata of a data logging session. Used to identify a session.
  */
-@interface PBDataLoggingSessionMetadata : NSObject <NSSecureCoding>
+@interface PBDataLoggingSessionMetadata : NSObject <NSSecureCoding, NSCopying>
 
 /**
  *  A tag associated with the session.
@@ -215,7 +215,7 @@ typedef UInt8 PBDataLoggingType;
  *  The delegate that has the responsility of handling callbacks from the
  *  data logging service.
  */
-@property (nonatomic, readwrite, weak) id<PBDataLoggingServiceDelegate> delegate;
+@property (atomic, readwrite, weak) id<PBDataLoggingServiceDelegate> delegate;
 
 /**
  *  Sets the queue on which delegate methods will be executed.

@@ -51,6 +51,8 @@
 		B955BFB017E9186400A438ED /* NSJSONSerialization+PBJSONHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B955BFAE17E9186300A438ED /* NSJSONSerialization+PBJSONHelpers.m */; };
 		B955BFB317E918B500A438ED /* PBVendorLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B955BFB117E918B500A438ED /* PBVendorLog.h */; };
 		B955BFB417E918B500A438ED /* PBVendorLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B955BFB217E918B500A438ED /* PBVendorLog.m */; };
+		B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */ = {isa = PBXBuildFile; fileRef = B98D7A241883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B98D7A271883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D7A251883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		B955BFAE17E9186300A438ED /* NSJSONSerialization+PBJSONHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+PBJSONHelpers.m"; sourceTree = "<group>"; };
 		B955BFB117E918B500A438ED /* PBVendorLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBVendorLog.h; sourceTree = "<group>"; };
 		B955BFB217E918B500A438ED /* PBVendorLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBVendorLog.m; sourceTree = "<group>"; };
+		B98D7A241883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+ObjectWithNString.h"; sourceTree = "<group>"; };
+		B98D7A251883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+ObjectWithNString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 		10418C6F1642D5E600066DE0 = {
 			isa = PBXGroup;
 			children = (
+				B98D7A241883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h */,
+				B98D7A251883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m */,
 				B955BFB117E918B500A438ED /* PBVendorLog.h */,
 				B955BFB217E918B500A438ED /* PBVendorLog.m */,
 				102DC99517B8649700A7CD25 /* NSString+HexData.h */,
@@ -236,6 +242,7 @@
 				10E3FFC81667EE1600657F03 /* DDASLLogger.h in Headers */,
 				10E3FFCA1667EE1600657F03 /* DDFileLogger.h in Headers */,
 				B955BFAF17E9186300A438ED /* NSJSONSerialization+PBJSONHelpers.h in Headers */,
+				B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */,
 				10E3FFCC1667EE1600657F03 /* DDLog.h in Headers */,
 				10E3FFCE1667EE1600657F03 /* DDTTYLogger.h in Headers */,
 				103DDC9F166A6C0700736D2F /* CompressingLogFileManager.h in Headers */,
@@ -350,6 +357,7 @@
 				10E3FFCF1667EE1600657F03 /* DDTTYLogger.m in Sources */,
 				103DDCA0166A6C0700736D2F /* CompressingLogFileManager.m in Sources */,
 				10C2E81E16A506A500546F34 /* UIDevice-Hardware.m in Sources */,
+				B98D7A271883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m in Sources */,
 				B955BFB017E9186400A438ED /* NSJSONSerialization+PBJSONHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +455,11 @@
 		10418C891642D5E600066DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					arm64,
+					armv7s,
+					armv7,
+				);
 				DSTROOT = /tmp/PebbleVendor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PebbleVendor-Prefix.pch";
@@ -466,6 +479,11 @@
 		10418C8A1642D5E600066DE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					arm64,
+					armv7s,
+					armv7,
+				);
 				DSTROOT = /tmp/PebbleVendor.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PebbleVendor-Prefix.pch";
