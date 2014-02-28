@@ -6,28 +6,11 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		1030EB9916C4E148006F46EA /* PebbleVendorFramework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1030EB9C16C4E148006F46EA /* Build configuration list for PBXAggregateTarget "PebbleVendorFramework" */;
-			buildPhases = (
-				1030EB9D16C4E14F006F46EA /* ShellScript */,
-			);
-			dependencies = (
-				10BFEC2B16C620A7009F0E9F /* PBXTargetDependency */,
-			);
-			name = PebbleVendorFramework;
-			productName = PebbleVendorFramework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		102DC99717B8649700A7CD25 /* NSString+HexData.h in Headers */ = {isa = PBXBuildFile; fileRef = 102DC99517B8649700A7CD25 /* NSString+HexData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		102DC99817B8649700A7CD25 /* NSString+HexData.m in Sources */ = {isa = PBXBuildFile; fileRef = 102DC99617B8649700A7CD25 /* NSString+HexData.m */; };
 		1032AE00165C4CED000EE193 /* NSURLConnectionVCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 1032ADFD165C4CED000EE193 /* NSURLConnectionVCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1032AE01165C4CED000EE193 /* NSURLConnectionVCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 1032ADFE165C4CED000EE193 /* NSURLConnectionVCR.m */; };
-		103DDC9F166A6C0700736D2F /* CompressingLogFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 103DDC9D166A6C0700736D2F /* CompressingLogFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		103DDCA0166A6C0700736D2F /* CompressingLogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 103DDC9E166A6C0700736D2F /* CompressingLogFileManager.m */; };
 		10418C7E1642D5E600066DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10418C7D1642D5E600066DE0 /* Foundation.framework */; };
 		10418CAA1642D63B00066DE0 /* CHMultiDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 10418C8D1642D63B00066DE0 /* CHMultiDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		10418CAB1642D63B00066DE0 /* CHMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 10418C8F1642D63B00066DE0 /* CHMutableDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -54,16 +37,6 @@
 		B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */ = {isa = PBXBuildFile; fileRef = B98D7A241883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B98D7A271883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m in Sources */ = {isa = PBXBuildFile; fileRef = B98D7A251883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		10BFEC2A16C620A7009F0E9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10418C711642D5E600066DE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10418D851642E8B600066DE0;
-			remoteInfo = PebbleTesting;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		10418C781642D5E600066DE0 /* CopyFiles */ = {
@@ -245,7 +218,6 @@
 				B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */,
 				10E3FFCC1667EE1600657F03 /* DDLog.h in Headers */,
 				10E3FFCE1667EE1600657F03 /* DDTTYLogger.h in Headers */,
-				103DDC9F166A6C0700736D2F /* CompressingLogFileManager.h in Headers */,
 				10C2E81D16A506A500546F34 /* UIDevice-Hardware.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,26 +293,9 @@
 			targets = (
 				10418C791642D5E600066DE0 /* PebbleVendor */,
 				10418D851642E8B600066DE0 /* PebbleTesting */,
-				1030EB9916C4E148006F46EA /* PebbleVendorFramework */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1030EB9D16C4E14F006F46EA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./prepare_framework.sh\n./build_framework.sh";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10418C761642D5E600066DE0 /* Sources */ = {
@@ -355,7 +310,6 @@
 				10E3FFCB1667EE1600657F03 /* DDFileLogger.m in Sources */,
 				10E3FFCD1667EE1600657F03 /* DDLog.m in Sources */,
 				10E3FFCF1667EE1600657F03 /* DDTTYLogger.m in Sources */,
-				103DDCA0166A6C0700736D2F /* CompressingLogFileManager.m in Sources */,
 				10C2E81E16A506A500546F34 /* UIDevice-Hardware.m in Sources */,
 				B98D7A271883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.m in Sources */,
 				B955BFB017E9186400A438ED /* NSJSONSerialization+PBJSONHelpers.m in Sources */,
@@ -373,29 +327,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		10BFEC2B16C620A7009F0E9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 10418D851642E8B600066DE0 /* PebbleTesting */;
-			targetProxy = 10BFEC2A16C620A7009F0E9F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		1030EB9A16C4E148006F46EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = PebbleVendor;
-			};
-			name = Debug;
-		};
-		1030EB9B16C4E148006F46EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = PebbleVendor;
-			};
-			name = Release;
-		};
 		10418C861642D5E600066DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,7 +349,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = ../../PrivateHeaders;
@@ -442,7 +374,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = ../../PrivateHeaders;
 				PUBLIC_HEADERS_FOLDER_PATH = ../../Headers;
@@ -529,15 +461,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1030EB9C16C4E148006F46EA /* Build configuration list for PBXAggregateTarget "PebbleVendorFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1030EB9A16C4E148006F46EA /* Debug */,
-				1030EB9B16C4E148006F46EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		10418C741642D5E600066DE0 /* Build configuration list for PBXProject "PebbleVendor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
