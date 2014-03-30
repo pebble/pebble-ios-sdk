@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     LICENSE
   }
   s.author       = { "Pebble Technology Corp." => "devsupport@getpebble.com" }
-  s.source       = { :git => "https://github.com/HBehrens/PebbleKit.git", :tag => "2.0.1" }
+  s.source       = { :git => "https://github.com/HBehrens/PebbleKit.git", :tag => "2.0.2" }
   s.platform     = :ios, '6.0'
 
   s.preserve_paths = "PebbleKit.framework", "PebbleVendor.framework"
