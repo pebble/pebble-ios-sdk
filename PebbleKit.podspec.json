@@ -36,5 +36,6 @@
     "MessageUI"
   ],
   "libraries": "z",
-  "requires_arc": true
+  "requires_arc": true,
+  "prepare_command": "echo 'Please make sure to add com.getpebble.public to the array UISupportedExternalAccessoryProtocols to your Info.plist.'"
 }
