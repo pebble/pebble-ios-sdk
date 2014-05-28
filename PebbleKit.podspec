@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PebbleKit"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.summary      = "Embed PebbleKit iOS into your app to communicate with Pebble"
   s.homepage     = "http://developer.getpebble.com"
   s.license      = {
