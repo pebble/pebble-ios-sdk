@@ -19,5 +19,4 @@ Pod::Spec.new do |s|
   s.weak_frameworks = 'ExternalAccessory', 'CoreBluetooth', 'CoreMotion', 'MessageUI'
   s.libraries = 'z'
   s.requires_arc = true
-  s.prepare_command = "echo 'Please make sure to add com.getpebble.public to the array UISupportedExternalAccessoryProtocols to your Info.plist.'"
 end
