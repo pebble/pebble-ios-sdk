@@ -1,1 +1,1 @@
-This repository temporarily mirrors a subset of https://github.com/pebble/pebblekit to provide CocoaPods for the iOS PebbleKit.
+This repository contains Pebble's public iOS SDK starting with version 2.2 and will be filled shortly.
