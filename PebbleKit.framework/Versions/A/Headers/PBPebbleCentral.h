@@ -23,8 +23,21 @@
 + (PBPebbleCentral*)defaultCentral;
 
 /**
+ * Adds the default ASL and TTY loggers for CocoaLumberjack using 
+ * [DDLog addLogger:[DDASLLogger sharedInstance]] and
+ * [DDLog addLogger:[DDTTYLogger sharedInstance]]
+ * @note This is separate from +setDebugLogsEnabled in case
+ * you would like to add your own custom loggers or implement CocoaLumberjack yourself.
+ * @see +setDebugLogsEnabled
+ * @see CocoaLumberjack https://github.com/CocoaLumberjack/CocoaLumberjack
+ */
++ (void)addLumberjackLoggers;
+
+/**
  *  Enables debug logs. The logs will be routed to the system log (ASL) and
  *  console. It is advised to call this before making any other calls to PebbleKit.
+ *  @note Logging uses CocoaLumberjack so you need to add the loggers manually
+ *  @see +addLumberjackLoggers
  */
 + (void)setDebugLogsEnabled:(BOOL)logsEnabled;
 

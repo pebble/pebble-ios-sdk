@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "DDLog.h"
+#import <PebbleVendor/DDLog.h>
 
 @class DDLogFileInfo;
 

@@ -1,4 +1,4 @@
-#import "DDLog.h"
+#import <PebbleVendor/DDLog.h>
 
 #import <pthread.h>
 #import <objc/runtime.h>

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <asl.h>
 
-#import "DDLog.h"
+#import <PebbleVendor/DDLog.h>
 
 /**
  * Welcome to Cocoa Lumberjack!

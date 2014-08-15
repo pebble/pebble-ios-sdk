@@ -215,8 +215,8 @@
 				10E3FFC81667EE1600657F03 /* DDASLLogger.h in Headers */,
 				10E3FFCA1667EE1600657F03 /* DDFileLogger.h in Headers */,
 				B955BFAF17E9186300A438ED /* NSJSONSerialization+PBJSONHelpers.h in Headers */,
-				B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */,
 				10E3FFCC1667EE1600657F03 /* DDLog.h in Headers */,
+				B98D7A261883A5D2006EE3F8 /* NSJSONSerialization+ObjectWithNString.h in Headers */,
 				10E3FFCE1667EE1600657F03 /* DDTTYLogger.h in Headers */,
 				10C2E81D16A506A500546F34 /* UIDevice-Hardware.h in Headers */,
 			);
@@ -404,6 +404,7 @@
 				OTHER_CFLAGS = "-Wno-all";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/PebbleVendor;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -427,6 +428,7 @@
 				OTHER_CFLAGS = "-Wno-all";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/PebbleVendor;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Pebble Technology Corp. All rights reserved.
 //
 
-#import "DDLog.h"
+#import <PebbleVendor/DDLog.h>
 
 extern int PBVendorLogLevel;
 

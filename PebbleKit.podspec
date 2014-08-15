@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "PebbleKit"
-  s.version      = "2.2.0"
+  s.version      = "2.4"
   s.summary      = "Embed PebbleKit iOS into your app to communicate with Pebble"
-  s.homepage     = "http://developer.getpebble.com"
+  s.homepage     = "https://github.com/pebble/pebble-ios-sdk"
   s.license      = {
     :type => 'Commercial',
     :text => <<-LICENSE
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.preserve_paths = "PebbleKit.framework", "PebbleVendor.framework"
   s.vendored_frameworks = "PebbleKit.framework", "PebbleVendor.framework"
-  s.public_header_files = "PebbleKit.framework/Headers/*.h"
+  s.public_header_files = "PebbleKit.framework/Versions/A/Headers/*.h"  # CocoaDocs doesn't follow symlinks
   s.weak_frameworks = 'ExternalAccessory', 'CoreBluetooth', 'CoreMotion', 'MessageUI'
   s.libraries = 'z'
   s.requires_arc = true

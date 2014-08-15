@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Pebble Technology. All rights reserved.
 //
 
-#import <PebbleKit/PebbleKit.h>
+#import "PebbleKit.h"
 
 typedef NS_ENUM(UInt8, PBAppState) {
   PBAppStateNotRunning = 0x00,
@@ -73,36 +73,11 @@ typedef NS_ENUM(UInt8, PBAppState) {
 - (id)appMessagesAddReceiveUpdateHandler:(BOOL(^)(PBWatch *watch, NSDictionary *update))onReceive withUUID:(NSData*)uuid;
 
 /**
- *  Add a handler for lifecycle events of watch applications.
- *  @param onLifecycleUpdate This block will be called when an application starts and
- *  stops running.
- *  @param watch The watch that has sent the event.
- *  @param uuid The uuid of the application that caused the event.
- *  @param newAppState The new state of the app (either PBAppStateNotRunning or PBAppStateRunning).
- */
-- (id)appMessagesAddAppLifecycleUpdateHandler:(void(^)(PBWatch *watch, NSUUID *uuid,
-                                                       PBAppState newAppState))onLifecycleUpdate;
-
-
-// INTERNAL USE ONLY
-- (id)appMessagesAddReceiveAllUpdatesHandler:(BOOL(^)(PBWatch *watch, NSUUID *uuid, NSDictionary *update))onReceive;
-
-/**
  *  Removes a receive handler that was previously installed using -appMessagesAddReceiveUpdateHandler:
  *  @param opaqueHandle The handle object as returned by -appMessagesAddReceiveUpdateHandler:
  *  @see -appMessagesAddReceiveUpdateHandler:
  */
 - (void)appMessagesRemoveUpdateHandler:(id)opaqueHandle;
-
-/**
- *  Fetches the run state of the watch application with UUID as set using
- *  -[PBPebbleCentral setAppUUID:]. You can use this method to determine whether the watch
- *  application is running or not.
- *  TODO: Ask Francois how this API works.
- *  @param onSent The block that will be called after the fetch state command has been
- *  sent to the watch.
- */
-- (void)appMessagesFetchAppState:(void(^)(PBWatch *watch, NSError *error))onSent;
 
 /**
  *  Sends a command to launch the watch application with UUID as set using

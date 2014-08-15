@@ -2,20 +2,15 @@
 
 Welcome to Pebble's official iOS SDK!
 
-## Compatibility
-
-- iOS 5.0+
-- iPhone 3GS or later
-
 ## Examples
 
-All Pebble SDK examples are now grouped in Pebble SDK, please look into the `examples/` folder of your Pebble SDK for sample code.
+All Pebble SDK examples are now available on GitHub at https://github.com/pebble/pebble-sdk-examples, please look into the `weather-demo`, `sports-demo`, and `golf-demo` folder for iOS sample code.
 
-## Integrating PebbleKit using Cocoapods
+## Integrating PebbleKit using CocoaPods
 
-- Install [Cocoapods](http://www.cocoapods.org) or make sure it is up to date
+- Install [CocoaPods](http://www.cocoapods.org) or make sure it is up to date
 - Add a Podfile to your project if you don't have one already (Hint: use `pod init`).
-- Add this line to the Podfile: `pod 'PebbleKit', :path => "/path/to/PebbleKit-iOS"`
+- Add this line to the Podfile: `pod 'PebbleKit'`
 - Run `pod install`
 
 ## Integrating PebbleKit Manually
@@ -30,8 +25,12 @@ All Pebble SDK examples are now grouped in Pebble SDK, please look into the `exa
 
 ## Xcode Documentation
 
+You can browser the latest documentation online at http://cocoadocs.org/docsets/PebbleKit and install an offline docset if you click on the icon on the top right.
+
+Alternatively, manually install the docset from this folder:
+
 - An Xcode docset is included with documentation about all public APIs.
-- Copy `com.getpebble.PebbleKit.docset` content into `~/Library/Developer/Shared/Documentation/DocSets`
+- Copy `PebbleKit-ios.docset` content into `~/Library/Developer/Shared/Documentation/DocSets`
 - Restart Xcode. The documentation will now be available from `Help > Documentation and API Reference`
 
 ## Submitting iOS apps with PebbleKit to Apple's App Store
@@ -40,28 +39,27 @@ In order for Pebble to work with iPhones, Pebble is part of the Made For iPhone 
 
 ## Change Log
 
-#### TODO-SetDate - 2.0
+#### 2.4
 
-- Remove examples from PebbleKit and move them into Pebble SDK
+- Automatic release on [GitHub](https://github.com/pebble/pebble-ios-sdk) and [Cocoapods](http://cocoapods.org/?q=pebble)
 
-#### 2013-07-03 - 1.12
-- Log errors to the console if there is no delegate set on PBWatch
-- Bugfixes
--- Fix threading bugs in WeatherDemo
--- Fix bugs that could cause callbacks to be called on the wrong thread
--- Fix a bug that could cause a crash when re-connecting to the watch
--- Fix a bug that caused some types to be unavailable (gtypes.h)
+#### 2.3
 
-#### 2013-05-06
-- Added WeatherDemo sample project to demonstrate custom use of the AppMessage subsystem
-- Added -[PBWatch closeSession:] to enable 3rd party apps to explicitely close the shared communication session.
-- Added PBBitmap helper class to convert UIImage to the native Pebble bitmap format
-- Exposed category methods on NSData/NSDictionary to (de)serialize from/to Pebble dicts
-- Added documentation for the NSNumber+stdint category
+- Removed Bluetooth LE code from PebbleKit
+- Improvements to data logging to help troubleshoot issues
+- Removed PBWatch+PhoneVersion and +Polling
+- Made PBWatch+Version report the correct version
+- Fixed a crash when calling PBNumber description
+- Changed imports from <PebbleKit/HeaderName.h> to “HeaderName.h” format
+- Fixed on rare race-condition when sending data between phone and watch
+- Made PebbleKit.podspec pass most-recent CocoaPod linter
+- Prefixed internally used logging classes to fix conflict when using CocoaLumberjack in your app
+- Made existing logging more descriptive
 
-#### 2013-03-25
-- Added generic bi-directional phone app <-> watch app communication layer, called "App Messages"
-- Refactored legacy Sports protocol to use App Messages
-- Added APIs to query the watch whether App / Sports Messages are supported (-appMessagesGetIsSupported: and -sportsGetIsSupported:)
-- Added API to set custom icon / title to the Sports watch app
-- Added API to receive Sports activity state changes by pressing the SELECT button on the watch (-sportsAppAddReceiveUpdateHandler:)
+#### 2.2
+- Removed PBWatch+PhoneVersion (moved to PebblePrivateKit)
+- Make PBWatch+Version report the correct version
+- Fixed a crash when calling PBNumber description
+
+#### 2.1
+- Some improvements to datalogging to help troubleshoot issues

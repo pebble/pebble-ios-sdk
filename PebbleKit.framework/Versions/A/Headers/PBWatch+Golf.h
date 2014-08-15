@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Pebble Technology. All rights reserved.
 //
 
-#import <PebbleKit/PebbleKit.h>
+#import "PebbleKit.h"
 #import <UIKit/UIKit.h>
 
 @interface PBWatch (Golf)

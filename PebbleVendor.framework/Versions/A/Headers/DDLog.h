@@ -15,7 +15,7 @@
  * Step 1:
  * Import the header in your implementation file:
  * 
- * #import "DDLog.h"
+ * #import <PebbleVendor/DDLog.h>
  * 
  * Step 2:
  * Define your logging level in your implementation file:

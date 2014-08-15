@@ -7,7 +7,7 @@
 #import "CLIColor.h"        // OS X without AppKit
 #endif
 
-#import "DDLog.h"
+#import <PebbleVendor/DDLog.h>
 
 #define LOG_CONTEXT_ALL INT_MAX
 
