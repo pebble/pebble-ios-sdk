@@ -6,55 +6,44 @@
 //  Copyright (c) 2012 Pebble Technology. All rights reserved.
 //
 
+#import <PebbleKit/PBDefines.h>
 #import <Foundation/Foundation.h>
 
 @class PBWatch;
 @class PBDataLoggingService;
 @protocol PBPebbleCentralDelegate;
 
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  PebbleCentral plays the central role for client iOS apps (e.g. RunKeeper).
  */
-@interface PBPebbleCentral : NSObject
+PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 
 /**
- @returns The default central singleton instance.
+ *  Configures which events should be logged via NSLog.
+ *  It is advised to call this before making any other calls to PebbleKit,
+ *  for example in your AppDelegate's `application:willFinishLaunchingWithOptions:`
+ *  before state restoration happens.
+ *  @see PBLog
  */
-+ (PBPebbleCentral*)defaultCentral;
-
-/**
- * Adds the default ASL and TTY loggers for CocoaLumberjack using 
- * [DDLog addLogger:[DDASLLogger sharedInstance]] and
- * [DDLog addLogger:[DDTTYLogger sharedInstance]]
- * @note This is separate from +setDebugLogsEnabled in case
- * you would like to add your own custom loggers or implement CocoaLumberjack yourself.
- * @see +setDebugLogsEnabled
- * @see CocoaLumberjack https://github.com/CocoaLumberjack/CocoaLumberjack
- */
-+ (void)addLumberjackLoggers;
-
-/**
- *  Enables debug logs. The logs will be routed to the system log (ASL) and
- *  console. It is advised to call this before making any other calls to PebbleKit.
- *  @note Logging uses CocoaLumberjack so you need to add the loggers manually
- *  @see +addLumberjackLoggers
- */
-+ (void)setDebugLogsEnabled:(BOOL)logsEnabled;
++ (void)setLogLevel:(PBPebbleKitLogLevel)logLevel;
 
 /**
  The watches that are currently connected. Do not cache the array because it can change over time.
  */
-@property (nonatomic, readonly, strong) NSArray *connectedWatches;
+@property (nonatomic, readonly, copy) PBGeneric(NSArray, PBWatch *) *connectedWatches;
 
 /**
  The watches that are stored in the user preferences of the application.
  */
-@property (nonatomic, readonly, strong) NSArray *registeredWatches;
+@property (nonatomic, readonly, copy) PBGeneric(NSArray, PBWatch *) *registeredWatches;
 
 /**
  The central's delegate.
  */
-@property (nonatomic, readwrite, weak) id<PBPebbleCentralDelegate> delegate;
+@property (nonatomic, readwrite, weak) id<PBPebbleCentralDelegate> __nullable delegate;
 
 /**
  *  The UUID is used as the identifier of the watch application and is used
@@ -66,17 +55,30 @@
  *  @param uuid The 16 byte UUID of your app.
  *  @note The UUID needs to be set before using either app message or data logging.
  */
-@property (nonatomic, strong, readwrite) NSData *appUUID;
+@property (nonatomic, copy) NSUUID * __nullable appUUID;
 
 /**
- *  Verifies the currently set application UUID.
- *  @return YES if the currently set UUID is valid, NO if it is not.
- *  @see -setAppUuid:
+ *  The list of App-UUIDs this PebbleCentral wants to talk to.
+ *  @see addAppUUID:
  */
-- (BOOL)hasValidAppUUID;
+@property (nonatomic, copy) PBGeneric(NSSet, NSUUID *) *appUUIDs;
+
+/**
+ *  Registers a new App-UUID with appUUIDs.
+ *  @see appUUIDs
+ */
+- (void)addAppUUID:(NSUUID *)appUUID;
+
+/**
+ Registers and announces internal Bluetooth services. Might cause a dialog to allow this
+ app to talk to other devices.
+ */
+- (void)run;
 
 /**
  @returns YES if the Pebble iOS app is installed, NO if it is not installed.
+ @discussion Since iOS 9.0 you have to add "pebble" to `LSApplicationQueriesSchemes`
+             in your `Info.plist`.
  */
 - (BOOL)isMobileAppInstalled;
 
@@ -117,3 +119,12 @@
 - (void)pebbleCentral:(PBPebbleCentral*)central watchDidDisconnect:(PBWatch*)watch;
 
 @end
+
+
+@interface PBPebbleCentral (Unavailable)
+
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
+
+@end
+
+NS_ASSUME_NONNULL_END

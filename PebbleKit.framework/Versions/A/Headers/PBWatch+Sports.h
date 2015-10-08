@@ -6,13 +6,18 @@
 //  Copyright (c) 2013 Pebble Technology. All rights reserved.
 //
 
-#import "PebbleKit.h"
-#import <UIKit/UIKit.h>
+#import <PebbleKit/PBDefines.h>
+#import <Foundation/Foundation.h>
+#import <PebbleKit/PBWatch.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class UIImage;
 
 /**
  *  The UUID of the Sports watch app.
  */
-extern NSData *PBSportsUUID;
+PB_EXTERN NSUUID *PBSportsUUID;
 
 /**
  *  The key of the "Time" field.
@@ -20,7 +25,7 @@ extern NSData *PBSportsUUID;
  *  @see -sportsAppUpdate:onSent:
  *  @see PBSportsUpdate
  */
-extern NSNumber *PBSportsTimeKey;
+PB_EXTERN NSNumber *PBSportsTimeKey;
 
 /**
  *  The key of the "Distance" field.
@@ -28,7 +33,7 @@ extern NSNumber *PBSportsTimeKey;
  *  @see -sportsAppUpdate:onSent:
  *  @see PBSportsUpdate
  */
-extern NSNumber *PBSportsDistanceKey;
+PB_EXTERN NSNumber *PBSportsDistanceKey;
 
 /**
  *  The key of the general purpose "Data" field.
@@ -36,7 +41,7 @@ extern NSNumber *PBSportsDistanceKey;
  *  @see -sportsAppUpdate:onSent:
  *  @see PBSportsUpdate
  */
-extern NSNumber *PBSportsDataKey;
+PB_EXTERN NSNumber *PBSportsDataKey;
 
 /**
  *  The key of the "Activity State".
@@ -45,14 +50,14 @@ extern NSNumber *PBSportsDataKey;
  *  @see -sportsAppUpdate:onSent:
  *  @see PBSportsUpdate
  */
-extern NSNumber *PBSportsActivityStateKey;
+PB_EXTERN NSNumber *PBSportsActivityStateKey;
 
 /**
  *  Instances of this convenience class represent an update of the current time, distance and pace,
  *  and has a method to convert the values into a dictionary that can be used with -sportsAppUpdate:onSent:.
  *  @see -sportsAppUpdate:onSent:
  */
-@interface PBSportsUpdate : NSObject
+PB_EXTERN_CLASS @interface PBSportsUpdate : NSObject
 
 /**
  *  The current time in seconds. The possible range is currently limited from -7140. to 7140., inclusive. (±1h 59min 59sec).
@@ -99,15 +104,16 @@ extern NSNumber *PBSportsActivityStateKey;
  *  The state of the Sports activity.
  *  @see -sportsAppAddReceiveUpdateHandler:
  */
-typedef enum {
+typedef NS_ENUM(uint8_t, SportsAppActivityState) {
   SportsAppActivityStateInit = 0x00,
   SportsAppActivityStateRunning = 0x01,
   SportsAppActivityStatePaused = 0x02,
   SportsAppActivityStateEnd = 0x03,
-} SportsAppActivityState;
+};
 
 /**
  *  Queries the watch whether Sports Messages are supported.
+ *  Must be called from the main thread.
  *  @param fetchedBlock The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
  *  asynchronously on the queue that was originally used when calling this method.
  *  @param watch The watch on which the query was performed.
@@ -117,21 +123,24 @@ typedef enum {
 
 /**
  *  Send a command to launch the sports app on the watch that the receiver represents.
+ *  Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.
  *  @param onSent The handler that will be called when the launch command has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsAppLaunch:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsAppLaunch:(void(^ __nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 /**
  *  Send a command to kill the sports app on the watch that the receiver represents.
+ *  Must be called from the main thread.
  *  @param onSent The handler that will be called when the kill command has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsAppKill:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsAppKill:(void(^ __nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 /**
  *  Send a command to the sports app on the watch that the receiver represents, to set the preferred
  *  unit system, either metric or imperial.
+ *  Must be called from the main thread.
  *  @param isMetric YES to request metric units or NO to request imperial units
  *  @param onSent The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
@@ -141,33 +150,37 @@ typedef enum {
 /**
  *  Send a command to the sports app on the watch that the receiver represents,
  *  to set the preferred  data label (either PACE or SPEED) and corresponding units.
+ *  Must be called from the main thread.
  *  @param isMetric YES to request metric units or NO to request imperial units
  *  @param onSent The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsAppSetLabel:(BOOL)isPace onSent:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsAppSetLabel:(BOOL)isPace onSent:(void(^ __nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 /**
  *  Send a command to the sports app on the watch that the receiver represents, to set the state of the
  *  sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
  *  supported.
+ *  Must be called from the main thread.
  *  @param state The new sports activity state
  *  @param onSent The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsAppSetActivityState:(SportsAppActivityState)state onSent:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsAppSetActivityState:(SportsAppActivityState)state onSent:(void(^ __nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 /**
  *  Sends the update to the sports app on the watch that the receiver represents.
+ *  Must be called from the main thread.
  *  @param update The update to send. Use one or more keys (PBSportsTimeKey, PBSportsPaceKey, PBSportsDistanceKey)
  *  note that the value for each key MUST be of NSString type.
  *  @param onSent The handler that will be called when the update has been sent or timed out (after 1.5 secs).
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsAppUpdate:(NSDictionary*)update onSent:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsAppUpdate:(NSDictionary*)update onSent:(void(^__nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 /**
  *  Add a receive handler for incoming Sports updates that are send by the Sports watch application.
+ *  Must be called from the main thread.
  *  @param onReceive The block that will be called every time a new update message arrives.
  *  @param watch The watch that has sent the update.
  *  @param state The new sports activity state as set by the watch.
@@ -179,6 +192,7 @@ typedef enum {
 
 /**
  *  Removes a receive handler that was previously installed using -sportsAppAddReceiveUpdateHandler:
+ *  Must be called from the main thread.
  *  @param opaqueHandle The handle object as returned by -sportsAppAddReceiveUpdateHandler:
  *  @see -sportsAppAddReceiveUpdateHandler:
  */
@@ -186,14 +200,17 @@ typedef enum {
 
 /**
  *  Assigns a custom title and icon to the sports app on the watch.
+ *  Must be called from the main thread.
  *  @discussion It is recommended to perform this as the first call after -sportsGetIsSupported:
  *  to avoid changing the title and icon while it is being displayed in the menu as to avoid confusion.
  *  @param title The custom title (max. 20 bytes of UTF-8 string)
- *  @param icon The custom icon (max. 32x32 pixels, black/white only)
+ *  @param icon The custom icon (max. 32x32 pixels, black/white only). This image cannot be `nil`.
  *  @param onSent The handler that will be called when the title and icon have been set or timed out.
  *  @param watch The watch on which the custom title and icon have been set.
  *  @param error nil if the operation was successful, or else an NSError with more information why it failed.
  */
-- (void)sportsSetTitle:(NSString*)title icon:(UIImage*)icon onSent:(void(^)(PBWatch *watch, NSError *error))onSent;
+- (void)sportsSetTitle:(NSString*)title icon:(UIImage*)icon onSent:(void(^ __nullable)(PBWatch *watch, NSError * __nullable error))onSent;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -6,9 +6,12 @@
 //  Copyright (c) 2012 Pebble Technology. All rights reserved.
 //
 
+#import <PebbleKit/PBDefines.h>
 #import <Foundation/Foundation.h>
 
-extern NSString *PBErrorDomain;
+NS_ASSUME_NONNULL_BEGIN
+
+PB_EXTERN NSString *PBErrorDomain;
 
 /**
  *  PebbleKit Error codes.
@@ -37,7 +40,10 @@ typedef enum {
   PBErrorCodePebbleAppUnexpectedResponse,
   PBErrorCodeServerNotAvailable,
   PBErrorCodeDownloadFailed,
-  PBErrorCodePebbleNotConnected
+  PBErrorCodePebbleNotConnected,
+  PBErrorCodeMessageTooLong,
+  PBErrorCodeBluetoothDisabled,
+  PBErrorCodeBluetoothLowEnergyHandshakeFailed,
 } PBErrorCode;
 
 @interface NSError (Pebble)
@@ -48,7 +54,7 @@ typedef enum {
  *  @param code The error code for which to create the error
  *  @param error The underlying error
  */
-+ (NSError*)pebbleErrorWithCode:(PBErrorCode)code underLyingError:(NSError*)error;
++ (NSError*)pebbleErrorWithCode:(PBErrorCode)code underLyingError:(NSError * __nullable)error;
 
 /**
  *  Convenience method to create an NSError object with <PBErrorDomain> error domain
@@ -58,3 +64,5 @@ typedef enum {
 + (NSError*)pebbleErrorWithCode:(PBErrorCode)code;
 
 @end
+
+NS_ASSUME_NONNULL_END

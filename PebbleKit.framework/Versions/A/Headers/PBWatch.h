@@ -6,11 +6,15 @@
 //  Copyright (c) 2012 Pebble Technology. All rights reserved.
 //
 
+#import <PebbleKit/PBDefines.h>
 #import <Foundation/Foundation.h>
 
 @protocol PBWatchDelegate;
+@class PBPebbleCentral;
 @class PBVersionInfo;
 @class PBDataLoggingService;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  Represents a Pebble watch.
@@ -36,50 +40,62 @@
  *  or when explicitely stopping a certain activity in the app) your iOS app
  *  should close the communication session using the -closeSession: method.
  */
-@interface PBWatch : NSObject
+PB_EXTERN_CLASS @interface PBWatch : NSObject
+
+/**
+ *  The central that is managing this watch.
+ *  @discussion This property is KVO-compliant.
+ */
+@property (nonatomic, weak, readonly) PBPebbleCentral *central;
+
+/**
+ *  YES if the receiver it's the first time that watch has been seen.
+ *  @discussion This property is KVO-compliant.
+ */
+@property (nonatomic, readonly, getter=isNew) BOOL new;
 
 /**
  *  YES if the receiver is connected and NO if the receiver is disconnected.
  *  @discussion This property is KVO-compliant.
  */
-@property (nonatomic, readonly, getter=isConnected) BOOL connected;
+@property (nonatomic, assign, readonly, getter=isConnected) BOOL connected;
 
 /**
  *  The human-friendly name of the receiver.
  *  This is the same name as the user will see in the iOS Bluetooth Settings.
  */
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *name;
 
 /**
  *  The serial number of the receiver.
  */
-@property (nonatomic, readonly) NSString *serialNumber;
+@property (nonatomic, copy, readonly) NSString *serialNumber;
 
 /**
  *  The versionInfo of the receiver.
  *  @see PBVersionInfo
  */
-@property (nonatomic, readonly) PBVersionInfo *versionInfo;
+@property (nonatomic, strong, readonly) PBVersionInfo * __nullable versionInfo;
 
 /**
  *  The delegate of the watch that will be notified of disconnections and errors.
  *  @see PBWatchDelegate
  */
-@property (nonatomic, readwrite, weak) id<PBWatchDelegate> delegate;
+@property (nonatomic, weak) id<PBWatchDelegate> __nullable delegate;
 
 /**
  *  The userInfo property can be used to associate application specific data
  *  with the watch. Note that the application itself is responsible for persisting
  *  the information if neccessary.
  */
-@property (nonatomic, readwrite, strong) id userInfo;
+@property (nonatomic, strong) id __nullable userInfo;
 
 /**
  *  The date when the watch was last known to be connected.
  *  This date will be updated automatically when the watch connects and
  *  disconnects. While the watch is being connected, this date will not be updated.
  */
-@property (nonatomic, readonly) NSDate *lastConnectedDate;
+@property (nonatomic, strong, readonly) NSDate *lastConnectedDate;
 
 /**
  *  Developer-friendly debugging description of the watch.
@@ -88,17 +104,15 @@
  */
 - (NSString*)friendlyDescription;
 
-/**
- *  Closes the communication session with the watch.
- *  Since there is only one, shared session for all 3rd party iOS apps,
- *  an app should close the session after the user is done using the app/watch-integration,
- *  so it can be used by other apps.
- *  The communication session is implicitely opened automatically when needed.
- *  @param onDone Callback block that will be called after the closing of the session
- *  has completed. If there is no open session, the onDone block will (also) be executed
- *  asynchronously on the calling queue.
+/** @abstract Releases the shared session to the watch (if one exists).
+ *  @discussion Depending on availability a per-app dedicated Bluetooth LE
+ *  based session (CoreBluetooth.framework) will be used to talk to the watch.
+ *  In other cases a Bluetooth Classic based session (ExternalAccessory.framework)
+ *  will be used that is shared between all 3rd party iOS apps.
+ *  Once the user is done using the app/watch-integration, the shared sessions
+ *  has to be released using this method so it can be used by other apps.
  */
-- (void)closeSession:(void(^)(void))onDone;
+- (void)releaseSharedSession;
 
 @end
 
@@ -116,18 +130,20 @@
 - (void)watch:(PBWatch*)watch handleError:(NSError*)error;
 
 /**
- *  Called when the internal EASession is about to be reset.
+ *  Called when an internal session is about to be reset.
  */
 - (void)watchWillResetSession:(PBWatch*)watch;
 
 /**
- *  Called when the internal EASession is opened
+ *  Called when an internal session is opened
  */
 - (void)watchDidOpenSession:(PBWatch*)watch;
 
 /**
- *  Called when the internal EASession is closed
+ *  Called when an internal EASession is closed
  */
 - (void)watchDidCloseSession:(PBWatch*)watch;
 
 @end
+
+NS_ASSUME_NONNULL_END
