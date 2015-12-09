@@ -4,7 +4,7 @@ Welcome to Pebble's official iOS SDK!
 
 ## Examples
 
-All Pebble SDK examples are now [available on GitHub](https://github.com/pebble/pebble-sdk-examples). Please look into the `weather-demo`, `sports-demo`, and `golf-demo` folder for iOS sample code.
+All Pebble SDK examples are [available on GitHub](https://github.com/pebble-examples/pebblekit-ios-demos).
 
 You can also run `pod try PebbleKit` to jump into a simple project right away.
 
@@ -33,7 +33,7 @@ You can also run `pod try PebbleKit` to jump into a simple project right away.
 
 - Add the value `com.getpebble.public` to the `UISupportedExternalAccessoryProtocols` ("Supported external accessory protocols") array
 - (Optional) Add the following entries to the `UIBackgroundModes` ("Required background modes") array:
- - `bluetooth-peripheral` ("App shares data using CoreBluetooth") 
+ - `bluetooth-peripheral` ("App shares data using CoreBluetooth")
  - `bluetooth-central` ("App communicates using CoreBluetooth")
  - `external-accessory` ("App communicates with an accessory")
 
@@ -49,11 +49,31 @@ Alternatively, manually install the docset from this folder:
 
 ## Submitting iOS apps with PebbleKit to Apple's App Store
 
-In order for Pebble to work with iPhones, Pebble is part of the Made For iPhone program (a requirement for hardware accessories to interact with iOS apps). Unfortunately this also means that if you build an iOS app with PebbleKit, Pebble will need to whitelist your iOS app before you can upload it to the App Store. If you have completed a Pebble app and would like to learn more about making it available on the App Store, please visit [the whitelisting guide](https://developer.getpebble.com/2/distribute/whitelisting.html)
+In order for Pebble to work with iPhones,
+Pebble is part of the Made For iPhone program (a requirement for hardware accessories to interact with iOS apps). Unfortunately this also means that if you build an iOS app with PebbleKit,
+Pebble will need to whitelist your iOS app before you can upload it to the App Store.
+If you have completed a Pebble app and would like to learn more about making it available on the App Store,
+please visit [the whitelisting guide](https://developer.getpebble.com/2/distribute/whitelisting.html)
 
 ## Change Log
 
-#### 3.0
+#### 3.1.0
+
+PebbleKit is now a *dynamic* framework.
+
+If you want to support iOS `7.x` add `pod 'PebbleKit-Static'` to your `Podfile`.
+
+- Added: Added workaround for Pebble 2.x / iOS 9 issue causing messages from watch not to arrive
+- Added: DataLogging now works better in multi-app setups.
+- Changed: DataLogging service is now created lazily when you try to use the API the first time
+- Changed: DataLogging won't unannounce server when you have Background Modes set
+- Changed: Lowered DeploymentTarget to 7.0 again
+- Fixed: DataLogging poll wouldn't be triggered on app launch
+- Fixed: `appMessagesRemoveUpdateHandler` not working as intended
+- Deprecated: `dataLoggingService.pollForData` - use `pollForDataFromWatch:` instead
+- Deprecated: `central.dataLoggingService` - use `dataLoggingServiceForAppUUID:` instead
+
+#### 3.0.0
 
 - Added: Support for *Pebble Time Round*
 - Added: Support for 8K app messages
@@ -83,9 +103,11 @@ In order for Pebble to work with iPhones, Pebble is part of the Made For iPhone 
 - Changed: Made existing logging more descriptive
 
 #### 2.2
+
 - Removed: `PBWatch+PhoneVersion`
 - Fixed:`PBWatch+Version` reported the wrong version
 - Fixed: Crash when calling `-[PBNumber description]`
 
 #### 2.1
+
 - Changed: Improvements to data-logging to help troubleshoot issues

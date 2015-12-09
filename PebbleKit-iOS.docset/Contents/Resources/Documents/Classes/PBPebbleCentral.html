@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>PBPebbleCentral Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,65 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-
+	<option value="overview">Overview</option>
 	
 
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/appUUID">appUUID</option>
+		
+		<option value="//api/name/appUUIDs">appUUIDs</option>
+		
+		<option value="//api/name/connectedWatches">connectedWatches</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/registeredWatches">registeredWatches</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/defaultCentral">+ defaultCentral</option>
+		
+		<option value="//api/name/setDebugLogsEnabled:">+ setDebugLogsEnabled:</option>
+		
+		<option value="//api/name/setLogLevel:">+ setLogLevel:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addAppUUID:">- addAppUUID:</option>
+		
+		<option value="//api/name/dataLoggingServiceForAppUUID:">- dataLoggingServiceForAppUUID:</option>
+		
+		<option value="//api/name/hasValidAppUUID">- hasValidAppUUID</option>
+		
+		<option value="//api/name/installMobileApp">- installMobileApp</option>
+		
+		<option value="//api/name/isMobileAppInstalled">- isMobileAppInstalled</option>
+		
+		<option value="//api/name/lastConnectedWatch">- lastConnectedWatch</option>
+		
+		<option value="//api/name/run">- run</option>
+		
+		<option value="//api/name/unregisterAllWatches">- unregisterAllWatches</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +115,872 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">PBPebbleCentral Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PBPebbleCentral.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>PebbleCentral plays the central role for client iOS apps (e.g. RunKeeper).</p>
+					</div>
+					
+					
 
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setLogLevel:" title="setLogLevel:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setLogLevel:">+&nbsp;setLogLevel:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Configures which events should be logged via NSLog.
+It is advised to call this before making any other calls to PebbleKit,
+for example in your AppDelegate&rsquo;s <code>application:willFinishLaunchingWithOptions:</code>
+before state restoration happens.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setLogLevel:(PBPebbleKitLogLevel)<em>logLevel</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Configures which events should be logged via NSLog.
+It is advised to call this before making any other calls to PebbleKit,
+for example in your AppDelegate&rsquo;s <code>application:willFinishLaunchingWithOptions:</code>
+before state restoration happens.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/connectedWatches" title="connectedWatches"></a>
+	<h3 class="method-title"><code><a href="#//api/name/connectedWatches">&nbsp;&nbsp;connectedWatches</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The watches that are currently connected. Do not cache the array because it can change over time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) PBGeneric ( NSArray , PBWatch **connectedWatches</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The watches that are currently connected. Do not cache the array because it can change over time.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registeredWatches" title="registeredWatches"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registeredWatches">&nbsp;&nbsp;registeredWatches</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The watches that are stored in the user preferences of the application.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) PBGeneric ( NSArray , PBWatch **registeredWatches</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The watches that are stored in the user preferences of the application.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The central&rsquo;s delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, weak) id&lt;PBPebbleCentralDelegate&gt; __nullable delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The central&rsquo;s delegate.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/appUUID" title="appUUID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appUUID">&nbsp;&nbsp;appUUID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The UUID is used as the identifier of the watch application and is used
+to make sure that appMessage and dataLogging communications arrives at its companion app
+on the other device (and not in another app).
+For most app message methods there is are two variants: one that does not take a UUID parameter and one that does take
+a UUID parameter (for example, -appMessagesAddReceiveUpdateHandler: vs appMessagesAddReceiveUpdateHandler:withUUID:).
+The methods that do not take a UUID, will use the UUID as set prior to this property.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSUUID *appUUID</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>uuid</code></th>
+						<td><p>The 16 byte UUID of your app.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The UUID is used as the identifier of the watch application and is used
+to make sure that appMessage and dataLogging communications arrives at its companion app
+on the other device (and not in another app).
+For most app message methods there is are two variants: one that does not take a UUID parameter and one that does take
+a UUID parameter (for example, -appMessagesAddReceiveUpdateHandler: vs appMessagesAddReceiveUpdateHandler:withUUID:).
+The methods that do not take a UUID, will use the UUID as set prior to this property.</p><div class="note"><p><strong>Note:</strong> The UUID needs to be set before using either app message or data logging.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/appUUIDs" title="appUUIDs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appUUIDs">&nbsp;&nbsp;appUUIDs</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The list of App-UUIDs this PebbleCentral wants to talk to.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) PBGeneric ( NSSet , NSUUID **appUUIDs</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The list of App-UUIDs this PebbleCentral wants to talk to.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/addAppUUID:">- addAppUUID:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAppUUID:" title="addAppUUID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAppUUID:">&ndash;&nbsp;addAppUUID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Registers a new App-UUID with <a href="#//api/name/appUUIDs">appUUIDs</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAppUUID:(NSUUID *)<em>appUUID</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Registers a new App-UUID with <a href="#//api/name/appUUIDs">appUUIDs</a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/appUUIDs">@property appUUIDs</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/run" title="run"></a>
+	<h3 class="method-title"><code><a href="#//api/name/run">&ndash;&nbsp;run</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Registers and announces internal Bluetooth services. Might cause a dialog to allow this
+app to talk to other devices.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)run</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Registers and announces internal Bluetooth services. Might cause a dialog to allow this
+app to talk to other devices.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isMobileAppInstalled" title="isMobileAppInstalled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isMobileAppInstalled">&ndash;&nbsp;isMobileAppInstalled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>YES if the Pebble iOS app is installed, NO if it is not installed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isMobileAppInstalled</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the Pebble iOS app is installed, NO if it is not installed.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Since iOS 9.0 you have to add &ldquo;pebble&rdquo; to <code>LSApplicationQueriesSchemes</code>
+             in your <code>Info.plist</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/installMobileApp" title="installMobileApp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/installMobileApp">&ndash;&nbsp;installMobileApp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Redirects to Pebble in the App Store, so the user can install the app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)installMobileApp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Redirects to Pebble in the App Store, so the user can install the app.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unregisterAllWatches" title="unregisterAllWatches"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unregisterAllWatches">&ndash;&nbsp;unregisterAllWatches</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Wipes out the data associated with the registered watches, that is stored on the phone.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unregisterAllWatches</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Wipes out the data associated with the registered watches, that is stored on the phone.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lastConnectedWatch" title="lastConnectedWatch"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lastConnectedWatch">&ndash;&nbsp;lastConnectedWatch</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the most recently connected watch from the <a href="#//api/name/registeredWatches">registeredWatches</a> array.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (PBWatch *)lastConnectedWatch</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the most recently connected watch from the <a href="#//api/name/registeredWatches">registeredWatches</a> array.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingServiceForAppUUID:" title="dataLoggingServiceForAppUUID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingServiceForAppUUID:">&ndash;&nbsp;dataLoggingServiceForAppUUID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the DataLoggingService for a (previously registered) <a href="#//api/name/appUUID">appUUID</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (PBDataLoggingService *__nullable)dataLoggingServiceForAppUUID:(NSUUID *)<em>appUUID</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Returns the DataLoggingService for a (previously registered) <a href="#//api/name/appUUID">appUUID</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Legacy Methods" name="task_Legacy Methods"></a>
+						<h2 class="task-title">Legacy Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/hasValidAppUUID" title="hasValidAppUUID"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasValidAppUUID">&ndash;&nbsp;hasValidAppUUID</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Verifies the currently set application UUID.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)hasValidAppUUID</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the currently set UUID is valid, NO if it is not.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Verifies the currently set application UUID.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral+Legacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDebugLogsEnabled:" title="setDebugLogsEnabled:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDebugLogsEnabled:">+&nbsp;setDebugLogsEnabled:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables debug logs. The logs will be printed via NSLog. It is advised to
+call this before making any other calls to PebbleKit.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDebugLogsEnabled:(BOOL)<em>logsEnabled</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Enables debug logs. The logs will be printed via NSLog. It is advised to
+call this before making any other calls to PebbleKit.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral+Legacy.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="DefaultCentral Methods" name="task_DefaultCentral Methods"></a>
+						<h2 class="task-title">DefaultCentral Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/defaultCentral" title="defaultCentral"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultCentral">+&nbsp;defaultCentral</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The default central singleton instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)defaultCentral</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The default central singleton instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBPebbleCentral+DefaultCentral.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-10-08</p>
+						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-08</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

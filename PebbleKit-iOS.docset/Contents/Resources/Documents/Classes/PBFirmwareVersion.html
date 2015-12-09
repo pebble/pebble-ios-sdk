@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>PBFirmwareVersion Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,57 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
-
+	<option value="overview">Overview</option>
 	
 
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/commitHash">commitHash</option>
+		
+		<option value="//api/name/major">major</option>
+		
+		<option value="//api/name/minor">minor</option>
+		
+		<option value="//api/name/os">os</option>
+		
+		<option value="//api/name/suffix">suffix</option>
+		
+		<option value="//api/name/tag">tag</option>
+		
+		<option value="//api/name/timestamp">timestamp</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:">+ firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:</option>
+		
+		<option value="//api/name/firmwareVersionWithString:">+ firmwareVersionWithString:</option>
+		
+		<option value="//api/name/firmwareVersionWithTag:commitHash:timestamp:">+ firmwareVersionWithTag:commitHash:timestamp:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/compare:">- compare:</option>
+		
+		<option value="//api/name/isEqualOrNewer:">- isEqualOrNewer:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +107,644 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">PBFirmwareVersion Class Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PBFirmwareVersion.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>PBFirmwareVersion is a helper class that is able to parse the versionTag string
+into its components (<a href="#//api/name/os">os</a>, <a href="#//api/name/major">major</a>, <a href="#//api/name/minor">minor</a>, <a href="#//api/name/suffix">suffix</a>) and facilitate comparisons
+between versions.
+Valid versions follow the following format:
+<code>(v)OS(.MAJOR(.MINOR(-SUFFIX)))</code>
+Where the fields OS, MAJOR, MINOR are positive, decimal integer numbers and SUFFIX
+an arbitrary string. MAJOR, MINOR and SUFFIX are optional (nested optionality).
+Examples of valid versions:
+<code>1</code>
+<code>v2</code>
+<code>v3.4-foo</code>
+<code>v4.1234.99-alpha-beta-gamma</code></p>
+					</div>
+					
+					
 
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/os" title="os"></a>
+	<h3 class="method-title"><code><a href="#//api/name/os">&nbsp;&nbsp;os</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The OS version component.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger os</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The OS version component.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="method-title"><code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The major version component.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger major</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The major version component.</p><div class="note"><p><strong>Note:</strong> If a version <a href="#//api/name/tag">tag</a> string does not contain a major component, it will be set to 0.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The minor version component.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInteger minor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The minor version component.</p><div class="note"><p><strong>Note:</strong> If a version <a href="#//api/name/tag">tag</a> string does not contain a <a href="#//api/name/major">major</a> component, it will be set to 0.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/suffix" title="suffix"></a>
+	<h3 class="method-title"><code><a href="#//api/name/suffix">&nbsp;&nbsp;suffix</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The release suffix, which is the part following the dash &lsquo;-&rsquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *suffix</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The release suffix, which is the part following the dash &lsquo;-&rsquo;.</p><div class="note"><p><strong>Note:</strong> If a version <a href="#//api/name/tag">tag</a> string does not contain a suffix, it will be set to an empty string.</p></div><p>The release suffix is not used in the <a href="#//api/name/compare:">compare:</a> method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timestamp" title="timestamp"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timestamp">&nbsp;&nbsp;timestamp</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The version timestamp.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) UInt32 timestamp</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The version timestamp.</p><div class="note"><p><strong>Note:</strong> The timestamp is in the final comparison equation, in the <a href="#//api/name/compare:">compare:</a> method, after evaluating
+<a href="#//api/name/os">os</a>, <a href="#//api/name/major">major</a> and <a href="#//api/name/minor">minor</a> components.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/commitHash" title="commitHash"></a>
+	<h3 class="method-title"><code><a href="#//api/name/commitHash">&nbsp;&nbsp;commitHash</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The version&rsquo;s git commit hash.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *commitHash</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The version&rsquo;s git commit hash.</p><p>The commit hash is not used in the <a href="#//api/name/compare:">compare:</a> method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tag" title="tag"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tag">&nbsp;&nbsp;tag</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The version&rsquo;s git tag.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *tag</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The version&rsquo;s git tag.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firmwareVersionWithString:" title="firmwareVersionWithString:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareVersionWithString:">+&nbsp;firmwareVersionWithString:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a PBFirmwareVersion object given a <a href="#//api/name/tag">tag</a> string.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PBFirmwareVersion *)firmwareVersionWithString:(NSString *)<em>string</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates a PBFirmwareVersion object given a <a href="#//api/name/tag">tag</a> string.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firmwareVersionWithTag:commitHash:timestamp:" title="firmwareVersionWithTag:commitHash:timestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareVersionWithTag:commitHash:timestamp:">+&nbsp;firmwareVersionWithTag:commitHash:timestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a PBFirmwareVersion object given a <a href="#//api/name/tag">tag</a> string and <a href="#//api/name/timestamp">timestamp</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PBFirmwareVersion *)firmwareVersionWithTag:(NSString *)<em>tag</em> commitHash:(NSString *__nullable)<em>commitHash</em> timestamp:(UInt32)<em>timestamp</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates a PBFirmwareVersion object given a <a href="#//api/name/tag">tag</a> string and <a href="#//api/name/timestamp">timestamp</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:" title="firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:">+&nbsp;firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a PBFirmwareVersion object given its components.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (PBFirmwareVersion *)firmwareVersionWithOS:(NSInteger)<em>os</em> major:(NSInteger)<em>major</em> minor:(NSInteger)<em>minor</em> suffix:(NSString *__nullable)<em>suffix</em> commitHash:(NSString *__nullable)<em>commitHash</em> timestamp:(UInt32)<em>timestamp</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates a PBFirmwareVersion object given its components.</p><p>The <a href="#//api/name/tag">tag</a> string will be set to the canonical format vOS.MINOR.MAJOR(-SUFFIX).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/compare:" title="compare:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/compare:">&ndash;&nbsp;compare:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Compares the receiver to another version object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSComparisonResult)compare:(PBFirmwareVersion *)<em>aVersion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>aVersion</code></th>
+						<td><p>The version to compare with the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NSOrderedAscending if the value of aVersion is greater than the receiver’s,
+NSOrderedSame if they’re equal, and NSOrderedDescending if the value of aVersion is less than the receiver’s.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Compares the receiver to another version object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isEqualOrNewer:" title="isEqualOrNewer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEqualOrNewer:">&ndash;&nbsp;isEqualOrNewer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convenience wrappers around <a href="#//api/name/compare:">compare:</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isEqualOrNewer:(PBFirmwareVersion *)<em>other</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Convenience wrappers around <a href="#//api/name/compare:">compare:</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBFirmwareVersion.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-10-08</p>
+						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-08</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

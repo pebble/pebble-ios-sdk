@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>PBDataLoggingServiceDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -43,9 +43,41 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
 
 	
 
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:">- dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:</option>
+		
+		<option value="//api/name/dataLoggingService:sessionDidFinish:">- dataLoggingService:sessionDidFinish:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +91,716 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">PBDataLoggingServiceDelegate Protocol Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PBDataLoggingService.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Data logging delegate protocol. The object that implements this protocol
+is responsible for handling incoming data.</p>
+					</div>
+					
+					
 
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasByteArrays:(const UInt8 *const)<em>bytes</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bytes</code></th>
+						<td><p>Pointer to the array of bytes.
+The array contains (numberOfItems * session.itemSize) bytes.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasUInt8s:(const UInt8 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of UInt8`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasUInt16s:(const UInt16 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of UInt16`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasUInt32s:(const UInt32 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of UInt32`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasSInt8s:(const SInt8 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of SInt8`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasSInt16s:(const SInt16 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of SInt16`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:" title="dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:">&ndash;&nbsp;dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)dataLoggingService:(PBDataLoggingService *)<em>service</em> hasSInt32s:(const SInt32 [ ])<em>data</em> numberOfItems:(UInt16)<em>numberOfItems</em> forDataLoggingSession:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>Pointer to the array of SInt32`s.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>numberOfItems</code></th>
+						<td><p>The number of items that the array contains.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time there is data available that has not been
+consumed yet.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dataLoggingService:sessionDidFinish:" title="dataLoggingService:sessionDidFinish:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dataLoggingService:sessionDidFinish:">&ndash;&nbsp;dataLoggingService:sessionDidFinish:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called by the service every time a session is finished.
+This is guaranteed to be called only after all data has been received and
+consumed by the application.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)dataLoggingService:(PBDataLoggingService *)<em>service</em> sessionDidFinish:(PBDataLoggingSessionMetadata *)<em>session</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>service</code></th>
+						<td><p>The data logging service.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>The metadata of the session.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called by the service every time a session is finished.
+This is guaranteed to be called only after all data has been received and
+consumed by the application.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
 					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-10-08</p>
+						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-08</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>

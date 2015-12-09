@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>PBWatchDelegate Protocol Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
 </head>
 <body class="appledoc">
 	<header>
@@ -45,7 +45,31 @@
 	
 
 	
+	
+	<option value="tasks">Tasks</option>
+	
+	
 
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/watch:handleError:">- watch:handleError:</option>
+		
+		<option value="//api/name/watchDidCloseSession:">- watchDidCloseSession:</option>
+		
+		<option value="//api/name/watchDidDisconnect:">- watchDidDisconnect:</option>
+		
+		<option value="//api/name/watchDidOpenSession:">- watchDidOpenSession:</option>
+		
+		<option value="//api/name/watchWillResetSession:">- watchWillResetSession:</option>
+		
+	</optgroup>
+	
 	
 </select>
 						</label>
@@ -59,22 +83,281 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title"></h1>
+					<h1 class="title">PBWatchDelegate Protocol Reference</h1>
 
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>PBWatch.h</td>
+</tr>
+						</tbody></table></div>
 					
 
                     
 
 					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/watchDidDisconnect:" title="watchDidDisconnect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchDidDisconnect:">&ndash;&nbsp;watchDidDisconnect:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when the watch got disconnected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)watchDidDisconnect:(PBWatch *)<em>watch</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when the watch got disconnected.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/watch:handleError:" title="watch:handleError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watch:handleError:">&ndash;&nbsp;watch:handleError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when the watch caught an error.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)watch:(PBWatch *)<em>watch</em> handleError:(NSError *)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when the watch caught an error.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/watchWillResetSession:" title="watchWillResetSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchWillResetSession:">&ndash;&nbsp;watchWillResetSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an internal session is about to be reset.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)watchWillResetSession:(PBWatch *)<em>watch</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when an internal session is about to be reset.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/watchDidOpenSession:" title="watchDidOpenSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchDidOpenSession:">&ndash;&nbsp;watchDidOpenSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an internal session is opened</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)watchDidOpenSession:(PBWatch *)<em>watch</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when an internal session is opened</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/watchDidCloseSession:" title="watchDidCloseSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/watchDidCloseSession:">&ndash;&nbsp;watchDidCloseSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Called when an internal EASession is closed</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)watchDidCloseSession:(PBWatch *)<em>watch</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Called when an internal EASession is closed</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
 
                     
+                    
+          
 				</main>
 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-10-08</p>
+						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-08</p>
 						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
 						
 					</div>
 				</footer>
