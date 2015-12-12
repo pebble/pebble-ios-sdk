@@ -95,7 +95,7 @@ PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 /**
  Returns the most recently connected watch from the -registeredWatches array.
  */
-- (PBWatch *)lastConnectedWatch;
+- (PBWatch * __nullable)lastConnectedWatch;
 
 /**
  Returns the DataLoggingService for a (previously registered) appUUID

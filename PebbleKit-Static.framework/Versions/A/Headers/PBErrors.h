@@ -44,7 +44,8 @@ typedef enum {
   PBErrorCodeMessageTooLong,
   PBErrorCodeBluetoothDisabled,
   PBErrorCodeBluetoothLowEnergyHandshakeFailed,
-  PBErrorCodeFirmwareUpdateMetadataInvalid
+  PBErrorCodeFirmwareUpdateMetadataInvalid,
+  PBErrorCodeBluetoothLowEnergyFailedToConnect,
 } PBErrorCode;
 
 @interface NSError (Pebble)

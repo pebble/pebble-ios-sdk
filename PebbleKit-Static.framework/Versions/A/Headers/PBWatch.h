@@ -52,7 +52,11 @@ PB_EXTERN_CLASS @interface PBWatch : NSObject
  *  YES if the receiver it's the first time that watch has been seen.
  *  @discussion This property is KVO-compliant.
  */
+#ifdef __cplusplus
+- (BOOL)isNew;
+#else
 @property (nonatomic, readonly, getter=isNew) BOOL new;
+#endif
 
 /**
  *  YES if the receiver is connected and NO if the receiver is disconnected.

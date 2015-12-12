@@ -66,8 +66,6 @@
 		
 		<option value="//api/name/name">name</option>
 		
-		<option value="//api/name/new">new</option>
-		
 		<option value="//api/name/serialNumber">serialNumber</option>
 		
 		<option value="//api/name/userInfo">userInfo</option>
@@ -121,6 +119,8 @@
 		<option value="//api/name/golfGetIsSupported:">- golfGetIsSupported:</option>
 		
 		<option value="//api/name/golfSetTitle:icon:onSent:">- golfSetTitle:icon:onSent:</option>
+		
+		<option value="//api/name/isNew">- isNew</option>
 		
 		<option value="//api/name/pingWithCookie:onPong:onTimeout:">- pingWithCookie:onPong:onTimeout:</option>
 		
@@ -267,8 +267,8 @@ platform.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/new" title="new"></a>
-	<h3 class="method-title"><code><a href="#//api/name/new">&nbsp;&nbsp;new</a></code>
+	<a name="//api/name/isNew" title="isNew"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isNew">&ndash;&nbsp;isNew</a></code>
 </h3>
 
 	<div class="method-info">
@@ -283,7 +283,7 @@ platform.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isNew) BOOL new</code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)isNew</code></div>
 
 		    
 			
@@ -769,82 +769,6 @@ has to be released using this method so it can be used by other apps.</p>
 						</div>
 						
 
-						<a title="Legacy Methods" name="task_Legacy Methods"></a>
-						<h2 class="task-title">Legacy Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/closeSession:" title="closeSession:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/closeSession:">&ndash;&nbsp;closeSession:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Closes the communication session with the watch.
-Since there is only one, shared session for all 3rd party iOS apps,
-an app should close the session after the user is done using the app/watch-integration,
-so it can be used by other apps.
-The communication session is implicitely opened automatically when needed.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)closeSession:(void ( ^ __nullable ) ( void ))<em>onDone</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onDone</code></th>
-						<td><p>Callback block that will be called after the closing of the session
-has completed. If there is no open session, the onDone block will (also) be executed
-asynchronously on the calling queue.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Closes the communication session with the watch.
-Since there is only one, shared session for all 3rd party iOS apps,
-an app should close the session after the user is done using the app/watch-integration,
-so it can be used by other apps.
-The communication session is implicitely opened automatically when needed.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Legacy.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
 						<a title="Ping Methods" name="task_Ping Methods"></a>
 						<h2 class="task-title">Ping Methods</h2>
 
@@ -919,6 +843,82 @@ Must be called from the main thread.</p>
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch+Ping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Legacy Methods" name="task_Legacy Methods"></a>
+						<h2 class="task-title">Legacy Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/closeSession:" title="closeSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/closeSession:">&ndash;&nbsp;closeSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Closes the communication session with the watch.
+Since there is only one, shared session for all 3rd party iOS apps,
+an app should close the session after the user is done using the app/watch-integration,
+so it can be used by other apps.
+The communication session is implicitely opened automatically when needed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)closeSession:(void ( ^ __nullable ) ( void ))<em>onDone</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onDone</code></th>
+						<td><p>Callback block that will be called after the closing of the session
+has completed. If there is no open session, the onDone block will (also) be executed
+asynchronously on the calling queue.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Closes the communication session with the watch.
+Since there is only one, shared session for all 3rd party iOS apps,
+an app should close the session after the user is done using the app/watch-integration,
+so it can be used by other apps.
+The communication session is implicitely opened automatically when needed.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Legacy.h</code></p>
 			</div>
 			
 			
@@ -1232,7 +1232,7 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a <a href="#//api/name/new">new</a> update message arrives.</p></td>
+						<td><p>The block that will be called every time a new update message arrives.</p></td>
 					</tr>
 				
 					<tr>
@@ -1435,738 +1435,6 @@ to avoid changing the title and icon while it is being displayed in the menu as 
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch+Golf.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Sports Methods" name="task_Sports Methods"></a>
-						<h2 class="task-title">Sports Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/sportsGetIsSupported:" title="sportsGetIsSupported:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsGetIsSupported:">&ndash;&nbsp;sportsGetIsSupported:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Queries the watch whether Sports Messages are supported.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsGetIsSupported:(void ( ^ ) ( PBWatch *watch , BOOL isSportsSupported ))<em>fetchedBlock</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fetchedBlock</code></th>
-						<td><p>The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
-asynchronously on the queue that was originally used when calling this method.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the query was performed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isSportsSupported</code></th>
-						<td><p>YES if Sports Messages are supported, NO if not.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Queries the watch whether Sports Messages are supported.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppLaunch:" title="sportsAppLaunch:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppLaunch:">&ndash;&nbsp;sportsAppLaunch:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to launch the sports app on the watch that the receiver represents.
-Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the launch command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to launch the sports app on the watch that the receiver represents.
-Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppKill:" title="sportsAppKill:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppKill:">&ndash;&nbsp;sportsAppKill:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to kill the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the kill command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to kill the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppSetMetric:onSent:" title="sportsAppSetMetric:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetMetric:onSent:">&ndash;&nbsp;sportsAppSetMetric:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
-unit system, either metric or imperial.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetMetric:(BOOL)<em>isMetric</em> onSent:(void ( ^ ) ( PBWatch *watch , NSError *error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isMetric</code></th>
-						<td><p>YES to request metric units or NO to request imperial units</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
-unit system, either metric or imperial.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppSetLabel:onSent:" title="sportsAppSetLabel:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetLabel:onSent:">&ndash;&nbsp;sportsAppSetLabel:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents,
-to set the preferred  data label (either PACE or SPEED) and corresponding units.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetLabel:(BOOL)<em>isPace</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isMetric</code></th>
-						<td><p>YES to request metric units or NO to request imperial units</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents,
-to set the preferred  data label (either PACE or SPEED) and corresponding units.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppSetActivityState:onSent:" title="sportsAppSetActivityState:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetActivityState:onSent:">&ndash;&nbsp;sportsAppSetActivityState:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
-sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
-supported.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetActivityState:(SportsAppActivityState)<em>state</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>state</code></th>
-						<td><p>The <a href="#//api/name/new">new</a> sports activity state</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
-sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
-supported.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppUpdate:onSent:" title="sportsAppUpdate:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppUpdate:onSent:">&ndash;&nbsp;sportsAppUpdate:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sends the update to the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppUpdate:(NSDictionary *)<em>update</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The update to send. Use one or more keys (PBSportsTimeKey, PBSportsPaceKey, PBSportsDistanceKey)
-note that the value for each key MUST be of NSString type.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the update has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends the update to the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppAddReceiveUpdateHandler:" title="sportsAppAddReceiveUpdateHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppAddReceiveUpdateHandler:">&ndash;&nbsp;sportsAppAddReceiveUpdateHandler:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (id)sportsAppAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , SportsAppActivityState state ))<em>onReceive</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a <a href="#//api/name/new">new</a> update message arrives.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that has sent the update.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>state</code></th>
-						<td><p>The <a href="#//api/name/new">new</a> sports activity state as set by the watch.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/sportsAppRemoveUpdateHandler:">sportsAppRemoveUpdateHandler:</a></p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/sportsAppRemoveUpdateHandler:">- sportsAppRemoveUpdateHandler:</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppRemoveUpdateHandler:" title="sportsAppRemoveUpdateHandler:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppRemoveUpdateHandler:">&ndash;&nbsp;sportsAppRemoveUpdateHandler:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppRemoveUpdateHandler:(id)<em>opaqueHandle</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>opaqueHandle</code></th>
-						<td><p>The handle object as returned by <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a></p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection see-also-section">
-				<h4 class="method-subtitle">See Also</h4>
-				<ul>
-					
-					<li><code><p><a href="#//api/name/sportsAppAddReceiveUpdateHandler:">- sportsAppAddReceiveUpdateHandler:</a></p></code></li>
-					
-				</ul>
-			</div>
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsSetTitle:icon:onSent:" title="sportsSetTitle:icon:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsSetTitle:icon:onSent:">&ndash;&nbsp;sportsSetTitle:icon:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Assigns a custom title and icon to the sports app on the watch.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsSetTitle:(NSString *)<em>title</em> icon:(UIImage *)<em>icon</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>title</code></th>
-						<td><p>The custom title (max. 20 bytes of UTF-8 string)</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>icon</code></th>
-						<td><p>The custom icon (max. 32x32 pixels, black/white only). This image cannot be <code>nil</code>.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the title and icon have been set or timed out.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the custom title and icon have been set.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Assigns a custom title and icon to the sports app on the watch.
-Must be called from the main thread.</p><p>It is recommended to perform this as the first call after <a href="#//api/name/sportsGetIsSupported:">sportsGetIsSupported:</a>
-to avoid changing the title and icon while it is being displayed in the menu as to avoid confusion.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
 			</div>
 			
 			
@@ -2451,7 +1719,7 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a <a href="#//api/name/new">new</a> update message arrives.</p></td>
+						<td><p>The block that will be called every time a new update message arrives.</p></td>
 					</tr>
 				
 					<tr>
@@ -2536,7 +1804,7 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a <a href="#//api/name/new">new</a> update message arrives. You should always return YES so than an ACK is sent to the watch.</p></td>
+						<td><p>The block that will be called every time a new update message arrives. You should always return YES so than an ACK is sent to the watch.</p></td>
 					</tr>
 				
 					<tr>
@@ -2968,6 +2236,738 @@ Must be called from the main thread.</p>
 						</div>
 						
 
+						<a title="Sports Methods" name="task_Sports Methods"></a>
+						<h2 class="task-title">Sports Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sportsGetIsSupported:" title="sportsGetIsSupported:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsGetIsSupported:">&ndash;&nbsp;sportsGetIsSupported:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Queries the watch whether Sports Messages are supported.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsGetIsSupported:(void ( ^ ) ( PBWatch *watch , BOOL isSportsSupported ))<em>fetchedBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fetchedBlock</code></th>
+						<td><p>The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
+asynchronously on the queue that was originally used when calling this method.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>watch</code></th>
+						<td><p>The watch on which the query was performed.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isSportsSupported</code></th>
+						<td><p>YES if Sports Messages are supported, NO if not.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Queries the watch whether Sports Messages are supported.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppLaunch:" title="sportsAppLaunch:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppLaunch:">&ndash;&nbsp;sportsAppLaunch:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to launch the sports app on the watch that the receiver represents.
+Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the launch command has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a command to launch the sports app on the watch that the receiver represents.
+Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppKill:" title="sportsAppKill:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppKill:">&ndash;&nbsp;sportsAppKill:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to kill the sports app on the watch that the receiver represents.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the kill command has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a command to kill the sports app on the watch that the receiver represents.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppSetMetric:onSent:" title="sportsAppSetMetric:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetMetric:onSent:">&ndash;&nbsp;sportsAppSetMetric:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
+unit system, either metric or imperial.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetMetric:(BOOL)<em>isMetric</em> onSent:(void ( ^ ) ( PBWatch *watch , NSError *error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isMetric</code></th>
+						<td><p>YES to request metric units or NO to request imperial units</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
+unit system, either metric or imperial.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppSetLabel:onSent:" title="sportsAppSetLabel:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetLabel:onSent:">&ndash;&nbsp;sportsAppSetLabel:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the preferred  data label (either PACE or SPEED) and corresponding units.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetLabel:(BOOL)<em>isPace</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isMetric</code></th>
+						<td><p>YES to request metric units or NO to request imperial units</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the preferred  data label (either PACE or SPEED) and corresponding units.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppSetActivityState:onSent:" title="sportsAppSetActivityState:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetActivityState:onSent:">&ndash;&nbsp;sportsAppSetActivityState:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
+sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
+supported.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetActivityState:(SportsAppActivityState)<em>state</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>The new sports activity state</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
+sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
+supported.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppUpdate:onSent:" title="sportsAppUpdate:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppUpdate:onSent:">&ndash;&nbsp;sportsAppUpdate:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends the update to the sports app on the watch that the receiver represents.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppUpdate:(NSDictionary *)<em>update</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>update</code></th>
+						<td><p>The update to send. Use one or more keys (PBSportsTimeKey, PBSportsPaceKey, PBSportsDistanceKey)
+note that the value for each key MUST be of NSString type.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the update has been sent or timed out (after 1.5 secs).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Sends the update to the sports app on the watch that the receiver represents.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppAddReceiveUpdateHandler:" title="sportsAppAddReceiveUpdateHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppAddReceiveUpdateHandler:">&ndash;&nbsp;sportsAppAddReceiveUpdateHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)sportsAppAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , SportsAppActivityState state ))<em>onReceive</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onReceive</code></th>
+						<td><p>The block that will be called every time a new update message arrives.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>watch</code></th>
+						<td><p>The watch that has sent the update.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>state</code></th>
+						<td><p>The new sports activity state as set by the watch.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/sportsAppRemoveUpdateHandler:">sportsAppRemoveUpdateHandler:</a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/sportsAppRemoveUpdateHandler:">- sportsAppRemoveUpdateHandler:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppRemoveUpdateHandler:" title="sportsAppRemoveUpdateHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppRemoveUpdateHandler:">&ndash;&nbsp;sportsAppRemoveUpdateHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppRemoveUpdateHandler:(id)<em>opaqueHandle</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>opaqueHandle</code></th>
+						<td><p>The handle object as returned by <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
+Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/sportsAppAddReceiveUpdateHandler:">- sportsAppAddReceiveUpdateHandler:</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsSetTitle:icon:onSent:" title="sportsSetTitle:icon:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsSetTitle:icon:onSent:">&ndash;&nbsp;sportsSetTitle:icon:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Assigns a custom title and icon to the sports app on the watch.
+Must be called from the main thread.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsSetTitle:(NSString *)<em>title</em> icon:(UIImage *)<em>icon</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The custom title (max. 20 bytes of UTF-8 string)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>icon</code></th>
+						<td><p>The custom icon (max. 32x32 pixels, black/white only). This image cannot be <code>nil</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the title and icon have been set or timed out.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>watch</code></th>
+						<td><p>The watch on which the custom title and icon have been set.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Assigns a custom title and icon to the sports app on the watch.
+Must be called from the main thread.</p><p>It is recommended to perform this as the first call after <a href="#//api/name/sportsGetIsSupported:">sportsGetIsSupported:</a>
+to avoid changing the title and icon while it is being displayed in the menu as to avoid confusion.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
 						<a title="Version Methods" name="task_Version Methods"></a>
 						<h2 class="task-title">Version Methods</h2>
 
@@ -3063,7 +3063,7 @@ accessed through the <a href="#//api/name/versionInfo">versionInfo</a> property 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-08</p>
+						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-11</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
