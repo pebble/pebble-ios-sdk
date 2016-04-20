@@ -37,6 +37,12 @@ You can also run `pod try PebbleKit` to jump into a simple project right away.
  - `bluetooth-central` ("App communicates using CoreBluetooth")
  - `external-accessory` ("App communicates with an accessory")
 
+If you use background modes you also need to update your target's `Capabilities` in Xcode.
+Enable `Background Modes` and select:
+ - External accessory communication
+ - Uses Bluetooth LE accessories
+ - Acts as a Bluetooth LE accessory
+
 ## Xcode Documentation
 
 You can browse the [latest documentation online](http://cocoadocs.org/docsets/PebbleKit) (and install an offline docset if you click on the icon on the top right).
