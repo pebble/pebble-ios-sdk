@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBWatch.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBWatch</TokenIdentifier>
+			<Abstract type="html">Represents a Pebble watch.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setCentral:</TokenIdentifier>
+			<Abstract type="html">The central that is managing this watch.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak, readonly) PBPebbleCentral *central</Declaration>
+			
+			
+			<Anchor>//api/name/central</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/central</TokenIdentifier>
+			<Abstract type="html">The central that is managing this watch.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak, readonly) PBPebbleCentral *central</Declaration>
+			
+			
+			<Anchor>//api/name/central</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/central</TokenIdentifier>
+			<Abstract type="html">The central that is managing this watch.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak, readonly) PBPebbleCentral *central</Declaration>
+			
+			
+			<Anchor>//api/name/central</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/isNew</TokenIdentifier>
+			<Abstract type="html">YES if the receiver it&apos;s the first time that watch has been seen.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isNew</Declaration>
+			
+			
+			<Anchor>//api/name/isNew</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setConnected:</TokenIdentifier>
+			<Abstract type="html">YES if the receiver is connected and NO if the receiver is disconnected.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly, getter=isConnected) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/isConnected</TokenIdentifier>
+			<Abstract type="html">YES if the receiver is connected and NO if the receiver is disconnected.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly, getter=isConnected) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/connected</TokenIdentifier>
+			<Abstract type="html">YES if the receiver is connected and NO if the receiver is disconnected.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly, getter=isConnected) BOOL connected</Declaration>
+			
+			
+			<Anchor>//api/name/connected</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setName:</TokenIdentifier>
+			<Abstract type="html">The human-friendly name of the receiver.
+This is the same name as the user will see in the iOS Bluetooth Settings.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/name</TokenIdentifier>
+			<Abstract type="html">The human-friendly name of the receiver.
+This is the same name as the user will see in the iOS Bluetooth Settings.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/name</TokenIdentifier>
+			<Abstract type="html">The human-friendly name of the receiver.
+This is the same name as the user will see in the iOS Bluetooth Settings.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setSerialNumber:</TokenIdentifier>
+			<Abstract type="html">The serial number of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setVersionInfo:</TokenIdentifier>
+			<Abstract type="html">The versionInfo of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBVersionInfo</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong, readonly) PBVersionInfo *versionInfo</Declaration>
+			
+			
+			<Anchor>//api/name/versionInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/versionInfo</TokenIdentifier>
+			<Abstract type="html">The versionInfo of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBVersionInfo</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong, readonly) PBVersionInfo *versionInfo</Declaration>
+			
+			
+			<Anchor>//api/name/versionInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/versionInfo</TokenIdentifier>
+			<Abstract type="html">The versionInfo of the receiver.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBVersionInfo</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, strong, readonly) PBVersionInfo *versionInfo</Declaration>
+			
+			
+			<Anchor>//api/name/versionInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The delegate of the watch that will be notified of disconnections and errors.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/PBWatchDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, weak) id&lt;PBWatchDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/delegate</TokenIdentifier>
+			<Abstract type="html">The delegate of the watch that will be notified of disconnections and errors.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/PBWatchDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, weak) id&lt;PBWatchDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/delegate</TokenIdentifier>
+			<Abstract type="html">The delegate of the watch that will be notified of disconnections and errors.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/PBWatchDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, weak) id&lt;PBWatchDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setUserInfo:</TokenIdentifier>
+			<Abstract type="html">The userInfo property can be used to associate application specific data
+with the watch. Note that the application itself is responsible for persisting
+the information if neccessary.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id __nullable userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/userInfo</TokenIdentifier>
+			<Abstract type="html">The userInfo property can be used to associate application specific data
+with the watch. Note that the application itself is responsible for persisting
+the information if neccessary.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id __nullable userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/userInfo</TokenIdentifier>
+			<Abstract type="html">The userInfo property can be used to associate application specific data
+with the watch. Note that the application itself is responsible for persisting
+the information if neccessary.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id __nullable userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/setLastConnectedDate:</TokenIdentifier>
+			<Abstract type="html">The date when the watch was last known to be connected.
+This date will be updated automatically when the watch connects and
+disconnects. While the watch is being connected, this date will not be updated.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDate *lastConnectedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastConnectedDate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/lastConnectedDate</TokenIdentifier>
+			<Abstract type="html">The date when the watch was last known to be connected.
+This date will be updated automatically when the watch connects and
+disconnects. While the watch is being connected, this date will not be updated.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDate *lastConnectedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastConnectedDate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBWatch/lastConnectedDate</TokenIdentifier>
+			<Abstract type="html">The date when the watch was last known to be connected.
+This date will be updated automatically when the watch connects and
+disconnects. While the watch is being connected, this date will not be updated.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSDate *lastConnectedDate</Declaration>
+			
+			
+			<Anchor>//api/name/lastConnectedDate</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/friendlyDescription</TokenIdentifier>
+			<Abstract type="html">Developer-friendly debugging description of the watch.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)friendlyDescription</Declaration>
+			
+			<ReturnValue><Abstract type="html">developer-friendly summary of the receiver, including
+software and hardware version information, if available.</Abstract></ReturnValue>
+			<Anchor>//api/name/friendlyDescription</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/releaseSharedSession</TokenIdentifier>
+			<Abstract type="html">Releases the shared session to the watch (if one exists). (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Remove usages of this method. The implementation is empty.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)releaseSharedSession</Declaration>
+			
+			
+			<Anchor>//api/name/releaseSharedSession</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfGetIsSupported:</TokenIdentifier>
+			<Abstract type="html">Queries the watch whether Golf Messages are supported.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+			<Declaration>- (void)golfGetIsSupported:(void ( ^ ) ( PBWatch *watch , BOOL isGolfSupported ))fetchedBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fetchedBlock</Name>
+					<Abstract type="html">The block that will be called when the inquiry has
+finished. The block will be called asynchronously
+on the queue that was originally used when calling this
+method.
+
+- watch: The watch on which the query was performed.
+- isGolfSupported: YES if Golf Messages are
+supported, NO if not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfGetIsSupported:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppLaunch:</TokenIdentifier>
+			<Abstract type="html">Send a command to launch the golf app on the watch that the receiver
+represents.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+			<Declaration>- (void)golfAppLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the launch command has
+been sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfAppLaunch:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppKill:</TokenIdentifier>
+			<Abstract type="html">Send a command to kill the golf app on the watch that the receiver
+represents.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+			<Declaration>- (void)golfAppKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the kill command has
+been sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfAppKill:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppUpdate:onSent:</TokenIdentifier>
+			<Abstract type="html">Sends an update to the golf app on the watch that the receiver represents.
+Must be called from the main thread.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+			<Declaration>- (void)golfAppUpdate:(NSDictionary *)update onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>update</Name>
+					<Abstract type="html">The update to send. Use one or more keys from
+PBGolfFrontKey, PBGolfMidKey, PBGolfBackKey,
+PBGolfHoleKey, or PBGolfParKey. Note that the value for
+each key MUST be of NSString type.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the update has been sent
+or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfAppUpdate:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppAddReceiveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Add a receive handler for incoming Golf updates that are send by the Golf
+watch application.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/GolfAppCommand</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppRemoveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)golfAppAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , GolfAppCommand command ))onReceive</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onReceive</Name>
+					<Abstract type="html">The block that will be called every time a new update
+message arrives.
+
+- watch: The receiver of the update.
+- command: The command as sent by the watch.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An opaque handle object representing the installed receive handler,
+that can be used in golfAppRemoveUpdateHandler:</Abstract></ReturnValue>
+			<Anchor>//api/name/golfAppAddReceiveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppRemoveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Removes a receive handler that was previously installed using
+golfAppAddReceiveUpdateHandler:</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppAddReceiveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)golfAppRemoveUpdateHandler:(id)opaqueHandle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opaqueHandle</Name>
+					<Abstract type="html">The handle object as returned by
+golfAppAddReceiveUpdateHandler:</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfAppRemoveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfSetTitle:icon:onSent:</TokenIdentifier>
+			<Abstract type="html">Assigns a custom title and icon to the golf app on the watch.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+			
+			<Declaration>- (void)golfSetTitle:(NSString *)title icon:(UIImage *)icon onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The custom title (max. 20 bytes of UTF-8 string)</Abstract>
+				</Parameter><Parameter>
+					<Name>icon</Name>
+					<Abstract type="html">The custom icon (max. 32x32 pixels, black/white only)</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the title and icon have
+been set or timed out.
+
+- watch: the recipient of the title and icon.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/golfSetTitle:icon:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/pingWithCookie:onPong:onTimeout:</TokenIdentifier>
+			<Abstract type="html">Sends a ping to the watch.</Abstract>
+			<DeclaredIn>PBWatch+Ping.h</DeclaredIn>
+			
+			<Declaration>- (void)pingWithCookie:(uint32_t)cookie onPong:(void ( ^ __nullable ) ( PBWatch *watch , uint32_t cookie ))onPong onTimeout:(void ( ^ __nullable ) ( PBWatch *watch , uint32_t cookie ))onTimeout</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cookie</Name>
+					<Abstract type="html">A number identifying the ping.</Abstract>
+				</Parameter><Parameter>
+					<Name>onPong</Name>
+					<Abstract type="html">The block handler that will be called when the &quot;pong&quot; reply from the watch has been received.</Abstract>
+				</Parameter><Parameter>
+					<Name>onTimeout</Name>
+					<Abstract type="html">The block handler that will be called when the watch failed to reply in time.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pingWithCookie:onPong:onTimeout:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetLabel:onSent:</TokenIdentifier>
+			<Abstract type="html">Send a command to the sports app on the watch that the receiver represents,
+to set the preferred data label (either PACE or SPEED) and corresponding
+units. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer using [PBSportsUpdate pace] or [PBSportsUpdate speed].&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppSetLabel:(BOOL)isPace onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>isPace</Name>
+					<Abstract type="html">YES to request the pace label or NO to request the speed
+label.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppSetLabel:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetMetric:onSent:</TokenIdentifier>
+			<Abstract type="html">Send a command to the sports app on the watch that the receiver represents,
+to set the preferred unit system, either metric or imperial. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer using [PBWatch(Sports) sportsAppSetUnitSystem:onSent:]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppSetMetric:(BOOL)isMetric onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>isMetric</Name>
+					<Abstract type="html">YES to request metric units or NO to request imperial
+units.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppSetMetric:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesGetIsSupported:</TokenIdentifier>
+			<Abstract type="html">Queries the watch whether AppMessages are supported.</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesGetIsSupported:(void ( ^ ) ( PBWatch *watch , BOOL isAppMessagesSupported ))fetchedBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fetchedBlock</Name>
+					<Abstract type="html">The block that will be called when the inquiry has
+finished. The block will be called asynchronously on the
+queue that was originally used when calling this method.
+
+- watch: The watch on which the query was performed.
+- isAppMessagesSupported: YES if AppMessages are
+supported, NO if not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesGetIsSupported:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesPushUpdate:onSent:</TokenIdentifier>
+			<Abstract type="html">Pushes an update to the watch application with UUID as set using
+[PBPebbleCentral setAppUUID:].</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesPushUpdate:(NSDictionary&lt;NSNumber*,id&gt; *)dictionary onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dictionary</Name>
+					<Abstract type="html">Contains the key/value pairs to update. The dictionary can
+only contain items with an NSNumber key and only contain
+NSString, NSNumber or NSData values. Use the methods
+in the NSNumber (stdint) category to create NSNumbers
+with specific types standard integer types.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called when the message was accepted,
+rejected or timed out.
+
+- watch: The watch to which the update was sent.
+- update: The dictionary that was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See
+PBErrorCode for error codes.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesPushUpdate:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesPushUpdate:withUUID:onSent:</TokenIdentifier>
+			<Abstract type="html">Pushes an update to the watch application with the specified UUID.</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesPushUpdate:(NSDictionary&lt;NSNumber*,id&gt; *)dictionary withUUID:(NSUUID *)appUUID onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dictionary</Name>
+					<Abstract type="html">Contains the key/value pairs to update. The dictionary can
+only contain items with an NSNumber key and only contain
+NSString, NSNumber or NSData values. Use the methods
+in the NSNumber (stdint) category to create NSNumbers
+with specific types standard integer types.</Abstract>
+				</Parameter><Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The UUID of the watchapp to which the update should be sent.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called when the message was accepted,
+rejected or timed out.
+
+- watch: The watch to which the update was sent.
+- update: The dictionary that was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See
+PBErrorCode for error codes.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesPushUpdate:withUUID:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesAddReceiveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Add a receive handler for incoming updates that are send by the watch
+application with UUID as set using [PBPebbleCentral setAppUUID:].</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesRemoveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , NSDictionary&lt;NSNumber*,id&gt; *update ))onReceive</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onReceive</Name>
+					<Abstract type="html">The block that will be called every time a new update
+message arrives.
+
+- watch: The watch that has sent the update.
+- update: The dictionary containing the values sent by
+the watch.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An opaque handle object representing the installed receive handler,
+that can be used in appMessagesRemoveUpdateHandler:</Abstract></ReturnValue>
+			<Anchor>//api/name/appMessagesAddReceiveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesAddReceiveUpdateHandler:withUUID:</TokenIdentifier>
+			<Abstract type="html">Add a receive handler for incoming updates that are send by the watch
+application with the specified UUID.</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesRemoveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , NSDictionary&lt;NSNumber*,id&gt; *update ))onReceive withUUID:(NSUUID *)appUUID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onReceive</Name>
+					<Abstract type="html">The block that will be called every time a new update
+message arrives. You should always return YES so than an
+ACK is sent to the watch.
+
+- watch: The watch that has sent the update.
+- update: The dictionary containing the values sent by
+the watch.</Abstract>
+				</Parameter><Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The UUID of the watchapp for which sent messages should be
+handled by the onReceive block.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An opaque handle object representing the installed receive handler,
+that can be used in appMessagesRemoveUpdateHandler:</Abstract></ReturnValue>
+			<Anchor>//api/name/appMessagesAddReceiveUpdateHandler:withUUID:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesRemoveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Removes a receive handler that was previously installed using
+appMessagesAddReceiveUpdateHandler:</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesAddReceiveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)appMessagesRemoveUpdateHandler:(id)opaqueHandle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opaqueHandle</Name>
+					<Abstract type="html">The handle object as returned by
+appMessagesAddReceiveUpdateHandler:</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesRemoveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesLaunch:</TokenIdentifier>
+			<Abstract type="html">Sends a command to launch the watch application with UUID as set using
+[PBPebbleCentral setAppUUID:]</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called after the launch command has been
+sent to the watch.
+
+- watch: The watch to which the command was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See PBErrorCode
+for error codes.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesLaunch:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesLaunch:withUUID:</TokenIdentifier>
+			<Abstract type="html">Sends a command to launch the watch application with the specified UUID.</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent withUUID:(NSUUID *)appUUID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called after the launch command has been
+sent to the watch.
+
+- watch: The watch to which the command was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See PBErrorCode
+for error codes.</Abstract>
+				</Parameter><Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The UUID of the watch application to launch.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesLaunch:withUUID:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesKill:</TokenIdentifier>
+			<Abstract type="html">Sends a command to kill the watch application with UUID as set using
+[PBPebbleCentral setAppUUID:].</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called after the kill command has been
+sent to the watch.
+
+- watch: The watch to which the command was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See PBErrorCode
+for error codes.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesKill:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/appMessagesKill:withUUID:</TokenIdentifier>
+			<Abstract type="html">Sends a command to kill the watch application with the specified UUID.</Abstract>
+			<DeclaredIn>PBWatch+AppMessages.h</DeclaredIn>
+			
+			<Declaration>- (void)appMessagesKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent withUUID:(NSUUID *)appUUID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The block that will be called after the kill command has been
+sent to the watch.
+
+- watch: The watch to which the command was sent.
+- error: If there was a problem, this will contain
+information about the underlying problem. See PBErrorCode
+for error codes.</Abstract>
+				</Parameter><Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The UUID of the watch application to launch.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/appMessagesKill:withUUID:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/closeSession:</TokenIdentifier>
+			<Abstract type="html">Closes the communication session with the watch. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBWatch releaseSharedSession]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Legacy.h</DeclaredIn>
+			
+			<Declaration>- (void)closeSession:(void ( ^ __nullable ) ( void ))onDone</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onDone</Name>
+					<Abstract type="html">Callback block that will be called after the closing of the
+session has completed. If there is no open session, the
+onDone block will (also) be executed asynchronously on the
+calling queue.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/closeSession:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsGetIsSupported:</TokenIdentifier>
+			<Abstract type="html">Queries the watch whether Sports Messages are supported.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsGetIsSupported:(void ( ^ ) ( PBWatch *watch , BOOL isSportsSupported ))fetchedBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fetchedBlock</Name>
+					<Abstract type="html">The block that will be called when the inquiry has
+finished. The block will be called asynchronously
+on the queue that was originally used when calling this
+method.
+
+- watch: the recipient of the query.
+- isSportsSupported: YES if Sports API is supported,
+NO otherwise.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsGetIsSupported:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppLaunch:</TokenIdentifier>
+			<Abstract type="html">Send a command to launch the sports app on the watch that the receiver represents.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppLaunch:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the launch command has
+been sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppLaunch:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppKill:</TokenIdentifier>
+			<Abstract type="html">Send a command to kill the sports app on the watch that the receiver represents.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppKill:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the kill command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppKill:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetUnitSystem:onSent:</TokenIdentifier>
+			<Abstract type="html">Send a command to the sports app on the watch that the receiver represents,
+to set the preferred unit system.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppSetUnitSystem:(PBUnitSystem)unitSystem onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>unitSystem</Name>
+					<Abstract type="html">PBUnitSystemMetric to request metric units or
+PBUnitSystemImperial to request imperial units.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppSetUnitSystem:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetActivityState:onSent:</TokenIdentifier>
+			<Abstract type="html">Send a command to the sports app on the watch that the receiver represents,
+to set the state of the sports activity. Currently only
+SportsAppActivityStateRunning and SportsAppActivityStatePaused are
+supported.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppSetActivityState:(SportsAppActivityState)state onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>state</Name>
+					<Abstract type="html">The new sports activity state</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppSetActivityState:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppUpdate:onSent:</TokenIdentifier>
+			<Abstract type="html">Sends the update to the sports app on the watch that the receiver represents.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsAppUpdate:(NSDictionary *)update onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>update</Name>
+					<Abstract type="html">The update to send.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).
+
+- watch: the recipient of the command.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppUpdate:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppAddReceiveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Add a receive handler for incoming Sports updates that are send by the
+Sports watch application.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/SportsAppActivityState</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppRemoveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)sportsAppAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , SportsAppActivityState state ))onReceive</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>onReceive</Name>
+					<Abstract type="html">The block that will be called every time a new update
+message arrives.
+
+- watch: The watch that has sent the update.
+- state: The new sports activity state as set by the
+watch.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An opaque handle object representing the installed receive handler,
+that can be used in sportsAppRemoveUpdateHandler:.</Abstract></ReturnValue>
+			<Anchor>//api/name/sportsAppAddReceiveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppRemoveUpdateHandler:</TokenIdentifier>
+			<Abstract type="html">Removes a receive handler that was previously installed using
+sportsAppAddReceiveUpdateHandler:.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppAddReceiveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sportsAppRemoveUpdateHandler:(id)opaqueHandle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opaqueHandle</Name>
+					<Abstract type="html">The handle object as returned by
+sportsAppAddReceiveUpdateHandler:</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsAppRemoveUpdateHandler:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsSetTitle:icon:onSent:</TokenIdentifier>
+			<Abstract type="html">Assigns a custom title and icon to the sports app on the watch.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)sportsSetTitle:(NSString *)title icon:(UIImage *)icon onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))onSent</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The custom title (max. 20 bytes of UTF-8 string)</Abstract>
+				</Parameter><Parameter>
+					<Name>icon</Name>
+					<Abstract type="html">The custom icon (max. 32x32 pixels, black/white only). This
+image cannot be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>onSent</Name>
+					<Abstract type="html">The handler that will be called when the title and icon have
+been set or timed out.
+
+- watch: the recipient of the custom title and icon.
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sportsSetTitle:icon:onSent:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

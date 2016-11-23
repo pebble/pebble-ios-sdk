@@ -7,97 +7,89 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PebbleKit/PBDefines.h>
+#import "PBDefines.h"
+#import "PBSemanticVersion.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  PBFirmwareVersion is a helper class that is able to parse the versionTag string
- *  into its components (os, major, minor, suffix) and facilitate comparisons
- *  between versions.
- *  Valid versions follow the following format:
- *  `(v)OS(.MAJOR(.MINOR(-SUFFIX)))`
- *  Where the fields OS, MAJOR, MINOR are positive, decimal integer numbers and SUFFIX
- *  an arbitrary string. MAJOR, MINOR and SUFFIX are optional (nested optionality).
- *  Examples of valid versions:
- *  `1`
- *  `v2`
- *  `v3.4-foo`
- *  `v4.1234.99-alpha-beta-gamma`
+ * PBFirmwareVersion is a helper class that is able to parse the versionTag string
+ * into its components (major, minor, revision, suffix) and facilitate comparisons
+ * between versions.
+ *
+ * Valid versions follow the following format:
+ * `(v)MAJORVERSION(.MINORVERSION(.REVISIONVERSION(-SUFFIX)))`
+ *
+ * Where the fields MAJOR, MINOR, REVISION are positive, decimal integer numbers and SUFFIX
+ * an arbitrary string. MINOR, REVISION, and SUFFIX are optional (nested optionality).
+ *
+ * Examples of valid versions:
+ *
+ * - `1`
+ * - `v2`
+ * - `v3.4-foo`
+ * - `v4.1234.99-alpha-beta-gamma`
  */
-PB_EXTERN_CLASS @interface PBFirmwareVersion : NSObject <NSCopying>
-/**
- *  The OS version component.
- */
-@property (nonatomic, readonly) NSInteger os;
+PB_EXTERN_CLASS @interface PBFirmwareVersion : PBSemanticVersion <NSCopying>
 
 /**
- *  The major version component.
- *  @note If a version tag string does not contain a major component, it will be set to 0.
+ * The version timestamp.
+ *
+ * The timestamp is in the final comparison equation, in the -compare: method,
+ * after evaluating major, minor, and revision components.
  */
-@property (nonatomic, readonly) NSInteger major;
+@property (nonatomic, readonly) uint32_t timestamp;
 
 /**
- *  The minor version component.
- *  @note If a version tag string does not contain a major component, it will be set to 0.
+ * The version's git commit hash.
+ *
+ * The commit hash is not used in the -compare: method.
  */
-@property (nonatomic, readonly) NSInteger minor;
+@property (nonatomic, readonly, copy, nullable) NSString * commitHash;
 
 /**
- *  The release suffix, which is the part following the dash '-'.
- *  @note If a version tag string does not contain a suffix, it will be set to an empty string.
- *  @discussion The release suffix is not used in the -compare: method.
- */
-@property (nonatomic, readonly, copy) NSString *suffix;
-
-/**
- *  The version timestamp.
- *  @note The timestamp is in the final comparison equation, in the -compare: method, after evaluating
- *  os, major and minor components.
- */
-@property (nonatomic, readonly) UInt32 timestamp;
-
-/**
- *  The version's git commit hash.
- *  @discussion The commit hash is not used in the -compare: method.
- */
-@property (nonatomic, readonly, copy) NSString * __nullable commitHash;
-
-/**
- *  The version's git tag.
+ * The version's git tag.
  */
 @property (nonatomic, readonly, copy) NSString *tag;
 
 /**
- *  Creates a PBFirmwareVersion object given a tag string.
+ * Creates a PBFirmwareVersion object given a tag string.
+ *
+ * @param tag The firmware version string to parse.
  */
-+ (PBFirmwareVersion *)firmwareVersionWithString:(NSString *)string;
++ (nullable instancetype)firmwareVersionWithString:(NSString *)tag;
 
 /**
- *  Creates a PBFirmwareVersion object given a tag string and timestamp.
+ * Creates a PBFirmwareVersion object given a tag string and timestamp.
+ *
+ * @param tag The firmare version string to parse.
+ * @param commitHash A version's commit hash. Can be nil.
+ * @param timestamp The version timestamp.
  */
-+ (PBFirmwareVersion*)firmwareVersionWithTag:(NSString*)tag commitHash:(NSString * __nullable)commitHash timestamp:(UInt32)timestamp;
++ (nullable instancetype)firmwareVersionWithTag:(NSString *)tag
+                                     commitHash:(nullable NSString *)commitHash
+                                      timestamp:(uint32_t)timestamp;
 
 /**
- *  Creates a PBFirmwareVersion object given its components.
- *  @discussion The tag string will be set to the canonical format vOS.MINOR.MAJOR(-SUFFIX).
+ * Creates a PBFirmwareVersion object given its components.
+ *
+ * The tag string will be set to the canonical format vMAJOR.MINOR.REVISION(-SUFFIX).
+ *
+ * @param major The version major number.
+ * @param minor The version minor number.
+ * @param revision The version revision number.
+ * @param suffix The version suffix. Can be nil.
+ * @param commitHash A version's commit hash. Can be nil.
+ * @param timestamp The version timestamp.
  */
-+ (PBFirmwareVersion*)firmwareVersionWithOS:(NSInteger)os major:(NSInteger)major minor:(NSInteger)minor suffix:(NSString * __nullable)suffix commitHash:(NSString * __nullable)commitHash timestamp:(UInt32)timestamp;
++ (instancetype)firmwareVersionWithMajor:(NSInteger)major
+                                   minor:(NSInteger)minor
+                                revision:(NSInteger)revision
+                                  suffix:(nullable NSString *)suffix
+                              commitHash:(nullable NSString *)commitHash
+                               timestamp:(uint32_t)timestamp;
 
-/**
- *  Compares the receiver to another version object.
- *  @param aVersion The version to compare with the receiver.
- *  @return NSOrderedAscending if the value of aVersion is greater than the receiver’s,
- *  NSOrderedSame if they’re equal, and NSOrderedDescending if the value of aVersion is less than the receiver’s.
- */
-- (NSComparisonResult)compare:(PBFirmwareVersion *)aVersion;
-
-/**
- *  Convenience wrappers around -compare:
- */
-- (BOOL)isEqualOrNewer:(PBFirmwareVersion *)other;
-- (BOOL)isNewer:(PBFirmwareVersion *)other;
-- (BOOL)isEqualVersionOnly:(PBFirmwareVersion *)other;
+- (BOOL)isEqualVersionOnly:(PBSemanticVersion *)other;
 
 @end
 

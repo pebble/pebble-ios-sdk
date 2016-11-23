@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/PBRemoteProtocolCapabilitiesFlags.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/PBRemoteProtocolCapabilitiesFlags</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+			
+			<NodeRef refid="26"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsAppRunState</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsAppRunState</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsInfiniteLogDumping</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsInfiniteLogDumping</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsUpdateMusicProtocol</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsUpdateMusicProtocol</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsExtendedNotificationService</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsExtendedNotificationService</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsLanguagePacksSupported</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsLanguagePacksSupported</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsAppMessage8kSupported</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsAppMessage8kSupported</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsInsightsSupport</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsInsightsSupport</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsThirdPartyVoiceSupported</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsThirdPartyVoiceSupported</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsSendTextSupported</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsSendTextSupported</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsNotificationsFilteringSupported</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsNotificationsFilteringSupported</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsUnreadCoredumpSupport</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsUnreadCoredumpSupport</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsWeatherApp2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsWeatherApp2</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsReminderApp</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsReminderApp</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsWorkoutApp</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsWorkoutApp</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBRemoteProtocolCapabilitiesFlagsJSBytecodeVersionAppended</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBRemoteProtocolCapabilitiesFlagsJSBytecodeVersionAppended</Declaration>
+            
+            <DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+            <NodeRef refid="26"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PBDataLoggingServiceDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PBDataLoggingServiceDelegate</TokenIdentifier>
+			<Abstract type="html">Data logging delegate protocol. The object that implements this protocol
+is responsible for handling incoming data.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasByteArrays:(const uint8_t *const)bytes numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>bytes</Name>
+					<Abstract type="html">Pointer to the array of bytes.
+The array contains (numberOfItems * session.itemSize) bytes.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasByteArrays:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasUInt8s:(const uint8_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of UInt8`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasUInt8s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasUInt16s:(const uint16_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of UInt16`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasUInt16s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasUInt32s:(const uint32_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of UInt32`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasUInt32s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasSInt8s:(const int8_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of SInt8`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasSInt8s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasSInt16s:(const int16_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of SInt16`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasSInt16s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time there is data available that has not been
+consumed yet.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)dataLoggingService:(PBDataLoggingService *)service hasSInt32s:(const int32_t [ ])data numberOfItems:(uint16_t)numberOfItems forDataLoggingSession:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">Pointer to the array of SInt32`s.</Abstract>
+				</Parameter><Parameter>
+					<Name>numberOfItems</Name>
+					<Abstract type="html">The number of items that the array contains.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data was consumed and the service can discard the data.
+Return NO if the data was not be consumed after the method returned.
+If NO is returned, the next time this callback is invoked for the session, the
+data argument will (also) contain the data of the items of the previous
+invocation of the callback.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataLoggingService:hasSInt32s:numberOfItems:forDataLoggingSession:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBDataLoggingServiceDelegate/dataLoggingService:sessionDidFinish:</TokenIdentifier>
+			<Abstract type="html">Called by the service every time a session is finished.
+This is guaranteed to be called only after all data has been received and
+consumed by the application.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (void)dataLoggingService:(PBDataLoggingService *)service sessionDidFinish:(PBDataLoggingSessionMetadata *)session</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>service</Name>
+					<Abstract type="html">The data logging service.</Abstract>
+				</Parameter><Parameter>
+					<Name>session</Name>
+					<Abstract type="html">The metadata of the session.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/dataLoggingService:sessionDidFinish:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

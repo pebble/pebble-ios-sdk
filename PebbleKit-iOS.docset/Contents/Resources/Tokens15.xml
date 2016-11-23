@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSError+Pebble.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSError(Pebble)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PBErrors.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/pebbleErrorWithCode:underLyingError:</TokenIdentifier>
+			<Abstract type="html">Convenience method to create an NSError object with &lt;PBErrorDomain&gt; error domain
+and a given PBErrorCode and with an underlying NSError object.</Abstract>
+			<DeclaredIn>PBErrors.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)pebbleErrorWithCode:(PBErrorCode)code underLyingError:(NSError *__nullable)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code for which to create the error</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The underlying error</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pebbleErrorWithCode:underLyingError:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/pebbleErrorWithCode:</TokenIdentifier>
+			<Abstract type="html">Convenience method to create an NSError object with &lt;PBErrorDomain&gt; error domain
+and a given PBErrorCode.</Abstract>
+			<DeclaredIn>PBErrors.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)pebbleErrorWithCode:(PBErrorCode)code</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">The error code for which to create the error</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pebbleErrorWithCode:</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

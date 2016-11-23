@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -80,6 +80,8 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/isEqual:">- isEqual:</option>
+		
 		<option value="//api/name/isEqualToDataLoggingSessionMetadata:">- isEqualToDataLoggingSessionMetadata:</option>
 		
 	</optgroup>
@@ -151,7 +153,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) UInt32 tag</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) uint32_t tag</code></div>
 
 		    
 			
@@ -160,11 +162,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>A tag associated with the session.</p>
-			</div>
 			
 
 			
@@ -197,7 +194,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) UInt32 timestamp</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) uint32_t timestamp</code></div>
 
 		    
 			
@@ -206,11 +203,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The timestamp of the moment the session was created by the watchapp.</p>
-			</div>
 			
 
 			
@@ -253,11 +245,6 @@
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The type of data stored in this session.</p>
-			</div>
-			
 
 			
 
@@ -289,7 +276,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) UInt16 itemSize</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) uint16_t itemSize</code></div>
 
 		    
 			
@@ -298,11 +285,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The size of a data item.</p>
-			</div>
 			
 
 			
@@ -335,7 +317,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *serialNumber</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *serialNumber</code></div>
 
 		    
 			
@@ -344,11 +326,6 @@
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The serial number of the watch that created the sessions.</p>
-			</div>
 			
 
 			
@@ -384,7 +361,7 @@ compare it with a metadata object that is passed into one of the
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (id)metadataWithTag:(UInt32)<em>tag</em> timestamp:(UInt32)<em>timestamp</em> type:(PBDataLoggingType)<em>type</em> itemSize:(UInt16)<em>itemSize</em> serialNumber:(NSString *)<em>serialNumber</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)metadataWithTag:(uint32_t)<em>tag</em> timestamp:(uint32_t)<em>timestamp</em> type:(PBDataLoggingType)<em>type</em> itemSize:(uint16_t)<em>itemSize</em> serialNumber:(NSString *)<em>serialNumber</em></code></div>
 
 		    
 			
@@ -431,12 +408,69 @@ compare it with a metadata object that is passed into one of the
 			
 
 			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBDataLoggingService.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isEqual:" title="isEqual:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEqual:">&ndash;&nbsp;isEqual:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tests the equality of the recipient and the given object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isEqual:(nullable id)<em>object</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>The object to check against.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if all the property values of the receiver are equal to the
+property values of the other object.</p>
+			</div>
+			
+
+			
+
+			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates a new data logging session metadata object, given all its property values.
-This method is provided to create a metadata object that can be used to
-compare it with a metadata object that is passed into one of the
-<a href="../Protocols/PBDataLoggingServiceDelegate.html">PBDataLoggingServiceDelegate</a> methods.</p>
+				<p>This method can be used to compare two sessions’ metadata objects to check
+whether they are referring to the same session or not.</p>
 			</div>
 			
 
@@ -465,10 +499,7 @@ compare it with a metadata object that is passed into one of the
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Tests the equality of two data logging session metadata objects.
-This method can be used to compare two session metadata objects
-to check whether they are referring to the same session or not.
-@param sessionMetadata</p>
+				<p>Tests the equality of two data logging sessions’ metadata objects.</p>
 			</div>
 			
 		    
@@ -477,12 +508,24 @@ to check whether they are referring to the same session or not.
 
 		    
 			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sessionMetadata</code></th>
+						<td><p>The session metadata to compare against.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>YES if all the property values of receiver are equal to the property
-values of the given session.</p>
+				<p><code>YES</code> if all the property values of the receiver are equal to the
+property values of the given session.</p>
 			</div>
 			
 
@@ -491,10 +534,8 @@ values of the given session.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Tests the equality of two data logging session metadata objects.
-This method can be used to compare two session metadata objects
-to check whether they are referring to the same session or not.
-@param sessionMetadata</p><div class="note"><p><strong>Note:</strong> Equivalent to [PBDataLoggingSessionMetadata isEqual:]</p></div>
+				<p>This method can be used to compare two sessions’ metadata objects to check
+whether they are referring to the same session or not.</p><div class="note"><p><strong>Note:</strong> Equivalent to <a href="#//api/name/isEqual:">[PBDataLoggingSessionMetadata isEqual:]</a></p></div>
 			</div>
 			
 
@@ -526,10 +567,10 @@ to check whether they are referring to the same session or not.
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-11</p>
+						<p class="copyright">Copyright &copy; 2016 Pebble Technology Corp. All rights reserved. Updated: 2016-11-23</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

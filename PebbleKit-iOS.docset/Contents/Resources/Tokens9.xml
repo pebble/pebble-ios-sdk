@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBSemanticVersion.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBSemanticVersion</TokenIdentifier>
+			<Abstract type="html">A version number that follows the rules of semantic versioning.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/setMajorVersion:</TokenIdentifier>
+			<Abstract type="html">The version major number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger majorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/majorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/majorVersion</TokenIdentifier>
+			<Abstract type="html">The version major number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger majorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/majorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSemanticVersion/majorVersion</TokenIdentifier>
+			<Abstract type="html">The version major number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger majorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/majorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/setMinorVersion:</TokenIdentifier>
+			<Abstract type="html">The version minor number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger minorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/minorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/minorVersion</TokenIdentifier>
+			<Abstract type="html">The version minor number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger minorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/minorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSemanticVersion/minorVersion</TokenIdentifier>
+			<Abstract type="html">The version minor number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger minorVersion</Declaration>
+			
+			
+			<Anchor>//api/name/minorVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/setRevisionVersion:</TokenIdentifier>
+			<Abstract type="html">The version revision number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger revisionVersion</Declaration>
+			
+			
+			<Anchor>//api/name/revisionVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/revisionVersion</TokenIdentifier>
+			<Abstract type="html">The version revision number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger revisionVersion</Declaration>
+			
+			
+			<Anchor>//api/name/revisionVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSemanticVersion/revisionVersion</TokenIdentifier>
+			<Abstract type="html">The version revision number</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSUInteger revisionVersion</Declaration>
+			
+			
+			<Anchor>//api/name/revisionVersion</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/setSuffix:</TokenIdentifier>
+			<Abstract type="html">The version suffix string.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *suffix</Declaration>
+			
+			
+			<Anchor>//api/name/suffix</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/suffix</TokenIdentifier>
+			<Abstract type="html">The version suffix string.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *suffix</Declaration>
+			
+			
+			<Anchor>//api/name/suffix</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSemanticVersion/suffix</TokenIdentifier>
+			<Abstract type="html">The version suffix string.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *suffix</Declaration>
+			
+			
+			<Anchor>//api/name/suffix</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/initWithVersionString:</TokenIdentifier>
+			<Abstract type="html">Returns a new instance by parsing the input.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>- (nullable instancetype)initWithVersionString:(NSString *)versionString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>versionString</Name>
+					<Abstract type="html">Expected format: major.minor.revision-sffix.
+
+Example: &quot;2.0.1-rc2&quot;
+
+If a parsing error occurs, nil will be returned.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A version or nil if some error happen.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithVersionString:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/initWithMajor:minor:revision:suffix:</TokenIdentifier>
+			<Abstract type="html">Returns a new instance by using the given components.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithMajor:(NSUInteger)major minor:(NSUInteger)minor revision:(NSUInteger)revision suffix:(nullable NSString *)suffix</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>major</Name>
+					<Abstract type="html">The version major number.</Abstract>
+				</Parameter><Parameter>
+					<Name>minor</Name>
+					<Abstract type="html">The version minor number.</Abstract>
+				</Parameter><Parameter>
+					<Name>revision</Name>
+					<Abstract type="html">The version revision number.</Abstract>
+				</Parameter><Parameter>
+					<Name>suffix</Name>
+					<Abstract type="html">The version suffix. Can be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithMajor:minor:revision:suffix:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/compare:</TokenIdentifier>
+			<Abstract type="html">Compares the receiver to another version object.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>- (NSComparisonResult)compare:(PBSemanticVersion *)aVersion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>aVersion</Name>
+					<Abstract type="html">The version to compare with the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">NSOrderedAscending if the value of aVersion is greater than the
+receiver’s, NSOrderedSame if they’re equal, and
+NSOrderedDescending if the value of aVersion is less than the
+receiver’s.</Abstract></ReturnValue>
+			<Anchor>//api/name/compare:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/isEqualOrNewer:</TokenIdentifier>
+			<Abstract type="html">Returns if the the receiver is equal or newer than the given version.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqualOrNewer:(PBSemanticVersion *)other</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>other</Name>
+					<Abstract type="html">Version number to compare against.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the receiver is equal or newer. NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqualOrNewer:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSemanticVersion/isNewer:</TokenIdentifier>
+			<Abstract type="html">Returns if the receiver is strictly newer than the given version.</Abstract>
+			<DeclaredIn>PBSemanticVersion.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isNewer:(PBSemanticVersion *)other</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>other</Name>
+					<Abstract type="html">Version number to compare against.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the receiver is stricly newer. NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isNewer:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

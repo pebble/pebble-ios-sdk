@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBFirmwareVersion.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBFirmwareVersion</TokenIdentifier>
+			<Abstract type="html">PBFirmwareVersion is a helper class that is able to parse the versionTag string
+into its components (major, minor, revision, suffix) and facilitate comparisons
+between versions.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setTimestamp:</TokenIdentifier>
+			<Abstract type="html">The version timestamp.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/timestamp</TokenIdentifier>
+			<Abstract type="html">The version timestamp.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/timestamp</TokenIdentifier>
+			<Abstract type="html">The version timestamp.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setCommitHash:</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git commit hash.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy, nullable) NSString *commitHash</Declaration>
+			
+			
+			<Anchor>//api/name/commitHash</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/commitHash</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git commit hash.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy, nullable) NSString *commitHash</Declaration>
+			
+			
+			<Anchor>//api/name/commitHash</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/commitHash</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git commit hash.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy, nullable) NSString *commitHash</Declaration>
+			
+			
+			<Anchor>//api/name/commitHash</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setTag:</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git tag.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/tag</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git tag.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/tag</TokenIdentifier>
+			<Abstract type="html">The version&apos;s git tag.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareVersion/firmwareVersionWithString:</TokenIdentifier>
+			<Abstract type="html">Creates a PBFirmwareVersion object given a tag string.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>+ (nullable instancetype)firmwareVersionWithString:(NSString *)tag</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tag</Name>
+					<Abstract type="html">The firmware version string to parse.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firmwareVersionWithString:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareVersion/firmwareVersionWithTag:commitHash:timestamp:</TokenIdentifier>
+			<Abstract type="html">Creates a PBFirmwareVersion object given a tag string and timestamp.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>+ (nullable instancetype)firmwareVersionWithTag:(NSString *)tag commitHash:(nullable NSString *)commitHash timestamp:(uint32_t)timestamp</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tag</Name>
+					<Abstract type="html">The firmare version string to parse.</Abstract>
+				</Parameter><Parameter>
+					<Name>commitHash</Name>
+					<Abstract type="html">A version&apos;s commit hash. Can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>timestamp</Name>
+					<Abstract type="html">The version timestamp.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firmwareVersionWithTag:commitHash:timestamp:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareVersion/firmwareVersionWithMajor:minor:revision:suffix:commitHash:timestamp:</TokenIdentifier>
+			<Abstract type="html">Creates a PBFirmwareVersion object given its components.</Abstract>
+			<DeclaredIn>PBFirmwareVersion.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)firmwareVersionWithMajor:(NSInteger)major minor:(NSInteger)minor revision:(NSInteger)revision suffix:(nullable NSString *)suffix commitHash:(nullable NSString *)commitHash timestamp:(uint32_t)timestamp</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>major</Name>
+					<Abstract type="html">The version major number.</Abstract>
+				</Parameter><Parameter>
+					<Name>minor</Name>
+					<Abstract type="html">The version minor number.</Abstract>
+				</Parameter><Parameter>
+					<Name>revision</Name>
+					<Abstract type="html">The version revision number.</Abstract>
+				</Parameter><Parameter>
+					<Name>suffix</Name>
+					<Abstract type="html">The version suffix. Can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>commitHash</Name>
+					<Abstract type="html">A version&apos;s commit hash. Can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>timestamp</Name>
+					<Abstract type="html">The version timestamp.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firmwareVersionWithMajor:minor:revision:suffix:commitHash:timestamp:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setOs:</TokenIdentifier>
+			<Abstract type="html">The OS version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion majorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger os</Declaration>
+			
+			
+			<Anchor>//api/name/os</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/os</TokenIdentifier>
+			<Abstract type="html">The OS version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion majorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger os</Declaration>
+			
+			
+			<Anchor>//api/name/os</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/os</TokenIdentifier>
+			<Abstract type="html">The OS version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion majorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger os</Declaration>
+			
+			
+			<Anchor>//api/name/os</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setMajor:</TokenIdentifier>
+			<Abstract type="html">The major version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion minorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger major</Declaration>
+			
+			
+			<Anchor>//api/name/major</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/major</TokenIdentifier>
+			<Abstract type="html">The major version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion minorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger major</Declaration>
+			
+			
+			<Anchor>//api/name/major</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/major</TokenIdentifier>
+			<Abstract type="html">The major version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion minorVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger major</Declaration>
+			
+			
+			<Anchor>//api/name/major</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/setMinor:</TokenIdentifier>
+			<Abstract type="html">The minor version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion revisionVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger minor</Declaration>
+			
+			
+			<Anchor>//api/name/minor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareVersion/minor</TokenIdentifier>
+			<Abstract type="html">The minor version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion revisionVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger minor</Declaration>
+			
+			
+			<Anchor>//api/name/minor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareVersion/minor</TokenIdentifier>
+			<Abstract type="html">The minor version component. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use [PBSemanticVersion revisionVersion]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger minor</Declaration>
+			
+			
+			<Anchor>//api/name/minor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareVersion/firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:</TokenIdentifier>
+			<Abstract type="html">Creates a PBFirmwareVersion object given its components. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use +[PBFirmwareVersion firmwareVersionWithMajor:minor:revision:suffix:commitHash:timestamp:]&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBFirmwareVersion+Legacy.h</DeclaredIn>
+			
+			<Declaration>+ (nullable instancetype)firmwareVersionWithOS:(NSInteger)os major:(NSInteger)major minor:(NSInteger)minor suffix:(nullable NSString *)suffix commitHash:(nullable NSString *)commitHash timestamp:(uint32_t)timestamp</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>os</Name>
+					<Abstract type="html">The version major number.</Abstract>
+				</Parameter><Parameter>
+					<Name>major</Name>
+					<Abstract type="html">The version minor number.</Abstract>
+				</Parameter><Parameter>
+					<Name>minor</Name>
+					<Abstract type="html">The version revision number.</Abstract>
+				</Parameter><Parameter>
+					<Name>suffix</Name>
+					<Abstract type="html">The version suffix. Can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>commitHash</Name>
+					<Abstract type="html">A version&apos;s commit hash. Can be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>timestamp</Name>
+					<Abstract type="html">The version timestamp.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

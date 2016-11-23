@@ -1,20 +1,19 @@
 source 'https://github.com/CocoaPods/Specs'
 
-platform :ios, '8.1'
+platform :ios, '9.3'
 
-# use_frameworks!
+use_frameworks!
+project 'PebbleKitExample.xcodeproj'
 
 target 'PebbleKitExample' do
   pod 'PebbleKit', :path => 'PebbleKit.podspec'
-  xcodeproj 'PebbleKitExample.xcodeproj'
 end
 
-target 'PebbleKitExampleTests', :exclusive => true do
+target 'PebbleKitExampleTests' do
   pod 'Specta'
   pod 'Expecta'
   pod 'OCMock'
   pod 'OHHTTPStubs'
-  xcodeproj 'PebbleKitExample.xcodeproj'
 end
 
 # Copy acknowledgements to the Settings.bundle

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/PBErrorCode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/PBErrorCode</TokenIdentifier>
+			<Abstract type="html">PebbleKit Error codes.
+Inspect the localizedDescription of any NSError objects for a description.</Abstract>
+			<DeclaredIn>PBErrors.h</DeclaredIn>
+            
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeNoSupportedProtocolsInInfoPlist</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeNoSupportedProtocolsInInfoPlist</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeErrorCreatingSession</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeErrorCreatingSession</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeOutputStreamError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeOutputStreamError</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeInputStreamError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeInputStreamError</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeSendMessageTimeout</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeSendMessageTimeout</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeEndpointDisallowed</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeEndpointDisallowed</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeVersionInfoTimeout</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeVersionInfoTimeout</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeCannotCreateSessionWhileClosing</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeCannotCreateSessionWhileClosing</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeNoAppUUID</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeNoAppUUID</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeAppMessageRejected</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeAppMessageRejected</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeAppMessageAckTimeout</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeAppMessageAckTimeout</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeDictionaryUnsupportedKeyClass</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeDictionaryUnsupportedKeyClass</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeDictionaryUnsupportedValueClass</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeDictionaryUnsupportedValueClass</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeDictionaryInternalConsistency</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeDictionaryInternalConsistency</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeInvalidArguments</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeInvalidArguments</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodePebbleAppUnreachable</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodePebbleAppUnreachable</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodePebbleAppRequestTimeout</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodePebbleAppRequestTimeout</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodePebbleAppEmptyResponse</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodePebbleAppEmptyResponse</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodePebbleAppUnexpectedResponse</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodePebbleAppUnexpectedResponse</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeServerNotAvailable</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeServerNotAvailable</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeDownloadFailed</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeDownloadFailed</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodePebbleNotConnected</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodePebbleNotConnected</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeMessageTooLong</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeMessageTooLong</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeBluetoothDisabled</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeBluetoothDisabled</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeBluetoothLowEnergyHandshakeFailed</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeBluetoothLowEnergyHandshakeFailed</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeFirmwareUpdateMetadataInvalid</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeFirmwareUpdateMetadataInvalid</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeBluetoothLowEnergyFailedToConnect</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeBluetoothLowEnergyFailedToConnect</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeBluetoothLowEnergyUnfaithful</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeBluetoothLowEnergyUnfaithful</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeTransportClosedError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeTransportClosedError</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBErrorCodeStreamInternalError</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBErrorCodeStreamInternalError</Declaration>
+            
+            <DeclaredIn>PBErrors.h</DeclaredIn>
+            
+            <NodeRef refid="23"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

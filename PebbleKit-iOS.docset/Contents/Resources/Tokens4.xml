@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBFirmwareMetadata.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBFirmwareMetadata</TokenIdentifier>
+			<Abstract type="html">Metainformation about a firmware running in a watch.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/setVersion:</TokenIdentifier>
+			<Abstract type="html">The version of the firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBFirmwareVersion</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) PBFirmwareVersion *version</Declaration>
+			
+			
+			<Anchor>//api/name/version</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/version</TokenIdentifier>
+			<Abstract type="html">The version of the firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBFirmwareVersion</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) PBFirmwareVersion *version</Declaration>
+			
+			
+			<Anchor>//api/name/version</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareMetadata/version</TokenIdentifier>
+			<Abstract type="html">The version of the firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBFirmwareVersion</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) PBFirmwareVersion *version</Declaration>
+			
+			
+			<Anchor>//api/name/version</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/setIsRecoveryFirmware:</TokenIdentifier>
+			<Abstract type="html">YES if the firmware is a recovery firmware, NO if it is a regular firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isRecoveryFirmware</Declaration>
+			
+			
+			<Anchor>//api/name/isRecoveryFirmware</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/isRecoveryFirmware</TokenIdentifier>
+			<Abstract type="html">YES if the firmware is a recovery firmware, NO if it is a regular firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isRecoveryFirmware</Declaration>
+			
+			
+			<Anchor>//api/name/isRecoveryFirmware</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareMetadata/isRecoveryFirmware</TokenIdentifier>
+			<Abstract type="html">YES if the firmware is a recovery firmware, NO if it is a regular firmware.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isRecoveryFirmware</Declaration>
+			
+			
+			<Anchor>//api/name/isRecoveryFirmware</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/setHardwarePlatform:</TokenIdentifier>
+			<Abstract type="html">The hardware platform variant with which the firmware is compatible.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) FirmwareMetadataPlatform hardwarePlatform</Declaration>
+			
+			
+			<Anchor>//api/name/hardwarePlatform</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBFirmwareMetadata/hardwarePlatform</TokenIdentifier>
+			<Abstract type="html">The hardware platform variant with which the firmware is compatible.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) FirmwareMetadataPlatform hardwarePlatform</Declaration>
+			
+			
+			<Anchor>//api/name/hardwarePlatform</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBFirmwareMetadata/hardwarePlatform</TokenIdentifier>
+			<Abstract type="html">The hardware platform variant with which the firmware is compatible.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) FirmwareMetadataPlatform hardwarePlatform</Declaration>
+			
+			
+			<Anchor>//api/name/hardwarePlatform</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareMetadata/hardwarePlatformToString:</TokenIdentifier>
+			<Abstract type="html">Converts a FirmwareMetadataPlatform value to a string.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)hardwarePlatformToString:(FirmwareMetadataPlatform)hardwarePlatform</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>hardwarePlatform</Name>
+					<Abstract type="html">The hardware platform value to convert</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A string of the hardware platform</Abstract></ReturnValue>
+			<Anchor>//api/name/hardwarePlatformToString:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBFirmwareMetadata/stringToHardwarePlatform:</TokenIdentifier>
+			<Abstract type="html">Converts an NSString hardware platform string to the corresponding
+FirmwareMetadataPlatform value.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+			
+			<Declaration>+ (FirmwareMetadataPlatform)stringToHardwarePlatform:(NSString *)hardwarePlatformString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>hardwarePlatformString</Name>
+					<Abstract type="html">The string representing the hardware platform.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The hardware platform enum value</Abstract></ReturnValue>
+			<Anchor>//api/name/stringToHardwarePlatform:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

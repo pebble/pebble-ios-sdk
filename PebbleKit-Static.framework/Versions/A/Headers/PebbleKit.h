@@ -1,6 +1,6 @@
 //
-//  PebbleSDK.h
-//  PebbleSDK
+//  PebbleKit.h
+//  PebbleKit
 //
 //  Created by Martijn Thé on 4/24/12.
 //  Copyright (c) 2012 Pebble Technology. All rights reserved.
@@ -14,23 +14,26 @@ FOUNDATION_EXPORT double PebbleKitVersionNumber;
 //! Project version string for PebbleKit.
 FOUNDATION_EXPORT const unsigned char PebbleKitVersionString[];
 
-#import <PebbleKit/PBLogConfig.h>
+#import <PebbleKit-Static/PBFirmwareVersion.h>
 
-#import <PebbleKit/PBWatch.h>
-#import <PebbleKit/PBWatch+AppMessages.h>
-#import <PebbleKit/PBWatch+Golf.h>
-#import <PebbleKit/PBWatch+Legacy.h>
-#import <PebbleKit/PBWatch+Ping.h>
-#import <PebbleKit/PBWatch+Sports.h>
-#import <PebbleKit/PBWatch+Version.h>
+#import <PebbleKit-Static/PBWatch.h>
+#import <PebbleKit-Static/PBWatch+AppMessages.h>
+#import <PebbleKit-Static/PBWatch+Golf.h>
+#import <PebbleKit-Static/PBWatch+Legacy.h>
+#import <PebbleKit-Static/PBWatch+Ping.h>
+#import <PebbleKit-Static/PBWatch+Sports.h>
+#import <PebbleKit-Static/PBWatch+Version.h>
 
-#import <PebbleKit/PBPebbleCentral.h>
-#import <PebbleKit/PBPebbleCentral+DefaultCentral.h>
-#import <PebbleKit/PBPebbleCentral+Legacy.h>
+#import <PebbleKit-Static/PBPebbleCentral.h>
+#import <PebbleKit-Static/PBPebbleCentral+DefaultCentral.h>
 
-#import <PebbleKit/PBBitmap.h>
-#import <PebbleKit/PBDataLoggingService.h>
-#import <PebbleKit/PBErrors.h>
+#import <PebbleKit-Static/PBBitmap.h>
+#import <PebbleKit-Static/PBDataLoggingService.h>
+#import <PebbleKit-Static/PBErrors.h>
 
-#import <PebbleKit/NSNumber+stdint.h>
-#import <PebbleKit/NSDictionary+Pebble.h>
+#import <PebbleKit-Static/NSNumber+stdint.h>
+#import <PebbleKit-Static/NSDictionary+Pebble.h>
+
+#pragma mark - Legacy behavior
+#import <PebbleKit-Static/PBFirmwareVersion+Legacy.h>
+#import <PebbleKit-Static/PBPebbleCentral+Legacy.h>

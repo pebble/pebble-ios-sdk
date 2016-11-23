@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBVersionInfo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBVersionInfo</TokenIdentifier>
+			<Abstract type="html">An instance of PBVersionInfo describes all the different system software (Pebble OS)
+on a Pebble watch and other auxiliary information.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+            
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBWatch</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setRunningFirmwareMetadata:</TokenIdentifier>
+			<Abstract type="html">The metadata of the firmware that is running.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *runningFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/runningFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/runningFirmwareMetadata</TokenIdentifier>
+			<Abstract type="html">The metadata of the firmware that is running.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *runningFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/runningFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/runningFirmwareMetadata</TokenIdentifier>
+			<Abstract type="html">The metadata of the firmware that is running.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *runningFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/runningFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setRecoveryFirmwareMetadata:</TokenIdentifier>
+			<Abstract type="html">The metadata of the recovery firmware that is in storage.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *recoveryFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/recoveryFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/recoveryFirmwareMetadata</TokenIdentifier>
+			<Abstract type="html">The metadata of the recovery firmware that is in storage.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *recoveryFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/recoveryFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/recoveryFirmwareMetadata</TokenIdentifier>
+			<Abstract type="html">The metadata of the recovery firmware that is in storage.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong, nullable) PBFirmwareMetadata *recoveryFirmwareMetadata</Declaration>
+			
+			
+			<Anchor>//api/name/recoveryFirmwareMetadata</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setSystemResources:</TokenIdentifier>
+			<Abstract type="html">The metadata of the system resources.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) PBResourceMetadata *systemResources</Declaration>
+			
+			
+			<Anchor>//api/name/systemResources</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/systemResources</TokenIdentifier>
+			<Abstract type="html">The metadata of the system resources.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) PBResourceMetadata *systemResources</Declaration>
+			
+			
+			<Anchor>//api/name/systemResources</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/systemResources</TokenIdentifier>
+			<Abstract type="html">The metadata of the system resources.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) PBResourceMetadata *systemResources</Declaration>
+			
+			
+			<Anchor>//api/name/systemResources</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setBootloaderVersion:</TokenIdentifier>
+			<Abstract type="html">The version of the bootloader.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UInt32 bootloaderVersion</Declaration>
+			
+			
+			<Anchor>//api/name/bootloaderVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/bootloaderVersion</TokenIdentifier>
+			<Abstract type="html">The version of the bootloader.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UInt32 bootloaderVersion</Declaration>
+			
+			
+			<Anchor>//api/name/bootloaderVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/bootloaderVersion</TokenIdentifier>
+			<Abstract type="html">The version of the bootloader.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) UInt32 bootloaderVersion</Declaration>
+			
+			
+			<Anchor>//api/name/bootloaderVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setHardwareVersion:</TokenIdentifier>
+			<Abstract type="html">The version of the hardware.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *hardwareVersion</Declaration>
+			
+			
+			<Anchor>//api/name/hardwareVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/hardwareVersion</TokenIdentifier>
+			<Abstract type="html">The version of the hardware.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *hardwareVersion</Declaration>
+			
+			
+			<Anchor>//api/name/hardwareVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/hardwareVersion</TokenIdentifier>
+			<Abstract type="html">The version of the hardware.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *hardwareVersion</Declaration>
+			
+			
+			<Anchor>//api/name/hardwareVersion</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setSerialNumber:</TokenIdentifier>
+			<Abstract type="html">The serial number.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setDeviceAddress:</TokenIdentifier>
+			<Abstract type="html">The current Bluetooth device address.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *deviceAddress</Declaration>
+			
+			
+			<Anchor>//api/name/deviceAddress</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/deviceAddress</TokenIdentifier>
+			<Abstract type="html">The current Bluetooth device address.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *deviceAddress</Declaration>
+			
+			
+			<Anchor>//api/name/deviceAddress</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/deviceAddress</TokenIdentifier>
+			<Abstract type="html">The current Bluetooth device address.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *deviceAddress</Declaration>
+			
+			
+			<Anchor>//api/name/deviceAddress</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setRemoteProtocolCapabilitiesFlags:</TokenIdentifier>
+			<Abstract type="html">Flags for the supported protocol features of the watch.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) PBRemoteProtocolCapabilitiesFlags remoteProtocolCapabilitiesFlags</Declaration>
+			
+			
+			<Anchor>//api/name/remoteProtocolCapabilitiesFlags</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/remoteProtocolCapabilitiesFlags</TokenIdentifier>
+			<Abstract type="html">Flags for the supported protocol features of the watch.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) PBRemoteProtocolCapabilitiesFlags remoteProtocolCapabilitiesFlags</Declaration>
+			
+			
+			<Anchor>//api/name/remoteProtocolCapabilitiesFlags</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/remoteProtocolCapabilitiesFlags</TokenIdentifier>
+			<Abstract type="html">Flags for the supported protocol features of the watch.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) PBRemoteProtocolCapabilitiesFlags remoteProtocolCapabilitiesFlags</Declaration>
+			
+			
+			<Anchor>//api/name/remoteProtocolCapabilitiesFlags</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/setHasBeenUnfaithful:</TokenIdentifier>
+			<Abstract type="html">Indicates if the previous connection for the watch was to this device.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) BOOL hasBeenUnfaithful</Declaration>
+			
+			
+			<Anchor>//api/name/hasBeenUnfaithful</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/hasBeenUnfaithful</TokenIdentifier>
+			<Abstract type="html">Indicates if the previous connection for the watch was to this device.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) BOOL hasBeenUnfaithful</Declaration>
+			
+			
+			<Anchor>//api/name/hasBeenUnfaithful</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBVersionInfo/hasBeenUnfaithful</TokenIdentifier>
+			<Abstract type="html">Indicates if the previous connection for the watch was to this device.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) BOOL hasBeenUnfaithful</Declaration>
+			
+			
+			<Anchor>//api/name/hasBeenUnfaithful</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/hasRecoveryFirmware</TokenIdentifier>
+			<Abstract type="html">YES if valid recovery firmware is installed, NO if not.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hasRecoveryFirmware</Declaration>
+			
+			
+			<Anchor>//api/name/hasRecoveryFirmware</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/hasSystemResources</TokenIdentifier>
+			<Abstract type="html">YES if valid system resources are installed, NO if not.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hasSystemResources</Declaration>
+			
+			
+			<Anchor>//api/name/hasSystemResources</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBVersionInfo/appMessagesSupported</TokenIdentifier>
+			<Abstract type="html">YES if app messages are supported, NO if not.</Abstract>
+			<DeclaredIn>PBVersionInfo.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)appMessagesSupported</Declaration>
+			
+			
+			<Anchor>//api/name/appMessagesSupported</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBPebbleCentral.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBPebbleCentral</TokenIdentifier>
+			<Abstract type="html">PebbleCentral plays the central role for client iOS apps (e.g. RunKeeper).</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setConnectedWatches:</TokenIdentifier>
+			<Abstract type="html">The watches that are currently connected. Do not cache the array because it can change over time.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *connectedWatches</Declaration>
+			
+			
+			<Anchor>//api/name/connectedWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/connectedWatches</TokenIdentifier>
+			<Abstract type="html">The watches that are currently connected. Do not cache the array because it can change over time.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *connectedWatches</Declaration>
+			
+			
+			<Anchor>//api/name/connectedWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/connectedWatches</TokenIdentifier>
+			<Abstract type="html">The watches that are currently connected. Do not cache the array because it can change over time.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *connectedWatches</Declaration>
+			
+			
+			<Anchor>//api/name/connectedWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setRegisteredWatches:</TokenIdentifier>
+			<Abstract type="html">The watches that are stored in the user preferences of the application.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *registeredWatches</Declaration>
+			
+			
+			<Anchor>//api/name/registeredWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/registeredWatches</TokenIdentifier>
+			<Abstract type="html">The watches that are stored in the user preferences of the application.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *registeredWatches</Declaration>
+			
+			
+			<Anchor>//api/name/registeredWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/registeredWatches</TokenIdentifier>
+			<Abstract type="html">The watches that are stored in the user preferences of the application.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSArray&lt;PBWatch*&gt; *registeredWatches</Declaration>
+			
+			
+			<Anchor>//api/name/registeredWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The central&apos;s delegate.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, weak) id&lt;PBPebbleCentralDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/delegate</TokenIdentifier>
+			<Abstract type="html">The central&apos;s delegate.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, weak) id&lt;PBPebbleCentralDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/delegate</TokenIdentifier>
+			<Abstract type="html">The central&apos;s delegate.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readwrite, weak) id&lt;PBPebbleCentralDelegate&gt; __nullable delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setAppUUID:</TokenIdentifier>
+			<Abstract type="html">Identifier of the watch application this companion app communicates with.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSUUID *appUUID</Declaration>
+			
+			
+			<Anchor>//api/name/appUUID</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/appUUID</TokenIdentifier>
+			<Abstract type="html">Identifier of the watch application this companion app communicates with.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSUUID *appUUID</Declaration>
+			
+			
+			<Anchor>//api/name/appUUID</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/appUUID</TokenIdentifier>
+			<Abstract type="html">Identifier of the watch application this companion app communicates with.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSUUID *appUUID</Declaration>
+			
+			
+			<Anchor>//api/name/appUUID</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setAppUUIDs:</TokenIdentifier>
+			<Abstract type="html">The list of App-UUIDs this PebbleCentral wants to talk to.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/addAppUUID:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, copy) NSSet&lt;NSUUID*&gt; *appUUIDs</Declaration>
+			
+			
+			<Anchor>//api/name/appUUIDs</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/appUUIDs</TokenIdentifier>
+			<Abstract type="html">The list of App-UUIDs this PebbleCentral wants to talk to.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/addAppUUID:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, copy) NSSet&lt;NSUUID*&gt; *appUUIDs</Declaration>
+			
+			
+			<Anchor>//api/name/appUUIDs</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/appUUIDs</TokenIdentifier>
+			<Abstract type="html">The list of App-UUIDs this PebbleCentral wants to talk to.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/addAppUUID:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, copy) NSSet&lt;NSUUID*&gt; *appUUIDs</Declaration>
+			
+			
+			<Anchor>//api/name/appUUIDs</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/addAppUUID:</TokenIdentifier>
+			<Abstract type="html">Registers a new App-UUID with appUUIDs.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/appUUIDs</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)addAppUUID:(NSUUID *)appUUID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The app UUID to register.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addAppUUID:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/run</TokenIdentifier>
+			<Abstract type="html">Registers and announces internal Bluetooth services. Might cause a dialog to allow this
+app to talk to other devices.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (void)run</Declaration>
+			
+			
+			<Anchor>//api/name/run</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/isMobileAppInstalled</TokenIdentifier>
+			<Abstract type="html">Determines if the Pebble iOS app is installed in the device.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isMobileAppInstalled</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the Pebble iOS app is installed, NO if it is not installed.</Abstract></ReturnValue>
+			<Anchor>//api/name/isMobileAppInstalled</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/installMobileApp</TokenIdentifier>
+			<Abstract type="html">Redirects to Pebble in the App Store, so the user can install the app.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (void)installMobileApp</Declaration>
+			
+			
+			<Anchor>//api/name/installMobileApp</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/unregisterAllWatches</TokenIdentifier>
+			<Abstract type="html">Wipes out the data associated with the registered watches, that is stored on the phone.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (void)unregisterAllWatches</Declaration>
+			
+			
+			<Anchor>//api/name/unregisterAllWatches</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/lastConnectedWatch</TokenIdentifier>
+			<Abstract type="html">Returns the most recently connected watch from the registeredWatches array.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (PBWatch *__nullable)lastConnectedWatch</Declaration>
+			
+			
+			<Anchor>//api/name/lastConnectedWatch</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/dataLoggingServiceForAppUUID:</TokenIdentifier>
+			<Abstract type="html">Returns the DataLoggingService for a (previously registered) appUUID</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (PBDataLoggingService *__nullable)dataLoggingServiceForAppUUID:(NSUUID *)appUUID</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appUUID</Name>
+					<Abstract type="html">The app UUID to recover the data logging service.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/dataLoggingServiceForAppUUID:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleCentral/defaultCentral</TokenIdentifier>
+			<Abstract type="html">The default central singleton instance.</Abstract>
+			<DeclaredIn>PBPebbleCentral+DefaultCentral.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)defaultCentral</Declaration>
+			
+			<ReturnValue><Abstract type="html">The default central singleton instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/defaultCentral</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/hasValidAppUUID</TokenIdentifier>
+			<Abstract type="html">Indicates if the central has been correctly configured with an app UUID. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use appUUID != nil instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hasValidAppUUID</Declaration>
+			
+			
+			<Anchor>//api/name/hasValidAppUUID</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleCentral/setDebugLogsEnabled:</TokenIdentifier>
+			<Abstract type="html">Enables or disables debug logging for PebbleKit. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use +[PBPebbleKitLogging setLogLevel:] instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>+ (void)setDebugLogsEnabled:(BOOL)logsEnabled</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>logsEnabled</Name>
+					<Abstract type="html">Whether logging should be enabled or not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDebugLogsEnabled:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleCentral/setLogLevel:</TokenIdentifier>
+			<Abstract type="html">Configures which events should be logged. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use +[PBPebbleKitLogging setLogLevel:] instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLogLevel:(PBPebbleKitLogLevel)logLevel</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>logLevel</Name>
+					<Abstract type="html">One of the values in PBPebbleKitLogLevel, which will be the
+maximum level that will be logged. You can use
+PBPebbleKitLogLevelOff to disable all logging.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLogLevel:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/setDataLoggingService:</TokenIdentifier>
+			<Abstract type="html">Use dataLoggingServiceForAppUUID: instead. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use dataLoggingServiceForAppUUID: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingService *dataLoggingService</Declaration>
+			
+			
+			<Anchor>//api/name/dataLoggingService</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleCentral/dataLoggingService</TokenIdentifier>
+			<Abstract type="html">Use dataLoggingServiceForAppUUID: instead. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use dataLoggingServiceForAppUUID: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingService *dataLoggingService</Declaration>
+			
+			
+			<Anchor>//api/name/dataLoggingService</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBPebbleCentral/dataLoggingService</TokenIdentifier>
+			<Abstract type="html">Use dataLoggingServiceForAppUUID: instead. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use dataLoggingServiceForAppUUID: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBPebbleCentral+Legacy.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingService *dataLoggingService</Declaration>
+			
+			
+			<Anchor>//api/name/dataLoggingService</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

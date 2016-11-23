@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBSportsUpdate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBSportsUpdate</TokenIdentifier>
+			<Abstract type="html">Packages a UI update of the sports app.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setTime:</TokenIdentifier>
+			<Abstract type="html">The current time in seconds.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/time</TokenIdentifier>
+			<Abstract type="html">The current time in seconds.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/time</TokenIdentifier>
+			<Abstract type="html">The current time in seconds.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval time</Declaration>
+			
+			
+			<Anchor>//api/name/time</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setDistance:</TokenIdentifier>
+			<Abstract type="html">The current distance in kilometers or miles.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetMetric:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/distance</TokenIdentifier>
+			<Abstract type="html">The current distance in kilometers or miles.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetMetric:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/distance</TokenIdentifier>
+			<Abstract type="html">The current distance in kilometers or miles.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetMetric:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float distance</Declaration>
+			
+			
+			<Anchor>//api/name/distance</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setPace:</TokenIdentifier>
+			<Abstract type="html">The current pace in seconds per kilometer or seconds per mile.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval pace</Declaration>
+			
+			
+			<Anchor>//api/name/pace</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/pace</TokenIdentifier>
+			<Abstract type="html">The current pace in seconds per kilometer or seconds per mile.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval pace</Declaration>
+			
+			
+			<Anchor>//api/name/pace</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/pace</TokenIdentifier>
+			<Abstract type="html">The current pace in seconds per kilometer or seconds per mile.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) NSTimeInterval pace</Declaration>
+			
+			
+			<Anchor>//api/name/pace</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setSpeed:</TokenIdentifier>
+			<Abstract type="html">The current speed in kilometers per hour or miles per hour.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float speed</Declaration>
+			
+			
+			<Anchor>//api/name/speed</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/speed</TokenIdentifier>
+			<Abstract type="html">The current speed in kilometers per hour or miles per hour.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float speed</Declaration>
+			
+			
+			<Anchor>//api/name/speed</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/speed</TokenIdentifier>
+			<Abstract type="html">The current speed in kilometers per hour or miles per hour.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float speed</Declaration>
+			
+			
+			<Anchor>//api/name/speed</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setHeartRate:</TokenIdentifier>
+			<Abstract type="html">The current heart rate in beats per minute.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) uint8_t heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/heartRate</TokenIdentifier>
+			<Abstract type="html">The current heart rate in beats per minute.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) uint8_t heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/heartRate</TokenIdentifier>
+			<Abstract type="html">The current heart rate in beats per minute.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) uint8_t heartRate</Declaration>
+			
+			
+			<Anchor>//api/name/heartRate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setCustomLabel:</TokenIdentifier>
+			<Abstract type="html">A custom label to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customLabel</Declaration>
+			
+			
+			<Anchor>//api/name/customLabel</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/customLabel</TokenIdentifier>
+			<Abstract type="html">A custom label to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customLabel</Declaration>
+			
+			
+			<Anchor>//api/name/customLabel</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/customLabel</TokenIdentifier>
+			<Abstract type="html">A custom label to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customLabel</Declaration>
+			
+			
+			<Anchor>//api/name/customLabel</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setCustomValue:</TokenIdentifier>
+			<Abstract type="html">A custom value to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customValue</Declaration>
+			
+			
+			<Anchor>//api/name/customValue</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/customValue</TokenIdentifier>
+			<Abstract type="html">A custom value to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customValue</Declaration>
+			
+			
+			<Anchor>//api/name/customValue</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/customValue</TokenIdentifier>
+			<Abstract type="html">A custom value to show in the sports UI.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, nullable) NSString *customValue</Declaration>
+			
+			
+			<Anchor>//api/name/customValue</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setAppMessageDictionary:</TokenIdentifier>
+			<Abstract type="html">Creates an update dictionary from the receiver, that can be used with
+[PBWatch sportsAppUpdate:onSent:].</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppUpdate:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) NSDictionary&lt;NSNumber*id&gt; *appMessageDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/appMessageDictionary</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/appMessageDictionary</TokenIdentifier>
+			<Abstract type="html">Creates an update dictionary from the receiver, that can be used with
+[PBWatch sportsAppUpdate:onSent:].</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppUpdate:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) NSDictionary&lt;NSNumber*id&gt; *appMessageDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/appMessageDictionary</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/appMessageDictionary</TokenIdentifier>
+			<Abstract type="html">Creates an update dictionary from the receiver, that can be used with
+[PBWatch sportsAppUpdate:onSent:].</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppUpdate:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic, readonly) NSDictionary&lt;NSNumber*id&gt; *appMessageDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/appMessageDictionary</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/updateWatch:completion:</TokenIdentifier>
+			<Abstract type="html">Sends an update to the watch.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>- (void)updateWatch:(PBWatch *)watch completion:(void ( ^ __nullable ) ( NSError *__nullable error ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch to send the update to.</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">Block that will be called when the update either succeeds
+or fails.
+
+- error: nil if the operation was successful, or else an
+NSError with more information on why it failed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/updateWatch:completion:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBSportsUpdate/timeStringFromSeconds:</TokenIdentifier>
+			<Abstract type="html">Creates a formatted time string from a total seconds value, formatted as
+&quot;h:mm:ss&quot;.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)timeStringFromSeconds:(NSTimeInterval)seconds</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seconds</Name>
+					<Abstract type="html">The number of seconds from which to create the time string.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Formatted time as &quot;h:mm:ss&quot;</Abstract></ReturnValue>
+			<Anchor>//api/name/timeStringFromSeconds:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBSportsUpdate/decimalStringFromFloat:</TokenIdentifier>
+			<Abstract type="html">Creates a formatted decimal string with one decimal number.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)decimalStringFromFloat:(float)decimal</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>decimal</Name>
+					<Abstract type="html">The decimal number to format as a string.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The formatted decimal number.</Abstract></ReturnValue>
+			<Anchor>//api/name/decimalStringFromFloat:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/setData:</TokenIdentifier>
+			<Abstract type="html">General purpose data variable. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer either pace or speed.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetLabel:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/data</TokenIdentifier>
+			<Abstract type="html">General purpose data variable. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer either pace or speed.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetLabel:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBSportsUpdate/data</TokenIdentifier>
+			<Abstract type="html">General purpose data variable. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer either pace or speed.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppSetLabel:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) float data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBSportsUpdate/updateWithTime:distance:data:</TokenIdentifier>
+			<Abstract type="html">Creates a new PBSportsUpdate with the given time, distance and data. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer -[PBSportsUpdate init] and filling the properties.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)updateWithTime:(NSTimeInterval)time distance:(float)distance data:(float)data</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>time</Name>
+					<Abstract type="html">The current time in seconds.</Abstract>
+				</Parameter><Parameter>
+					<Name>distance</Name>
+					<Abstract type="html">The current distance in kilometers or miles.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">General purpose data variable.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A new PBSportsUpdate with the given time, distance and data.</Abstract></ReturnValue>
+			<Anchor>//api/name/updateWithTime:distance:data:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBSportsUpdate/dictionary</TokenIdentifier>
+			<Abstract type="html">Creates an update dictionary from the receiver that can be used with
+[PBWatch sportsAppUpdate:onSent:]. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer using -[PBSportsUpdate appMessageDictionary].&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppUpdate:onSent:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (NSDictionary *)dictionary</Declaration>
+			
+			
+			<Anchor>//api/name/dictionary</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBSportsUpdate/timeStringFromFloat:</TokenIdentifier>
+			<Abstract type="html">Creates a formatted time string from a total seconds value, formatted as
+&quot;h:mm:ss&quot;. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Prefer +[PBSportsUpdate timeStringFromSeconds:].&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)timeStringFromFloat:(float)seconds</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seconds</Name>
+					<Abstract type="html">The number of seconds from which to create the time string.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Formatted time as &quot;h:mm:ss&quot;</Abstract></ReturnValue>
+			<Anchor>//api/name/timeStringFromFloat:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

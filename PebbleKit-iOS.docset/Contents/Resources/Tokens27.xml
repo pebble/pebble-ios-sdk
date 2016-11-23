@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/PBUnitSystem.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/PBUnitSystem</TokenIdentifier>
+			<Abstract type="html">The unit system available for the Sports app.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBUnitSystemMetric</TokenIdentifier>
+            <Abstract type="html">The metric system. Use kilometers, kilometers per hour and minutes per
+kilometer.</Abstract>
+            <Declaration>PBUnitSystemMetric</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="27"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBUnitSystemImperial</TokenIdentifier>
+            <Abstract type="html">The imperial system. Use miles, miles per hour and minutes per mile.</Abstract>
+            <Declaration>PBUnitSystemImperial</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="27"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

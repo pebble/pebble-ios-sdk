@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBResourceMetadata.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBResourceMetadata</TokenIdentifier>
+			<Abstract type="html">Instances of PBResourceMetadata describe (system) resources.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+            
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/PBVersionInfo</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBResourceMetadata/setTimestamp:</TokenIdentifier>
+			<Abstract type="html">The version of the resources as the Epoch timestamp of the Git commit.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBResourceMetadata/timestamp</TokenIdentifier>
+			<Abstract type="html">The version of the resources as the Epoch timestamp of the Git commit.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBResourceMetadata/timestamp</TokenIdentifier>
+			<Abstract type="html">The version of the resources as the Epoch timestamp of the Git commit.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBResourceMetadata/setCrc:</TokenIdentifier>
+			<Abstract type="html">The checksum of the resources.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t crc</Declaration>
+			
+			
+			<Anchor>//api/name/crc</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBResourceMetadata/crc</TokenIdentifier>
+			<Abstract type="html">The checksum of the resources.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t crc</Declaration>
+			
+			
+			<Anchor>//api/name/crc</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBResourceMetadata/crc</TokenIdentifier>
+			<Abstract type="html">The checksum of the resources.</Abstract>
+			<DeclaredIn>PBResourceMetadata.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t crc</Declaration>
+			
+			
+			<Anchor>//api/name/crc</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

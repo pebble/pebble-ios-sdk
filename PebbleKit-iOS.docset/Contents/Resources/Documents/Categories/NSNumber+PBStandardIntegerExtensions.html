@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>NSNumber(stdint) Category Reference</title>
+	<title>NSNumber(PBStandardIntegerExtensions) Category Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -54,47 +54,47 @@
 
 	
 	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/pb_byteWidth">pb_byteWidth</option>
+		
+		<option value="//api/name/pb_float">pb_float</option>
+		
+		<option value="//api/name/pb_int16Value">pb_int16Value</option>
+		
+		<option value="//api/name/pb_int32Value">pb_int32Value</option>
+		
+		<option value="//api/name/pb_int8Value">pb_int8Value</option>
+		
+		<option value="//api/name/pb_signed">pb_signed</option>
+		
+		<option value="//api/name/pb_uint16Value">pb_uint16Value</option>
+		
+		<option value="//api/name/pb_uint32Value">pb_uint32Value</option>
+		
+		<option value="//api/name/pb_uint8Value">pb_uint8Value</option>
+		
+	</optgroup>
+	
 
 	
 	<optgroup label="Class Methods">
 		
-		<option value="//api/name/numberWithInt16:">+ numberWithInt16:</option>
+		<option value="//api/name/pb_numberWithInt16:">+ pb_numberWithInt16:</option>
 		
-		<option value="//api/name/numberWithInt32:">+ numberWithInt32:</option>
+		<option value="//api/name/pb_numberWithInt32:">+ pb_numberWithInt32:</option>
 		
-		<option value="//api/name/numberWithInt8:">+ numberWithInt8:</option>
+		<option value="//api/name/pb_numberWithInt8:">+ pb_numberWithInt8:</option>
 		
-		<option value="//api/name/numberWithUint16:">+ numberWithUint16:</option>
+		<option value="//api/name/pb_numberWithUint16:">+ pb_numberWithUint16:</option>
 		
-		<option value="//api/name/numberWithUint32:">+ numberWithUint32:</option>
+		<option value="//api/name/pb_numberWithUint32:">+ pb_numberWithUint32:</option>
 		
-		<option value="//api/name/numberWithUint8:">+ numberWithUint8:</option>
+		<option value="//api/name/pb_numberWithUint8:">+ pb_numberWithUint8:</option>
 		
 	</optgroup>
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/int16Value">- int16Value</option>
-		
-		<option value="//api/name/int32Value">- int32Value</option>
-		
-		<option value="//api/name/int8Value">- int8Value</option>
-		
-		<option value="//api/name/isFloat">- isFloat</option>
-		
-		<option value="//api/name/isSigned">- isSigned</option>
-		
-		<option value="//api/name/uint16Value">- uint16Value</option>
-		
-		<option value="//api/name/uint32Value">- uint32Value</option>
-		
-		<option value="//api/name/uint8Value">- uint8Value</option>
-		
-		<option value="//api/name/width">- width</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -109,7 +109,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">NSNumber(stdint) Category Reference</h1>
+					<h1 class="title">NSNumber(PBStandardIntegerExtensions) Category Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -126,7 +126,7 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>This category exposes the capabilities the underlying CFNumber to explicitely
-store the signedness and the <a href="#//api/name/width">width</a> of the storage.</p>
+store the signedness and the width of the storage.</p>
 					</div>
 					
 					
@@ -142,8 +142,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/uint32Value" title="uint32Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/uint32Value">&ndash;&nbsp;uint32Value</a></code>
+	<a name="//api/name/pb_uint32Value" title="pb_uint32Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_uint32Value">&nbsp;&nbsp;pb_uint32Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,7 +158,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (uint32_t)uint32Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) uint32_t pb_uint32Value</code></div>
 
 		    
 			
@@ -167,11 +167,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 32-bits wide, unsigned integer.</p>
-			</div>
 			
 
 			
@@ -188,8 +183,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/uint16Value" title="uint16Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/uint16Value">&ndash;&nbsp;uint16Value</a></code>
+	<a name="//api/name/pb_uint16Value" title="pb_uint16Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_uint16Value">&nbsp;&nbsp;pb_uint16Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -204,7 +199,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (uint16_t)uint16Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) uint16_t pb_uint16Value</code></div>
 
 		    
 			
@@ -213,11 +208,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 16-bits wide, unsigned integer.</p>
-			</div>
 			
 
 			
@@ -234,8 +224,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/uint8Value" title="uint8Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/uint8Value">&ndash;&nbsp;uint8Value</a></code>
+	<a name="//api/name/pb_uint8Value" title="pb_uint8Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_uint8Value">&nbsp;&nbsp;pb_uint8Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -250,7 +240,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (uint8_t)uint8Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) uint8_t pb_uint8Value</code></div>
 
 		    
 			
@@ -259,11 +249,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 8-bits wide, unsigned integer.</p>
-			</div>
 			
 
 			
@@ -280,8 +265,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/int32Value" title="int32Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/int32Value">&ndash;&nbsp;int32Value</a></code>
+	<a name="//api/name/pb_int32Value" title="pb_int32Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_int32Value">&nbsp;&nbsp;pb_int32Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -296,7 +281,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int32_t)int32Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) int32_t pb_int32Value</code></div>
 
 		    
 			
@@ -305,11 +290,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 32-bits wide, signed integer.</p>
-			</div>
 			
 
 			
@@ -326,8 +306,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/int16Value" title="int16Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/int16Value">&ndash;&nbsp;int16Value</a></code>
+	<a name="//api/name/pb_int16Value" title="pb_int16Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_int16Value">&nbsp;&nbsp;pb_int16Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -342,7 +322,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int16_t)int16Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) int16_t pb_int16Value</code></div>
 
 		    
 			
@@ -351,11 +331,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 16-bits wide, signed integer.</p>
-			</div>
 			
 
 			
@@ -372,8 +347,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/int8Value" title="int8Value"></a>
-	<h3 class="method-title"><code><a href="#//api/name/int8Value">&ndash;&nbsp;int8Value</a></code>
+	<a name="//api/name/pb_int8Value" title="pb_int8Value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_int8Value">&nbsp;&nbsp;pb_int8Value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -388,7 +363,7 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int8_t)int8Value</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) int8_t pb_int8Value</code></div>
 
 		    
 			
@@ -397,11 +372,6 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Interprets the receiver as a 8-bits wide, signed integer.</p>
-			</div>
 			
 
 			
@@ -418,284 +388,8 @@ store the signedness and the <a href="#//api/name/width">width</a> of the storag
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/numberWithUint32:" title="numberWithUint32:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithUint32:">+&nbsp;numberWithUint32:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 32-bits wide, unsigned integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithUint32:(uint32_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 32-bits wide, unsigned integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberWithUint16:" title="numberWithUint16:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithUint16:">+&nbsp;numberWithUint16:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 16-bits wide, unsigned integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithUint16:(uint16_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 16-bits wide, unsigned integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberWithUint8:" title="numberWithUint8:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithUint8:">+&nbsp;numberWithUint8:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 8-bits wide, unsigned integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithUint8:(uint8_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 8-bits wide, unsigned integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberWithInt32:" title="numberWithInt32:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithInt32:">+&nbsp;numberWithInt32:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 32-bits wide, signed integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithInt32:(int32_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 32-bits wide, signed integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberWithInt16:" title="numberWithInt16:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithInt16:">+&nbsp;numberWithInt16:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 16-bits wide, signed integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithInt16:(int16_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 16-bits wide, signed integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/numberWithInt8:" title="numberWithInt8:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/numberWithInt8:">+&nbsp;numberWithInt8:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Creates an NSNumber with a 8-bits wide, signed integer.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>+ (NSNumber *)numberWithInt8:(int8_t)<em>value</em></code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an NSNumber with a 8-bits wide, signed integer.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/isFloat" title="isFloat"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isFloat">&ndash;&nbsp;isFloat</a></code>
+	<a name="//api/name/pb_float" title="pb_float"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_float">&nbsp;&nbsp;pb_float</a></code>
 </h3>
 
 	<div class="method-info">
@@ -711,7 +405,7 @@ as a floating pointer number or not.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isFloat</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly, getter=pb_isFloat) BOOL pb_float</code></div>
 
 		    
 			
@@ -720,12 +414,6 @@ as a floating pointer number or not.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Gets whether the number that is stored by the receiver should be interpreted
-as a floating pointer number or not.</p>
-			</div>
 			
 
 			
@@ -742,8 +430,8 @@ as a floating pointer number or not.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/isSigned" title="isSigned"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isSigned">&ndash;&nbsp;isSigned</a></code>
+	<a name="//api/name/pb_signed" title="pb_signed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_signed">&nbsp;&nbsp;pb_signed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -759,7 +447,7 @@ as a signed integer or not.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isSigned</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly, getter=pb_isSigned) BOOL pb_signed</code></div>
 
 		    
 			
@@ -768,12 +456,6 @@ as a signed integer or not.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Gets whether the number that is stored by the receiver should be interpreted
-as a signed integer or not.</p>
-			</div>
 			
 
 			
@@ -790,8 +472,8 @@ as a signed integer or not.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/width" title="width"></a>
-	<h3 class="method-title"><code><a href="#//api/name/width">&ndash;&nbsp;width</a></code>
+	<a name="//api/name/pb_byteWidth" title="pb_byteWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_byteWidth">&nbsp;&nbsp;pb_byteWidth</a></code>
 </h3>
 
 	<div class="method-info">
@@ -806,7 +488,7 @@ as a signed integer or not.</p>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (uint8_t)width</code></div>
+			<div class="method-subsection method-declaration"><code>@property (readonly) uint8_t pb_byteWidth</code></div>
 
 		    
 			
@@ -816,10 +498,323 @@ as a signed integer or not.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Gets the width in bytes of the integer that is stored by the receiver.</p>
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
 			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithUint32:" title="pb_numberWithUint32:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithUint32:">+&nbsp;pb_numberWithUint32:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 32-bits wide, unsigned integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithUint32:(uint32_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithUint16:" title="pb_numberWithUint16:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithUint16:">+&nbsp;pb_numberWithUint16:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 16-bits wide, unsigned integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithUint16:(uint16_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithUint8:" title="pb_numberWithUint8:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithUint8:">+&nbsp;pb_numberWithUint8:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 8-bits wide, unsigned integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithUint8:(uint8_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithInt32:" title="pb_numberWithInt32:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithInt32:">+&nbsp;pb_numberWithInt32:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 32-bits wide, signed integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithInt32:(int32_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithInt16:" title="pb_numberWithInt16:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithInt16:">+&nbsp;pb_numberWithInt16:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 16-bits wide, signed integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithInt16:(int16_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">NSNumber+stdint.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pb_numberWithInt8:" title="pb_numberWithInt8:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pb_numberWithInt8:">+&nbsp;pb_numberWithInt8:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an NSNumber with a 8-bits wide, signed integer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSNumber *)pb_numberWithInt8:(int8_t)<em>value</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>The value for the created number.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
 			
 
 			
@@ -850,10 +845,10 @@ as a signed integer or not.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-11</p>
+						<p class="copyright">Copyright &copy; 2016 Pebble Technology Corp. All rights reserved. Updated: 2016-11-23</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

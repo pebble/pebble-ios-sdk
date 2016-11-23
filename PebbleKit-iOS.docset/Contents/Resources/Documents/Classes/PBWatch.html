@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -104,8 +104,6 @@
 		
 		<option value="//api/name/friendlyDescription">- friendlyDescription</option>
 		
-		<option value="//api/name/getVersionInfo:onTimeout:">- getVersionInfo:onTimeout:</option>
-		
 		<option value="//api/name/golfAppAddReceiveUpdateHandler:">- golfAppAddReceiveUpdateHandler:</option>
 		
 		<option value="//api/name/golfAppKill:">- golfAppKill:</option>
@@ -139,6 +137,8 @@
 		<option value="//api/name/sportsAppSetLabel:onSent:">- sportsAppSetLabel:onSent:</option>
 		
 		<option value="//api/name/sportsAppSetMetric:onSent:">- sportsAppSetMetric:onSent:</option>
+		
+		<option value="//api/name/sportsAppSetUnitSystem:onSent:">- sportsAppSetUnitSystem:onSent:</option>
 		
 		<option value="//api/name/sportsAppUpdate:onSent:">- sportsAppUpdate:onSent:</option>
 		
@@ -181,31 +181,6 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Represents a Pebble watch.</p>
-
-<p>On iOS, there is the notion of a &ldquo;communication session&rdquo; between an app and
-the Pebble watch. You can imagine this as a &ldquo;data pipe&rdquo; directly from the
-watch to your app. However, there is only one session for 3rd party apps.
-This one session has to be shared among all 3rd party apps that want to
-communicate with Pebble (excluding the official Pebble iOS app).</p>
-
-<p>Unfortunately, the session can only be opened from the phone app. This means
-that the iOS app has to start talking to the watch first to open the
-communications channel; the other way around is not possible.
-Most methods in the PBWatch categories (Ping), (Version), (Sports), (Golf)
-and (AppMessages) all implicitly open the shared communication session.</p>
-
-<p>Lastly, iOS provides no good way to manage how the one shared session is
-accessed or used. Simply, the last iOS app to try to open it, wins and gets
-to use it. Therefore, it is important that your iOS app does <strong>not</strong> try
-communicate when a Pebble is <a href="#//api/name/connected">connected</a>.</p>
-
-<p>When the user has stopped using your app (e.g. when going to the background
-or when explicitely stopping a certain activity in the app) your iOS app
-should close the communication session using the <a href="#//api/name/closeSession:">closeSession:</a> method.</p>
-
-<p>Instances of <a href="../Classes/PBFirmwareMetadata.html">PBFirmwareMetadata</a> describe a firmware in terms of
-its version, whether it is a recovery firmware and its intended hardware
-platform.</p>
 					</div>
 					
 					
@@ -249,7 +224,7 @@ platform.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The central that is managing this watch.</p><p>This property is KVO-compliant.</p>
+				<p>This property is KVO-compliant.</p>
 			</div>
 			
 
@@ -295,7 +270,7 @@ platform.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>YES if the receiver it&rsquo;s the first time that watch has been seen.</p><p>This property is KVO-compliant.</p>
+				<p>This property is KVO-compliant.</p>
 			</div>
 			
 
@@ -341,7 +316,7 @@ platform.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>YES if the receiver is connected and NO if the receiver is disconnected.</p><p>This property is KVO-compliant.</p>
+				<p>This property is KVO-compliant.</p>
 			</div>
 			
 
@@ -386,12 +361,6 @@ This is the same name as the user will see in the iOS Bluetooth Settings.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The human-friendly name of the receiver.
-This is the same name as the user will see in the iOS Bluetooth Settings.</p>
-			</div>
-			
 
 			
 
@@ -433,11 +402,6 @@ This is the same name as the user will see in the iOS Bluetooth Settings.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The serial number of the receiver.</p>
-			</div>
-			
 
 			
 
@@ -478,11 +442,6 @@ This is the same name as the user will see in the iOS Bluetooth Settings.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The versionInfo of the receiver.</p>
-			</div>
 			
 
 			
@@ -533,11 +492,6 @@ This is the same name as the user will see in the iOS Bluetooth Settings.</p>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The delegate of the watch that will be notified of disconnections and errors.</p>
-			</div>
 			
 
 			
@@ -591,13 +545,6 @@ the information if neccessary.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The userInfo property can be used to associate application specific data
-with the watch. Note that the application itself is responsible for persisting
-the information if neccessary.</p>
-			</div>
-			
 
 			
 
@@ -641,13 +588,6 @@ disconnects. While the watch is being <a href="#//api/name/connected">connected<
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The date when the watch was last known to be <a href="#//api/name/connected">connected</a>.
-This date will be updated automatically when the watch connects and
-disconnects. While the watch is being <a href="#//api/name/connected">connected</a>, this date will not be updated.</p>
-			</div>
-			
 
 			
 
@@ -687,18 +627,13 @@ disconnects. While the watch is being <a href="#//api/name/connected">connected<
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>localized, user-friendly summary of the receiver, including
+				<p>developer-friendly summary of the receiver, including
 software and hardware version information, if available.</p>
 			</div>
 			
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Developer-friendly debugging description of the watch.</p>
-			</div>
 			
 
 			
@@ -726,7 +661,7 @@ software and hardware version information, if available.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Releases the shared session to the watch (if one exists).</p>
+				<p>Releases the shared session to the watch (if one exists). (<b class="deprecated">Deprecated:</b><span class="deprecated"> Remove usages of this method. The implementation is empty.</span>)</p>
 			</div>
 			
 		    
@@ -743,11 +678,12 @@ software and hardware version information, if available.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Depending on availability a per-app dedicated Bluetooth LE
-based session (CoreBluetooth.framework) will be used to talk to the watch.
-In other cases a Bluetooth Classic based session (ExternalAccessory.framework)
-will be used that is shared between all 3rd party iOS apps.
-Once the user is done using the app/watch-integration, the shared sessions
+				<p>Depending on availability a per-app dedicated Bluetooth LE based session
+(CoreBluetooth.framework) will be used to talk to the watch. In other cases
+a Bluetooth Classic based session (ExternalAccessory.framework) will be used
+that is shared between all 3rd party iOS apps.</p>
+
+<p>Once the user is done using the app/watch-integration, the shared sessions
 has to be released using this method so it can be used by other apps.</p>
 			</div>
 			
@@ -760,165 +696,6 @@ has to be released using this method so it can be used by other apps.</p>
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Ping Methods" name="task_Ping Methods"></a>
-						<h2 class="task-title">Ping Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/pingWithCookie:onPong:onTimeout:" title="pingWithCookie:onPong:onTimeout:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/pingWithCookie:onPong:onTimeout:">&ndash;&nbsp;pingWithCookie:onPong:onTimeout:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Sends a ping to the watch.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)pingWithCookie:(UInt32)<em>cookie</em> onPong:(void ( ^ __nullable ) ( PBWatch *watch , UInt32 cookie ))<em>onPong</em> onTimeout:(void ( ^ __nullable ) ( PBWatch *watch , UInt32 cookie ))<em>onTimeout</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>cookie</code></th>
-						<td><p>The cookie that was initially passed when calling this method.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onPong</code></th>
-						<td><p>The block handler that will be called when the &ldquo;pong&rdquo; reply from the watch has been received.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onTimeout</code></th>
-						<td><p>The block handler that will be called when the watch failed to reply in time.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that sent the &ldquo;pong&rdquo; reply, which is &ldquo;self&rdquo;. It is passed in to avoid retain loops.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends a ping to the watch.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Ping.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Legacy Methods" name="task_Legacy Methods"></a>
-						<h2 class="task-title">Legacy Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/closeSession:" title="closeSession:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/closeSession:">&ndash;&nbsp;closeSession:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Closes the communication session with the watch.
-Since there is only one, shared session for all 3rd party iOS apps,
-an app should close the session after the user is done using the app/watch-integration,
-so it can be used by other apps.
-The communication session is implicitely opened automatically when needed.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)closeSession:(void ( ^ __nullable ) ( void ))<em>onDone</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onDone</code></th>
-						<td><p>Callback block that will be called after the closing of the session
-has completed. If there is no open session, the onDone block will (also) be executed
-asynchronously on the calling queue.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Closes the communication session with the watch.
-Since there is only one, shared session for all 3rd party iOS apps,
-an app should close the session after the user is done using the app/watch-integration,
-so it can be used by other apps.
-The communication session is implicitely opened automatically when needed.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Legacy.h</code></p>
 			</div>
 			
 			
@@ -944,8 +721,7 @@ The communication session is implicitely opened automatically when needed.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Queries the watch whether Golf Messages are supported.
-Must be called from the main thread.</p>
+				<p>Queries the watch whether Golf Messages are supported.</p>
 			</div>
 			
 		    
@@ -960,18 +736,17 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>fetchedBlock</code></th>
-						<td><p>The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
-asynchronously on the queue that was originally used when calling this method.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the query was performed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isGolfSupported</code></th>
-						<td><p>YES if Golf Messages are supported, NO if not.</p></td>
+						<td><p>The block that will be called when the inquiry has
+finished. The block will be called asynchronously
+on the queue that was originally used when calling this
+method.</p>
+
+<ul>
+<li><code>watch</code>: The watch on which the query was performed.</li>
+<li><code>isGolfSupported</code>: <code>YES</code> if Golf Messages are
+supported, <code>NO</code> if not.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -985,8 +760,7 @@ asynchronously on the queue that was originally used when calling this method.</
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Queries the watch whether Golf Messages are supported.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1015,8 +789,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to launch the golf app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Send a command to launch the golf app on the watch that the receiver
+represents.</p>
 			</div>
 			
 		    
@@ -1031,12 +805,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the launch command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the launch command has
+been sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1050,8 +827,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to launch the golf app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1080,8 +856,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to kill the golf app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Send a command to kill the golf app on the watch that the receiver
+represents.</p>
 			</div>
 			
 		    
@@ -1096,12 +872,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the kill command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the kill command has
+been sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1115,8 +894,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to kill the golf app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1161,18 +939,23 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The update to send. Use one or more keys (PBGolfFrontKey, PBGolfMidKey, PBGolfBackKey, PBGolfHoleKey, PBGolfParKey)
-note that the value for each key MUST be of NSString type.</p></td>
+						<td><p>The update to send. Use one or more keys from
+<code>PBGolfFrontKey</code>, <code>PBGolfMidKey</code>, <code>PBGolfBackKey</code>,
+<code>PBGolfHoleKey</code>, or <code>PBGolfParKey</code>. Note that the value for
+each key MUST be of <code>NSString</code> type.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the update has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the update has been sent
+or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1183,12 +966,6 @@ note that the value for each key MUST be of NSString type.</p></td>
 
 			
 
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends an update to the golf app on the watch that the receiver represents.
-Must be called from the main thread.</p>
-			</div>
 			
 
 			
@@ -1216,8 +993,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Add a receive handler for incoming Golf updates that are send by the Golf watch application.
-Must be called from the main thread.</p>
+				<p>Add a receive handler for incoming Golf updates that are send by the Golf
+watch application.</p>
 			</div>
 			
 		    
@@ -1232,17 +1009,14 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a new update message arrives.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that has sent the update.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>command</code></th>
-						<td><p>The command as sent by the watch.</p></td>
+						<td><p>The block that will be called every time a new update
+message arrives.</p>
+
+<ul>
+<li><code>watch</code>: The receiver of the update.</li>
+<li><code>command</code>: The command as sent by the watch.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1252,7 +1026,8 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/golfAppRemoveUpdateHandler:">golfAppRemoveUpdateHandler:</a></p>
+				<p>An opaque handle object representing the installed receive handler,
+that can be used in <a href="#//api/name/golfAppRemoveUpdateHandler:">golfAppRemoveUpdateHandler:</a></p>
 			</div>
 			
 
@@ -1261,8 +1036,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a receive handler for incoming Golf updates that are send by the Golf watch application.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1302,8 +1076,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/golfAppAddReceiveUpdateHandler:">golfAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Removes a receive handler that was previously installed using
+<a href="#//api/name/golfAppAddReceiveUpdateHandler:">golfAppAddReceiveUpdateHandler:</a></p>
 			</div>
 			
 		    
@@ -1318,7 +1092,8 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>opaqueHandle</code></th>
-						<td><p>The handle object as returned by <a href="#//api/name/golfAppAddReceiveUpdateHandler:">golfAppAddReceiveUpdateHandler:</a></p></td>
+						<td><p>The handle object as returned by
+<a href="#//api/name/golfAppAddReceiveUpdateHandler:">golfAppAddReceiveUpdateHandler:</a></p></td>
 					</tr>
 				
 				</table>
@@ -1332,8 +1107,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/golfAppAddReceiveUpdateHandler:">golfAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1371,13 +1145,12 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Assigns a custom title and icon to the golf app on the watch.
-Must be called from the main thread.</p>
+				<p>Assigns a custom title and icon to the golf app on the watch.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)golfSetTitle:(NSString *)<em>title</em> icon:(UIImage *)<em>icon</em> onSent:(void ( ^ ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)golfSetTitle:(NSString *)<em>title</em> icon:(UIImage *)<em>icon</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
 
 		    
 			
@@ -1397,17 +1170,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the title and icon have been set or timed out.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the custom title and icon have been set.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the title and icon have
+been set or timed out.</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the title and icon.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1421,9 +1192,11 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Assigns a custom title and icon to the golf app on the watch.
-Must be called from the main thread.</p><p>It is recommended to perform this as the first call after <a href="#//api/name/golfGetIsSupported:">golfGetIsSupported:</a>
-to avoid changing the title and icon while it is being displayed in the menu as to avoid confusion.</p>
+				<p>Must be called from the main thread.</p>
+
+<p>It is recommended to perform this as the first call after
+<a href="#//api/name/golfGetIsSupported:">golfGetIsSupported:</a> to avoid changing the title and icon while it is being
+displayed in the menu as to avoid confusion.</p>
 			</div>
 			
 
@@ -1435,6 +1208,237 @@ to avoid changing the title and icon while it is being displayed in the menu as 
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch+Golf.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Ping Methods" name="task_Ping Methods"></a>
+						<h2 class="task-title">Ping Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/pingWithCookie:onPong:onTimeout:" title="pingWithCookie:onPong:onTimeout:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pingWithCookie:onPong:onTimeout:">&ndash;&nbsp;pingWithCookie:onPong:onTimeout:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends a ping to the watch.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pingWithCookie:(uint32_t)<em>cookie</em> onPong:(void ( ^ __nullable ) ( PBWatch *watch , uint32_t cookie ))<em>onPong</em> onTimeout:(void ( ^ __nullable ) ( PBWatch *watch , uint32_t cookie ))<em>onTimeout</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cookie</code></th>
+						<td><p>A number identifying the ping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onPong</code></th>
+						<td><p>The block handler that will be called when the &ldquo;pong&rdquo; reply from the watch has been received.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onTimeout</code></th>
+						<td><p>The block handler that will be called when the watch failed to reply in time.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Ping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="SportsDeprecated Methods" name="task_SportsDeprecated Methods"></a>
+						<h2 class="task-title">SportsDeprecated Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sportsAppSetLabel:onSent:" title="sportsAppSetLabel:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetLabel:onSent:">&ndash;&nbsp;sportsAppSetLabel:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the preferred data label (either PACE or SPEED) and corresponding
+units. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer using [PBSportsUpdate pace] or [PBSportsUpdate speed].</span>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetLabel:(BOOL)<em>isPace</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isPace</code></th>
+						<td><p><code>YES</code> to request the pace label or <code>NO</code> to request the speed
+label.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sportsAppSetMetric:onSent:" title="sportsAppSetMetric:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetMetric:onSent:">&ndash;&nbsp;sportsAppSetMetric:onSent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the preferred unit system, either metric or imperial. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer using [PBWatch(Sports) sportsAppSetUnitSystem:onSent:]</span>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetMetric:(BOOL)<em>isMetric</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isMetric</code></th>
+						<td><p><code>YES</code> to request metric units or <code>NO</code> to request imperial
+units.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onSent</code></th>
+						<td><p>The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Must be called from the main thread.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
 			</div>
 			
 			
@@ -1460,8 +1464,7 @@ to avoid changing the title and icon while it is being displayed in the menu as 
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Queries the watch whether AppMessages are supported.
-Must be called from the main thread.</p>
+				<p>Queries the watch whether AppMessages are supported.</p>
 			</div>
 			
 		    
@@ -1476,18 +1479,16 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>fetchedBlock</code></th>
-						<td><p>The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
-asynchronously on the queue that was originally used when calling this method.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the query was performed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isAppMessagesSupported</code></th>
-						<td><p>YES if AppMessages are supported, NO if not.</p></td>
+						<td><p>The block that will be called when the inquiry has
+finished. The block will be called asynchronously on the
+queue that was originally used when calling this method.</p>
+
+<ul>
+<li><code>watch</code>: The watch on which the query was performed.</li>
+<li><code>isAppMessagesSupported</code>: <code>YES</code> if AppMessages are
+supported, <code>NO</code> if not.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1501,8 +1502,7 @@ asynchronously on the queue that was originally used when calling this method.</
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Queries the watch whether AppMessages are supported.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1532,13 +1532,12 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection brief-description">
 				<p>Pushes an update to the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)appMessagesPushUpdate:(PBGeneric ( NSDictionary , NSNumber *, id ) *)<em>dictionary</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullable error ))<em>onSent</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)appMessagesPushUpdate:(NSDictionary&lt;NSNumber*,id&gt; *)<em>dictionary</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullable error ))<em>onSent</em></code></div>
 
 		    
 			
@@ -1548,29 +1547,26 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>dictionary</code></th>
-						<td><p>Contains the key/value pairs to update. The dictionary can only contain items with an NSNumber
-key and only contain NSString, NSNumber or NSData values. Use the methods in the NSNumber (stdint) category to
-create NSNumbers with specific types standard integer types.</p></td>
+						<td><p>Contains the key/value pairs to update. The dictionary can
+only contain items with an <code>NSNumber</code> key and only contain
+<code>NSString</code>, <code>NSNumber</code> or <code>NSData</code> values. Use the methods
+in the <code>NSNumber (stdint)</code> category to create <code>NSNumbers</code>
+with specific types standard integer types.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The block that will be called when the message was accepted, rejected or timed out.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the update was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The dictionary that was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
+						<td><p>The block that will be called when the message was accepted,
+rejected or timed out.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the update was sent.</li>
+<li><code>update</code>: The dictionary that was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See
+<a href="../Constants/PBErrorCode.html"><code>PBErrorCode</code></a> for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1584,9 +1580,7 @@ create NSNumbers with specific types standard integer types.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Pushes an update to the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1615,13 +1609,12 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Pushes an update to the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Pushes an update to the watch application with the specified UUID.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)appMessagesPushUpdate:(PBGeneric ( NSDictionary , NSNumber *, id ) *)<em>dictionary</em> withUUID:(NSUUID *)<em>appUUID</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullableerror ))<em>onSent</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)appMessagesPushUpdate:(NSDictionary&lt;NSNumber*,id&gt; *)<em>dictionary</em> withUUID:(NSUUID *)<em>appUUID</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSDictionary *update , NSError *__nullable error ))<em>onSent</em></code></div>
 
 		    
 			
@@ -1631,9 +1624,11 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>dictionary</code></th>
-						<td><p>Contains the key/value pairs to update. The dictionary can only contain items with an NSNumber
-key and only contain NSString, NSNumber or NSData values. Use the methods in the NSNumber (stdint) category to
-create NSNumbers with specific types standard integer types.</p></td>
+						<td><p>Contains the key/value pairs to update. The dictionary can
+only contain items with an <code>NSNumber</code> key and only contain
+<code>NSString</code>, <code>NSNumber</code> or <code>NSData</code> values. Use the methods
+in the <code>NSNumber (stdint)</code> category to create <code>NSNumbers</code>
+with specific types standard integer types.</p></td>
 					</tr>
 				
 					<tr>
@@ -1643,22 +1638,17 @@ create NSNumbers with specific types standard integer types.</p></td>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The block that will be called when the message was accepted, rejected or timed out.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the update was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The dictionary that was sent.</p></td>
+						<td><p>The block that will be called when the message was accepted,
+rejected or timed out.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the update was sent.</li>
+<li><code>update</code>: The dictionary that was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See
+<a href="../Constants/PBErrorCode.html"><code>PBErrorCode</code></a> for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1672,8 +1662,7 @@ create NSNumbers with specific types standard integer types.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Pushes an update to the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1702,14 +1691,13 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Add a receive handler for incoming updates that are send by the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+				<p>Add a receive handler for incoming updates that are send by the watch
+application with UUID as set using <a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , PBGeneric ( NSDictionary , NSNumber *, id ) *update ))<em>onReceive</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , NSDictionary&lt;NSNumber*,id&gt; *update ))<em>onReceive</em></code></div>
 
 		    
 			
@@ -1719,17 +1707,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a new update message arrives.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that has sent the update.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The dictionary containing the values sent by the watch.</p></td>
+						<td><p>The block that will be called every time a new update
+message arrives.</p>
+
+<ul>
+<li><code>watch</code>: The watch that has sent the update.</li>
+<li><code>update</code>: The dictionary containing the values sent by
+the watch.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1739,7 +1725,8 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/appMessagesRemoveUpdateHandler:">appMessagesRemoveUpdateHandler:</a></p>
+				<p>An opaque handle object representing the installed receive handler,
+that can be used in <a href="#//api/name/appMessagesRemoveUpdateHandler:">appMessagesRemoveUpdateHandler:</a></p>
 			</div>
 			
 
@@ -1748,9 +1735,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a receive handler for incoming updates that are send by the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1788,13 +1773,13 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Add a receive handler for incoming updates that are send by the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Add a receive handler for incoming updates that are send by the watch
+application with the specified UUID.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , PBGeneric ( NSDictionary , NSNumber *, id ) *update ))<em>onReceive</em> withUUID:(NSUUID *)<em>appUUID</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (id)appMessagesAddReceiveUpdateHandler:(BOOL ( ^ ) ( PBWatch *watch , NSDictionary&lt;NSNumber*,id&gt; *update ))<em>onReceive</em> withUUID:(NSUUID *)<em>appUUID</em></code></div>
 
 		    
 			
@@ -1804,22 +1789,22 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a new update message arrives. You should always return YES so than an ACK is sent to the watch.</p></td>
+						<td><p>The block that will be called every time a new update
+message arrives. You should always return <code>YES</code> so than an
+ACK is sent to the watch.</p>
+
+<ul>
+<li><code>watch</code>: The watch that has sent the update.</li>
+<li><code>update</code>: The dictionary containing the values sent by
+the watch.</li>
+</ul>
+</td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>appUUID</code></th>
-						<td><p>The UUID of the watchapp for which sent messages should be handled by the onReceive block.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that has sent the update.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The dictionary containing the values sent by the watch.</p></td>
+						<td><p>The UUID of the watchapp for which sent messages should be
+handled by the onReceive block.</p></td>
 					</tr>
 				
 				</table>
@@ -1829,7 +1814,8 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/appMessagesRemoveUpdateHandler:">appMessagesRemoveUpdateHandler:</a></p>
+				<p>An opaque handle object representing the installed receive handler,
+that can be used in <a href="#//api/name/appMessagesRemoveUpdateHandler:">appMessagesRemoveUpdateHandler:</a></p>
 			</div>
 			
 
@@ -1838,8 +1824,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a receive handler for incoming updates that are send by the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1877,8 +1862,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/appMessagesAddReceiveUpdateHandler:">appMessagesAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Removes a receive handler that was previously installed using
+<a href="#//api/name/appMessagesAddReceiveUpdateHandler:">appMessagesAddReceiveUpdateHandler:</a></p>
 			</div>
 			
 		    
@@ -1893,7 +1878,8 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>opaqueHandle</code></th>
-						<td><p>The handle object as returned by <a href="#//api/name/appMessagesAddReceiveUpdateHandler:">appMessagesAddReceiveUpdateHandler:</a></p></td>
+						<td><p>The handle object as returned by
+<a href="#//api/name/appMessagesAddReceiveUpdateHandler:">appMessagesAddReceiveUpdateHandler:</a></p></td>
 					</tr>
 				
 				</table>
@@ -1907,8 +1893,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/appMessagesAddReceiveUpdateHandler:">appMessagesAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -1947,8 +1932,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection brief-description">
 				<p>Sends a command to launch the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a></p>
 			</div>
 			
 		    
@@ -1964,17 +1948,15 @@ Must be called from the main thread.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
 						<td><p>The block that will be called after the launch command has been
-sent to the watch.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the command was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
+sent to the watch.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the command was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See <a href="../Constants/PBErrorCode.html">PBErrorCode</a>
+for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -1988,9 +1970,7 @@ sent to the watch.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends a command to launch the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2019,8 +1999,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sends a command to launch the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Sends a command to launch the watch application with the specified UUID.</p>
 			</div>
 			
 		    
@@ -2036,22 +2015,20 @@ Must be called from the main thread.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
 						<td><p>The block that will be called after the launch command has been
-sent to the watch.</p></td>
+sent to the watch.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the command was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See <a href="../Constants/PBErrorCode.html">PBErrorCode</a>
+for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>appUUID</code></th>
 						<td><p>The UUID of the watch application to launch.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the command was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
 					</tr>
 				
 				</table>
@@ -2065,8 +2042,7 @@ sent to the watch.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends a command to launch the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2096,8 +2072,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection brief-description">
 				<p>Sends a command to kill the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>.</p>
 			</div>
 			
 		    
@@ -2113,17 +2088,15 @@ Must be called from the main thread.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
 						<td><p>The block that will be called after the kill command has been
-sent to the watch.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the command was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
+sent to the watch.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the command was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See <a href="../Constants/PBErrorCode.html">PBErrorCode</a>
+for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2137,9 +2110,7 @@ sent to the watch.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends a command to kill the watch application with UUID as set using
-<a href="../Classes/PBPebbleCentral.html#//api/name/appUUID">[PBPebbleCentral setAppUUID:]</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2168,8 +2139,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sends a command to kill the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Sends a command to kill the watch application with the specified UUID.</p>
 			</div>
 			
 		    
@@ -2185,22 +2155,20 @@ Must be called from the main thread.</p>
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
 						<td><p>The block that will be called after the kill command has been
-sent to the watch.</p></td>
+sent to the watch.</p>
+
+<ul>
+<li><code>watch</code>: The watch to which the command was sent.</li>
+<li><code>error</code>: If there was a problem, this will contain
+information about the underlying problem. See <a href="../Constants/PBErrorCode.html">PBErrorCode</a>
+for error codes.</li>
+</ul>
+</td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>appUUID</code></th>
 						<td><p>The UUID of the watch application to launch.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch to which the command was sent.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>If there was a problem, this will contain information about the underlying problem. See PBError.h for error codes.</p></td>
 					</tr>
 				
 				</table>
@@ -2214,8 +2182,7 @@ sent to the watch.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends a command to kill the watch application with the specified UUID.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2227,6 +2194,79 @@ Must be called from the main thread.</p>
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch+AppMessages.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Legacy Methods" name="task_Legacy Methods"></a>
+						<h2 class="task-title">Legacy Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/closeSession:" title="closeSession:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/closeSession:">&ndash;&nbsp;closeSession:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Closes the communication session with the watch. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Use [PBWatch releaseSharedSession]</span>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)closeSession:(void ( ^ __nullable ) ( void ))<em>onDone</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>onDone</code></th>
+						<td><p>Callback block that will be called after the closing of the
+session has completed. If there is no open session, the
+<code>onDone</code> block will (also) be executed asynchronously on the
+calling queue.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Since there is only one, shared session for all 3rd party iOS apps, an app
+should close the session after the user is done using the
+app/watch-integration, so it can be used by other apps.</p>
+
+<p>The communication session is implicitely opened automatically when needed.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Legacy.h</code></p>
 			</div>
 			
 			
@@ -2252,8 +2292,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Queries the watch whether Sports Messages are supported.
-Must be called from the main thread.</p>
+				<p>Queries the watch whether Sports Messages are supported.</p>
 			</div>
 			
 		    
@@ -2268,18 +2307,17 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>fetchedBlock</code></th>
-						<td><p>The block that will be called whenthe inquiry has finished. The fetchedBlock will be called
-asynchronously on the queue that was originally used when calling this method.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the query was performed.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isSportsSupported</code></th>
-						<td><p>YES if Sports Messages are supported, NO if not.</p></td>
+						<td><p>The block that will be called when the inquiry has
+finished. The block will be called asynchronously
+on the queue that was originally used when calling this
+method.</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the query.</li>
+<li><code>isSportsSupported</code>: <code>YES</code> if Sports API is supported,
+<code>NO</code> otherwise.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2293,8 +2331,7 @@ asynchronously on the queue that was originally used when calling this method.</
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Queries the watch whether Sports Messages are supported.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2323,8 +2360,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to launch the sports app on the watch that the receiver represents.
-Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
+				<p>Send a command to launch the sports app on the watch that the receiver represents.</p>
 			</div>
 			
 		    
@@ -2339,12 +2375,15 @@ Must be called from the main thread, and before sportsAppSetMetric or sportsAppS
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the launch command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the launch command has
+been sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2358,8 +2397,8 @@ Must be called from the main thread, and before sportsAppSetMetric or sportsAppS
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to launch the sports app on the watch that the receiver represents.
-Must be called from the main thread, and before sportsAppSetMetric or sportsAppSetLabel.</p>
+				<p>Must be called from the main thread, and before <a href="#//api/name/sportsAppSetMetric:onSent:">sportsAppSetMetric:onSent:</a>
+or <a href="#//api/name/sportsAppUpdate:onSent:">sportsAppUpdate:onSent:</a>.</p>
 			</div>
 			
 
@@ -2388,8 +2427,7 @@ Must be called from the main thread, and before sportsAppSetMetric or sportsAppS
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to kill the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Send a command to kill the sports app on the watch that the receiver represents.</p>
 			</div>
 			
 		    
@@ -2404,12 +2442,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the kill command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the kill command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: nil if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2423,8 +2464,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to kill the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2442,8 +2482,8 @@ Must be called from the main thread.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sportsAppSetMetric:onSent:" title="sportsAppSetMetric:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetMetric:onSent:">&ndash;&nbsp;sportsAppSetMetric:onSent:</a></code>
+	<a name="//api/name/sportsAppSetUnitSystem:onSent:" title="sportsAppSetUnitSystem:onSent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetUnitSystem:onSent:">&ndash;&nbsp;sportsAppSetUnitSystem:onSent:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -2453,14 +2493,13 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
-unit system, either metric or imperial.
-Must be called from the main thread.</p>
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the preferred unit system.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetMetric:(BOOL)<em>isMetric</em> onSent:(void ( ^ ) ( PBWatch *watch , NSError *error ))<em>onSent</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetUnitSystem:(PBUnitSystem)<em>unitSystem</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
 
 		    
 			
@@ -2469,18 +2508,22 @@ Must be called from the main thread.</p>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>isMetric</code></th>
-						<td><p>YES to request metric units or NO to request imperial units</p></td>
+						<th scope="row" class="argument-name"><code>unitSystem</code></th>
+						<td><p><code>PBUnitSystemMetric</code> to request metric units or
+<code>PBUnitSystemImperial</code> to request imperial units.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2494,81 +2537,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the preferred
-unit system, either metric or imperial.
-Must be called from the main thread.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/sportsAppSetLabel:onSent:" title="sportsAppSetLabel:onSent:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sportsAppSetLabel:onSent:">&ndash;&nbsp;sportsAppSetLabel:onSent:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents,
-to set the preferred  data label (either PACE or SPEED) and corresponding units.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)sportsAppSetLabel:(BOOL)<em>isPace</em> onSent:(void ( ^ __nullable ) ( PBWatch *watch , NSError *__nullable error ))<em>onSent</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isMetric</code></th>
-						<td><p>YES to request metric units or NO to request imperial units</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents,
-to set the preferred  data label (either PACE or SPEED) and corresponding units.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2597,10 +2566,10 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
-sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
-supported.
-Must be called from the main thread.</p>
+				<p>Send a command to the sports app on the watch that the receiver represents,
+to set the state of the sports activity. Currently only
+<code>SportsAppActivityStateRunning</code> and <code>SportsAppActivityStatePaused</code> are
+supported.</p>
 			</div>
 			
 		    
@@ -2620,12 +2589,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the unit command has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2639,10 +2611,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Send a command to the sports app on the watch that the receiver represents, to set the state of the
-sports activity. Currently only SportsAppActivityStateRunning and SportsAppActivityStatePaused are
-supported.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2671,8 +2640,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Sends the update to the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Sends the update to the sports app on the watch that the receiver represents.</p>
 			</div>
 			
 		    
@@ -2687,18 +2655,20 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>update</code></th>
-						<td><p>The update to send. Use one or more keys (PBSportsTimeKey, PBSportsPaceKey, PBSportsDistanceKey)
-note that the value for each key MUST be of NSString type.</p></td>
+						<td><p>The update to send.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the update has been sent or timed out (after 1.5 secs).</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the unit command has been
+sent or timed out (after 1.5 secs).</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the command.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2712,8 +2682,34 @@ note that the value for each key MUST be of NSString type.</p></td>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Sends the update to the sports app on the watch that the receiver represents.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
+
+<p>The valid keys and values for the dictionary are the following:</p>
+
+<ul>
+<li><code>PBSportsTimeKey</code>: the string representing the time. The value must be an
+<code>NSString</code>. The maximum number of characters is about 8.</li>
+<li><code>PBSportsDistanceKey</code>: the string representing the distance. The value must
+be an <code>NSString</code>. The maximum number of characters is about 5.</li>
+<li><code>PBSportsDataKey</code>: the string representing the pace or the speed. The value
+must be an <code>NSString</code>. The maximum number of characters is about 5.</li>
+<li><code>PBSportsActivityStateKey</code>: the state of the activity. The value must be an
+<code>NSNumber</code> created using +[NSNumber(stdint) pb_numberWithUint8:]. The value
+must be one of the values from the enum <a href="../Constants/SportsAppActivityState.html">SportsAppActivityState</a>.</li>
+<li><code>PBSportsIsPaceKey</code>: whether the value sent in <code>PBSportsDataKey</code> is the
+pace (use value 1) or the speed (use value 0). You don&rsquo;t need to
+continously send this value. The value must be an <code>NSNumber</code> created using
++[NSNumber(stdin) pb_numberWithUint8:].</li>
+<li><code>PBSportsHeartBPMKey</code>: the current heart rate in beats per minute. The
+value must be an <code>NSNumber</code> created using
+[NSNumber(stdin) pb_numberWithUint8:].</li>
+<li><code>PBSportsCustomLabelKey</code>: the string to show as a custom label. The value
+must be an <code>NSString</code>. The maximum number of characters is about 10. The
+string will be transformed into upper case before being sent to the watch.</li>
+<li><code>PBSportsCustomValueKey</code>: the string to show as a custom value. The value
+must be an <code>NSString</code>. The maximum number of characters is about 8.</li>
+</ul>
+
 			</div>
 			
 
@@ -2742,8 +2738,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
-Must be called from the main thread.</p>
+				<p>Add a receive handler for incoming Sports updates that are send by the
+Sports watch application.</p>
 			</div>
 			
 		    
@@ -2758,17 +2754,15 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onReceive</code></th>
-						<td><p>The block that will be called every time a new update message arrives.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch that has sent the update.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>state</code></th>
-						<td><p>The new sports activity state as set by the watch.</p></td>
+						<td><p>The block that will be called every time a new update
+message arrives.</p>
+
+<ul>
+<li><code>watch</code>: The watch that has sent the update.</li>
+<li><code>state</code>: The new sports activity state as set by the
+watch.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2778,7 +2772,8 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>An opaque handle object representing the installed receive handler, that can be used in <a href="#//api/name/sportsAppRemoveUpdateHandler:">sportsAppRemoveUpdateHandler:</a></p>
+				<p>An opaque handle object representing the installed receive handler,
+that can be used in <a href="#//api/name/sportsAppRemoveUpdateHandler:">sportsAppRemoveUpdateHandler:</a>.</p>
 			</div>
 			
 
@@ -2787,8 +2782,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Add a receive handler for incoming Sports updates that are send by the Sports watch application.
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2798,6 +2792,8 @@ Must be called from the main thread.</p>
 			<div class="method-subsection see-also-section">
 				<h4 class="method-subtitle">See Also</h4>
 				<ul>
+					
+					<li><code><p><a href="../Constants/SportsAppActivityState.html">SportsAppActivityState</a></p></code></li>
 					
 					<li><code><p><a href="#//api/name/sportsAppRemoveUpdateHandler:">- sportsAppRemoveUpdateHandler:</a></p></code></li>
 					
@@ -2826,8 +2822,8 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Removes a receive handler that was previously installed using
+<a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>.</p>
 			</div>
 			
 		    
@@ -2842,7 +2838,8 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>opaqueHandle</code></th>
-						<td><p>The handle object as returned by <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a></p></td>
+						<td><p>The handle object as returned by
+<a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a></p></td>
 					</tr>
 				
 				</table>
@@ -2856,8 +2853,7 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Removes a receive handler that was previously installed using <a href="#//api/name/sportsAppAddReceiveUpdateHandler:">sportsAppAddReceiveUpdateHandler:</a>
-Must be called from the main thread.</p>
+				<p>Must be called from the main thread.</p>
 			</div>
 			
 
@@ -2895,8 +2891,7 @@ Must be called from the main thread.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Assigns a custom title and icon to the sports app on the watch.
-Must be called from the main thread.</p>
+				<p>Assigns a custom title and icon to the sports app on the watch.</p>
 			</div>
 			
 		    
@@ -2916,22 +2911,21 @@ Must be called from the main thread.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>icon</code></th>
-						<td><p>The custom icon (max. 32x32 pixels, black/white only). This image cannot be <code>nil</code>.</p></td>
+						<td><p>The custom icon (max. 32x32 pixels, black/white only). This
+image cannot be <code>nil</code>.</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>onSent</code></th>
-						<td><p>The handler that will be called when the title and icon have been set or timed out.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch on which the custom title and icon have been set.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>nil if the operation was successful, or else an NSError with more information why it failed.</p></td>
+						<td><p>The handler that will be called when the title and icon have
+been set or timed out.</p>
+
+<ul>
+<li><code>watch</code>: the recipient of the custom title and icon.</li>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
 					</tr>
 				
 				</table>
@@ -2945,9 +2939,10 @@ Must be called from the main thread.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Assigns a custom title and icon to the sports app on the watch.
-Must be called from the main thread.</p><p>It is recommended to perform this as the first call after <a href="#//api/name/sportsGetIsSupported:">sportsGetIsSupported:</a>
-to avoid changing the title and icon while it is being displayed in the menu as to avoid confusion.</p>
+				<p>Must be called from the main thread.</p><p>It is recommended to perform this as the first call after
+<a href="#//api/name/sportsGetIsSupported:">sportsGetIsSupported:</a> to avoid changing the title
+and icon while it is being displayed in the menu as to avoid
+confusion.</p>
 			</div>
 			
 
@@ -2959,90 +2954,6 @@ to avoid changing the title and icon while it is being displayed in the menu as 
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="Version Methods" name="task_Version Methods"></a>
-						<h2 class="task-title">Version Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/getVersionInfo:onTimeout:" title="getVersionInfo:onTimeout:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getVersionInfo:onTimeout:">&ndash;&nbsp;getVersionInfo:onTimeout:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Requests the version info from the receiver.
-Must be called from the main thread.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)getVersionInfo:(PBVersionInfoCompletionBlock)<em>handler</em> onTimeout:(void ( ^ __nullable ) ( PBWatch *watch ))<em>onTimeout</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>handler</code></th>
-						<td><p>The handler that will be called when the version info response has been received.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>onTimeout</code></th>
-						<td><p>The handler that will be called if the watch did not respond within 5 seconds.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>versionInfo</code></th>
-						<td><p>The version info response.</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>watch</code></th>
-						<td><p>The watch for which the version info was requested.</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Requests the version info from the receiver.
-Must be called from the main thread.</p><p>The <a href="../Classes/PBVersionInfo.html">PBVersionInfo</a> response will be cached. The latest version info can be
-accessed through the <a href="#//api/name/versionInfo">versionInfo</a> property of <PBWatch>.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">PBWatch+Version.h</code></p>
 			</div>
 			
 			
@@ -3063,10 +2974,10 @@ accessed through the <a href="#//api/name/versionInfo">versionInfo</a> property 
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-11</p>
+						<p class="copyright">Copyright &copy; 2016 Pebble Technology Corp. All rights reserved. Updated: 2016-11-23</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

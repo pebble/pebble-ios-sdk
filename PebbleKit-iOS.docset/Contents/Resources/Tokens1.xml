@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBBitmap.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBBitmap</TokenIdentifier>
+			<Abstract type="html">Helper class to convert a UIImage to Pebble bitmap pixel data and GBitmap metadata.
+Refer to the documentation of Pebble&apos;s native watch app SDK on the GBitmap format.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/setPixelData:</TokenIdentifier>
+			<Abstract type="html">The pixel data of the bitmap.
+This corresponds to the data as pointed to by GBitmap&apos;s addr field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *pixelData</Declaration>
+			
+			
+			<Anchor>//api/name/pixelData</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/pixelData</TokenIdentifier>
+			<Abstract type="html">The pixel data of the bitmap.
+This corresponds to the data as pointed to by GBitmap&apos;s addr field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *pixelData</Declaration>
+			
+			
+			<Anchor>//api/name/pixelData</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBBitmap/pixelData</TokenIdentifier>
+			<Abstract type="html">The pixel data of the bitmap.
+This corresponds to the data as pointed to by GBitmap&apos;s addr field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSData *pixelData</Declaration>
+			
+			
+			<Anchor>//api/name/pixelData</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/setRowSizeBytes:</TokenIdentifier>
+			<Abstract type="html">The number of bytes per row.
+Always a multiple of 4 bytes.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t rowSizeBytes</Declaration>
+			
+			
+			<Anchor>//api/name/rowSizeBytes</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/rowSizeBytes</TokenIdentifier>
+			<Abstract type="html">The number of bytes per row.
+Always a multiple of 4 bytes.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t rowSizeBytes</Declaration>
+			
+			
+			<Anchor>//api/name/rowSizeBytes</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBBitmap/rowSizeBytes</TokenIdentifier>
+			<Abstract type="html">The number of bytes per row.
+Always a multiple of 4 bytes.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t rowSizeBytes</Declaration>
+			
+			
+			<Anchor>//api/name/rowSizeBytes</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/setInfoFlags:</TokenIdentifier>
+			<Abstract type="html">Bitfield of metadata flags.
+This corresponds to GBitmap&apos;s info_flags field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t infoFlags</Declaration>
+			
+			
+			<Anchor>//api/name/infoFlags</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/infoFlags</TokenIdentifier>
+			<Abstract type="html">Bitfield of metadata flags.
+This corresponds to GBitmap&apos;s info_flags field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t infoFlags</Declaration>
+			
+			
+			<Anchor>//api/name/infoFlags</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBBitmap/infoFlags</TokenIdentifier>
+			<Abstract type="html">Bitfield of metadata flags.
+This corresponds to GBitmap&apos;s info_flags field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) uint16_t infoFlags</Declaration>
+			
+			
+			<Anchor>//api/name/infoFlags</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/setBounds:</TokenIdentifier>
+			<Abstract type="html">The box of bits inside pixelData, that contains
+the actual image data to use.
+This corresponds to GBitmap&apos;s bounds field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) GRect bounds</Declaration>
+			
+			
+			<Anchor>//api/name/bounds</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBBitmap/bounds</TokenIdentifier>
+			<Abstract type="html">The box of bits inside pixelData, that contains
+the actual image data to use.
+This corresponds to GBitmap&apos;s bounds field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) GRect bounds</Declaration>
+			
+			
+			<Anchor>//api/name/bounds</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBBitmap/bounds</TokenIdentifier>
+			<Abstract type="html">The box of bits inside pixelData, that contains
+the actual image data to use.
+This corresponds to GBitmap&apos;s bounds field.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, assign) GRect bounds</Declaration>
+			
+			
+			<Anchor>//api/name/bounds</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBBitmap/pebbleBitmapWithUIImage:</TokenIdentifier>
+			<Abstract type="html">Factory method to create a PBBitmap from a UIImage instance.</Abstract>
+			<DeclaredIn>PBBitmap.h</DeclaredIn>
+			
+			<Declaration>+ (PBBitmap *)pebbleBitmapWithUIImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The UIImage from which to create the PBBitmap</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pebbleBitmapWithUIImage:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

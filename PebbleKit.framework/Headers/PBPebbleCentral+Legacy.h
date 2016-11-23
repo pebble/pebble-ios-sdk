@@ -6,26 +6,43 @@
 //  Copyright (c) 2015 Pebble Technology. All rights reserved.
 //
 
-#import <PebbleKit/PBPebbleCentral.h>
+#import "PBPebbleCentral.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PBPebbleCentral (Legacy)
 
 /**
- *  Verifies the currently set application UUID.
- *  @return YES if the currently set UUID is valid, NO if it is not.
- *  @see -setAppUuid:
+ * Indicates if the central has been correctly configured with an app UUID.
+ *
+ * @deprecated Use `appUUID != nil` instead.
  */
-- (BOOL)hasValidAppUUID __deprecated_msg("Method deprecated. Use `appUUID != nil`");
+- (BOOL)hasValidAppUUID __attribute__((deprecated("Use `appUUID != nil` instead.")));
 
 /**
- *  Enables debug logs. The logs will be printed via NSLog. It is advised to
- *  call this before making any other calls to PebbleKit.
+ * Enables or disables debug logging for PebbleKit.
+ *
+ * @deprecated Use `+[PBPebbleKitLogging setLogLevel:]` instead.
+ *
+ * @param logsEnabled Whether logging should be enabled or not.
  */
-+ (void)setDebugLogsEnabled:(BOOL)logsEnabled __deprecated_msg("Method deprecated. Use `setLogLevel:`");
++ (void)setDebugLogsEnabled:(BOOL)logsEnabled __attribute__((deprecated("Use `+[PBPebbleKitLogging setLogLevel:]` instead.")));
 
-@property (nonatomic, readonly) PBDataLoggingService * __nullable dataLoggingService __deprecated_msg("Method deprecated. Use `dataLoggingServiceForAppUUID:`");
+/**
+ * Configures which events should be logged.
+ *
+ * @deprecated Use `+[PBPebbleKitLogging setLogLevel:]` instead.
+ *
+ * @param logLevel One of the values in PBPebbleKitLogLevel, which will be the
+ *                 maximum level that will be logged. You can use
+ *                 `PBPebbleKitLogLevelOff` to disable all logging.
+ */
++ (void)setLogLevel:(PBPebbleKitLogLevel)logLevel __attribute__((deprecated("Use `+[PBPebbleKitLogging setLogLevel:]` instead.")));
+
+/**
+ * @deprecated Use `dataLoggingServiceForAppUUID:` instead.
+ */
+@property (nonatomic, readonly) PBDataLoggingService *__nullable dataLoggingService __attribute__((deprecated("Use `dataLoggingServiceForAppUUID:` instead.")));
 
 @end
 

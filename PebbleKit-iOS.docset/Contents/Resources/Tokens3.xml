@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBDataLoggingSessionMetadata.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBDataLoggingSessionMetadata</TokenIdentifier>
+			<Abstract type="html">The metadata of a data logging session. Used to identify a session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/setTag:</TokenIdentifier>
+			<Abstract type="html">A tag associated with the session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/tag</TokenIdentifier>
+			<Abstract type="html">A tag associated with the session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingSessionMetadata/tag</TokenIdentifier>
+			<Abstract type="html">A tag associated with the session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t tag</Declaration>
+			
+			
+			<Anchor>//api/name/tag</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/setTimestamp:</TokenIdentifier>
+			<Abstract type="html">The timestamp of the moment the session was created by the watchapp.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/timestamp</TokenIdentifier>
+			<Abstract type="html">The timestamp of the moment the session was created by the watchapp.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingSessionMetadata/timestamp</TokenIdentifier>
+			<Abstract type="html">The timestamp of the moment the session was created by the watchapp.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint32_t timestamp</Declaration>
+			
+			
+			<Anchor>//api/name/timestamp</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/setType:</TokenIdentifier>
+			<Abstract type="html">The type of data stored in this session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/type</TokenIdentifier>
+			<Abstract type="html">The type of data stored in this session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingSessionMetadata/type</TokenIdentifier>
+			<Abstract type="html">The type of data stored in this session.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) PBDataLoggingType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/setItemSize:</TokenIdentifier>
+			<Abstract type="html">The size of a data item.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint16_t itemSize</Declaration>
+			
+			
+			<Anchor>//api/name/itemSize</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/itemSize</TokenIdentifier>
+			<Abstract type="html">The size of a data item.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint16_t itemSize</Declaration>
+			
+			
+			<Anchor>//api/name/itemSize</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingSessionMetadata/itemSize</TokenIdentifier>
+			<Abstract type="html">The size of a data item.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) uint16_t itemSize</Declaration>
+			
+			
+			<Anchor>//api/name/itemSize</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/setSerialNumber:</TokenIdentifier>
+			<Abstract type="html">The serial number of the watch that created the sessions.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number of the watch that created the sessions.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingSessionMetadata/serialNumber</TokenIdentifier>
+			<Abstract type="html">The serial number of the watch that created the sessions.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *serialNumber</Declaration>
+			
+			
+			<Anchor>//api/name/serialNumber</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBDataLoggingSessionMetadata/metadataWithTag:timestamp:type:itemSize:serialNumber:</TokenIdentifier>
+			<Abstract type="html">Creates a new data logging session metadata object, given all its property values.
+This method is provided to create a metadata object that can be used to
+compare it with a metadata object that is passed into one of the
+PBDataLoggingServiceDelegate methods.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)metadataWithTag:(uint32_t)tag timestamp:(uint32_t)timestamp type:(PBDataLoggingType)type itemSize:(uint16_t)itemSize serialNumber:(NSString *)serialNumber</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tag</Name>
+					<Abstract type="html">The tag associated with the session</Abstract>
+				</Parameter><Parameter>
+					<Name>timestamp</Name>
+					<Abstract type="html">The timestamp of the creation of the session</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The type of data stored in the session</Abstract>
+				</Parameter><Parameter>
+					<Name>itemSize</Name>
+					<Abstract type="html">The size of a data item</Abstract>
+				</Parameter><Parameter>
+					<Name>serialNumber</Name>
+					<Abstract type="html">The serial number of the watch that created the session</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A session metadata object with the specified information</Abstract></ReturnValue>
+			<Anchor>//api/name/metadataWithTag:timestamp:type:itemSize:serialNumber:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/isEqual:</TokenIdentifier>
+			<Abstract type="html">Tests the equality of the recipient and the given object.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(nullable id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to check against.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if all the property values of the receiver are equal to the
+property values of the other object.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingSessionMetadata/isEqualToDataLoggingSessionMetadata:</TokenIdentifier>
+			<Abstract type="html">Tests the equality of two data logging sessions’ metadata objects.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqualToDataLoggingSessionMetadata:(PBDataLoggingSessionMetadata *)sessionMetadata</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sessionMetadata</Name>
+					<Abstract type="html">The session metadata to compare against.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if all the property values of the receiver are equal to the
+property values of the given session.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqualToDataLoggingSessionMetadata:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

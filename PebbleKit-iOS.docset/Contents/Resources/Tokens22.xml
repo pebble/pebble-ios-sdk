@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/PBDataLoggingType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/PBDataLoggingType</TokenIdentifier>
+			<Abstract type="html">Data logging datatypes.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBDataLoggingTypeByteArray</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBDataLoggingTypeByteArray</Declaration>
+            
+            <DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+            <NodeRef refid="22"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBDataLoggingTypeUInt</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBDataLoggingTypeUInt</Declaration>
+            
+            <DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+            <NodeRef refid="22"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/PBDataLoggingTypeInt</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>PBDataLoggingTypeInt</Declaration>
+            
+            <DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+            <NodeRef refid="22"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

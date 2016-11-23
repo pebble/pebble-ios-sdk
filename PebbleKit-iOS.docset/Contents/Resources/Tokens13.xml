@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSData+Pebble.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(Pebble)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+Pebble.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSData/pb_dictionaryFromPebbleDictionaryDataWithError:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as Pebble dict data and deserializes it into an NSDictionary.</Abstract>
+			<DeclaredIn>NSDictionary+Pebble.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/NSDictionary/pb_pebbleDictionaryData:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (nullable NSDictionary *)pb_dictionaryFromPebbleDictionaryDataWithError:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>error</Name>
+					<Abstract type="html">Pointer to an NSError * that will be set after the method has
+returned in case there was an error. Possible error codes:
+
+- PBErrorCodeDictionaryInternalConsistency</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_dictionaryFromPebbleDictionaryDataWithError:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

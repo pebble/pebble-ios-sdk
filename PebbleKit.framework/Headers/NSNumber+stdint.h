@@ -8,88 +8,125 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- *  This category exposes the capabilities the underlying CFNumber to explicitely
- *  store the signedness and the width of the storage.
- */
 
-@interface NSNumber (stdint)
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  Interprets the receiver as a 32-bits wide, unsigned integer.
+ * This category exposes the capabilities the underlying CFNumber to explicitely
+ * store the signedness and the width of the storage.
  */
-- (uint32_t)uint32Value;
+@interface NSNumber (PBStandardIntegerExtensions)
 
 /**
- *  Interprets the receiver as a 16-bits wide, unsigned integer.
+ * Interprets the receiver as a 32-bits wide, unsigned integer.
  */
-- (uint16_t)uint16Value;
+@property (readonly) uint32_t pb_uint32Value;
 
 /**
- *  Interprets the receiver as a 8-bits wide, unsigned integer.
+ * Interprets the receiver as a 16-bits wide, unsigned integer.
  */
-- (uint8_t)uint8Value;
+@property (readonly) uint16_t pb_uint16Value;
 
 /**
- *  Interprets the receiver as a 32-bits wide, signed integer.
+ * Interprets the receiver as a 8-bits wide, unsigned integer.
  */
-- (int32_t)int32Value;
+@property (readonly) uint8_t pb_uint8Value;
 
 /**
- *  Interprets the receiver as a 16-bits wide, signed integer.
+ * Interprets the receiver as a 32-bits wide, signed integer.
  */
-- (int16_t)int16Value;
+@property (readonly) int32_t pb_int32Value;
 
 /**
- *  Interprets the receiver as a 8-bits wide, signed integer.
+ * Interprets the receiver as a 16-bits wide, signed integer.
  */
-- (int8_t)int8Value;
+@property (readonly) int16_t pb_int16Value;
 
 /**
- *  Creates an NSNumber with a 32-bits wide, unsigned integer.
+ * Interprets the receiver as a 8-bits wide, signed integer.
  */
-+ (NSNumber *)numberWithUint32:(uint32_t)value;
+@property (readonly) int8_t pb_int8Value;
 
 /**
- *  Creates an NSNumber with a 16-bits wide, unsigned integer.
+ * Gets whether the number that is stored by the receiver should be interpreted
+ * as a floating pointer number or not.
  */
-+ (NSNumber *)numberWithUint16:(uint16_t)value;
+@property (readonly, getter=pb_isFloat) BOOL pb_float;
 
 /**
- *  Creates an NSNumber with a 8-bits wide, unsigned integer.
+ * Gets whether the number that is stored by the receiver should be interpreted
+ * as a signed integer or not.
  */
-+ (NSNumber *)numberWithUint8:(uint8_t)value;
+@property (readonly, getter=pb_isSigned) BOOL pb_signed;
 
 /**
- *  Creates an NSNumber with a 32-bits wide, signed integer.
+ * Gets the width in bytes of the integer that is stored by the receiver.
  */
-+ (NSNumber *)numberWithInt32:(int32_t)value;
+@property (readonly) uint8_t pb_byteWidth;
 
 /**
- *  Creates an NSNumber with a 16-bits wide, signed integer.
+ * Creates an NSNumber with a 32-bits wide, unsigned integer.
+ *
+ * @param value The value for the created number.
  */
-+ (NSNumber *)numberWithInt16:(int16_t)value;
++ (NSNumber *)pb_numberWithUint32:(uint32_t)value;
 
 /**
- *  Creates an NSNumber with a 8-bits wide, signed integer.
+ * Creates an NSNumber with a 16-bits wide, unsigned integer.
+ *
+ * @param value The value for the created number.
  */
-+ (NSNumber *)numberWithInt8:(int8_t)value;
++ (NSNumber *)pb_numberWithUint16:(uint16_t)value;
 
 /**
- *  Gets whether the number that is stored by the receiver should be interpreted
- *  as a floating pointer number or not.
+ * Creates an NSNumber with a 8-bits wide, unsigned integer.
+ *
+ * @param value The value for the created number.
  */
-- (BOOL)isFloat;
++ (NSNumber *)pb_numberWithUint8:(uint8_t)value;
 
 /**
- *  Gets whether the number that is stored by the receiver should be interpreted
- *  as a signed integer or not.
+ * Creates an NSNumber with a 32-bits wide, signed integer.
+ *
+ * @param value The value for the created number.
  */
-- (BOOL)isSigned;
++ (NSNumber *)pb_numberWithInt32:(int32_t)value;
 
 /**
- *  Gets the width in bytes of the integer that is stored by the receiver.
+ * Creates an NSNumber with a 16-bits wide, signed integer.
+ *
+ * @param value The value for the created number.
  */
-- (uint8_t)width;
++ (NSNumber *)pb_numberWithInt16:(int16_t)value;
+
+/**
+ * Creates an NSNumber with a 8-bits wide, signed integer.
+ *
+ * @param value The value for the created number.
+ */
++ (NSNumber *)pb_numberWithInt8:(int8_t)value;
 
 @end
+
+
+@interface NSNumber (PBStandardIntegerExtensionsDeprecated)
+
+- (uint32_t)uint32Value DEPRECATED_MSG_ATTRIBUTE("Use pb_uint32Value");
+- (uint16_t)uint16Value DEPRECATED_MSG_ATTRIBUTE("Use pb_uint16Value");
+- (uint8_t)uint8Value DEPRECATED_MSG_ATTRIBUTE("Use pb_uint8Value");
+- (int32_t)int32Value DEPRECATED_MSG_ATTRIBUTE("Use pb_int32Value");
+- (int16_t)int16Value DEPRECATED_MSG_ATTRIBUTE("Use pb_int16Value");
+- (int8_t)int8Value DEPRECATED_MSG_ATTRIBUTE("Use pb_int8Value");
++ (NSNumber *)numberWithUint32:(uint32_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithUint32:");
++ (NSNumber *)numberWithUint16:(uint16_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithUint16:");
++ (NSNumber *)numberWithUint8:(uint8_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithUint8:");
++ (NSNumber *)numberWithInt32:(int32_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithInt32:");
++ (NSNumber *)numberWithInt16:(int16_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithInt16:");
++ (NSNumber *)numberWithInt8:(int8_t)value DEPRECATED_MSG_ATTRIBUTE("Use pb_numberWithInt8:");
+- (BOOL)isFloat DEPRECATED_MSG_ATTRIBUTE("Use pb_isFloat");
+- (BOOL)isSigned DEPRECATED_MSG_ATTRIBUTE("Use pb_isSigned");
+- (uint8_t)width DEPRECATED_MSG_ATTRIBUTE("Use pb_byteWidth");
+
+@end
+
+NS_ASSUME_NONNULL_END

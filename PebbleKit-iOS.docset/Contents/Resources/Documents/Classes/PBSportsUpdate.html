@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
-	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
 </head>
 <body class="appledoc">
 	<header>
@@ -56,9 +56,21 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/appMessageDictionary">appMessageDictionary</option>
+		
+		<option value="//api/name/customLabel">customLabel</option>
+		
+		<option value="//api/name/customValue">customValue</option>
+		
 		<option value="//api/name/data">data</option>
 		
 		<option value="//api/name/distance">distance</option>
+		
+		<option value="//api/name/heartRate">heartRate</option>
+		
+		<option value="//api/name/pace">pace</option>
+		
+		<option value="//api/name/speed">speed</option>
 		
 		<option value="//api/name/time">time</option>
 		
@@ -68,7 +80,11 @@
 	
 	<optgroup label="Class Methods">
 		
+		<option value="//api/name/decimalStringFromFloat:">+ decimalStringFromFloat:</option>
+		
 		<option value="//api/name/timeStringFromFloat:">+ timeStringFromFloat:</option>
+		
+		<option value="//api/name/timeStringFromSeconds:">+ timeStringFromSeconds:</option>
 		
 		<option value="//api/name/updateWithTime:distance:data:">+ updateWithTime:distance:data:</option>
 		
@@ -79,6 +95,8 @@
 	<optgroup label="Instance Methods">
 		
 		<option value="//api/name/dictionary">- dictionary</option>
+		
+		<option value="//api/name/updateWatch:completion:">- updateWatch:completion:</option>
 		
 	</optgroup>
 	
@@ -114,8 +132,16 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Instances of this convenience class represent an update of the current <a href="#//api/name/time">time</a>, <a href="#//api/name/distance">distance</a> and pace,
-and has a method to convert the values into a <a href="#//api/name/dictionary">dictionary</a> that can be used with -sportsAppUpdate:onSent:.</p>
+						<p>Packages a UI update of the sports app.</p>
+
+<p>This container class includes new values of time, distance, pace or
+speed, heart rate, and a custom label/value. To send the values to the
+watch use <a href="#//api/name/updateWatch:completion:">[PBSportsUpdate updateWatch:completion:]</a>.</p>
+
+<p>The class is mutable, so consumers can update the values and send the same
+instance again. Modifying the values of this class will not send the values.
+The consumer needs to invoke <a href="#//api/name/updateWatch:completion:">[PBSportsUpdate updateWatch:completion:]</a> every
+<a href="#//api/name/time">time</a> the UI needs to be updated.</p>
 					</div>
 					
 					
@@ -127,7 +153,7 @@ and has a method to convert the values into a <a href="#//api/name/dictionary">d
 						
 
 						
-						
+						<h2 class="task-title">Other Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
@@ -142,12 +168,12 @@ and has a method to convert the values into a <a href="#//api/name/dictionary">d
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current time in seconds. The possible range is currently limited from -7140. to 7140., inclusive. (±1h 59min 59sec).</p>
+				<p>The current time in seconds.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) NSTimeInterval time</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) NSTimeInterval time</code></div>
 
 		    
 			
@@ -159,7 +185,14 @@ and has a method to convert the values into a <a href="#//api/name/dictionary">d
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current time in seconds. The possible range is currently limited from -7140. to 7140., inclusive. (±1h 59min 59sec).</p>
+				<p>The possible range is currently limited from -35999 to 35999,
+inclusive (±9h 59min 59sec). Values larger or smaller than the limits will
+be transformed into the maximum or minimum, respectively.</p>
+
+<p>It will be presented as a duration string in the UI. Hours, minutes and
+seconds will be separated by colons. The hours value will only appear if
+the value is more than 1 hour. The decimal part will be discarded for the
+presentation.</p>
 			</div>
 			
 
@@ -188,13 +221,12 @@ and has a method to convert the values into a <a href="#//api/name/dictionary">d
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The current distance in km or mi. The possible range is currently limited from -99.9 to 99.9, inclusive.
-The unit of distance is dependent on the current unit setting.</p>
+				<p>The current distance in kilometers or miles.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) float distance</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) float distance</code></div>
 
 		    
 			
@@ -206,8 +238,78 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The current distance in km or mi. The possible range is currently limited from -99.9 to 99.9, inclusive.
-The unit of distance is dependent on the current unit setting.</p>
+				<p>The possible range is currently limited from -99.9 to 99.9, inclusive. Values
+larger or smaller than the limits will be transformed into the maximum or
+minimum, respectively.</p>
+
+<p>It will be presented as a decimal number in the UI. The decimal part will be
+rounded to one digit.</p>
+
+<p>The unit of distance is dependent on the current unit setting.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/PBWatch.html#//api/name/sportsAppSetMetric:onSent:">[PBWatch sportsAppSetMetric:onSent:]</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pace" title="pace"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pace">&nbsp;&nbsp;pace</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The current pace in seconds per kilometer or seconds per mile.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) NSTimeInterval pace</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The possible range is currently limited from -3599 to 3599,
+inclusive (±59min 59sec). Values larger or smaller than the limits will be
+transformed into the maximum or minimum, respectively.</p>
+
+<p>It will be presented as a duration string in the UI. Minutes and seconds will
+be separated by colons. The decimal part will be discarded for the
+presentation.</p>
+
+<p>Currently pace and <a href="#//api/name/speed">speed</a> cannot be presented at the same <a href="#//api/name/time">time</a>. Setting <a href="#//api/name/speed">speed</a>
+will discard the value set through pace.</p>
 			</div>
 			
 
@@ -225,8 +327,8 @@ The unit of distance is dependent on the current unit setting.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/data" title="data"></a>
-	<h3 class="method-title"><code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
+	<a name="//api/name/speed" title="speed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/speed">&nbsp;&nbsp;speed</a></code>
 </h3>
 
 	<div class="method-info">
@@ -236,12 +338,12 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>General purpose data variable. The possible range is currently limited from -99.99 to 99.99, inclusive.</p>
+				<p>The current speed in kilometers per hour or miles per hour.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) float data</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) float speed</code></div>
 
 		    
 			
@@ -253,12 +355,496 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>General purpose data variable. The possible range is currently limited from -99.99 to 99.99, inclusive.</p>
+				<p>The possible range is currently limited from -99.9 to 99.9, inclusive. Values
+larger or smaller than the limits will be transformed into the maximum or
+minimum, respectively.</p>
+
+<p>It will be presented as a decimal number in the UI. The decimal part will be
+rounded to one digit.</p>
+
+<p>Currently <a href="#//api/name/pace">pace</a> and speed cannot be presented at the same <a href="#//api/name/time">time</a>. Setting <a href="#//api/name/pace">pace</a>
+will discard the value set through speed.</p>
 			</div>
 			
 
 			
 
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/heartRate" title="heartRate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/heartRate">&nbsp;&nbsp;heartRate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The current heart rate in beats per minute.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) uint8_t heartRate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Currently there’s no way to stop sending heart rate values if one heart rate
+value was sent. The last value will be shown in the UI.</p>
+
+<p>If the heart rate has never been set before, this property will return zero.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/customLabel" title="customLabel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/customLabel">&nbsp;&nbsp;customLabel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A custom label to show in the sports UI.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nullable) NSString *customLabel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The maximum number of characters is ~10, but this maximum is not enforced.
+The label will be sent in upper case to the watch.</p>
+
+<p>To be sent, both customLabel and <a href="#//api/name/customValue">customValue</a> have to be set to non-nil values.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/customValue" title="customValue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/customValue">&nbsp;&nbsp;customValue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A custom value to show in the sports UI.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nullable) NSString *customValue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The maximum number of characters is ~8, but the maximum is not enforced.</p>
+
+<p>To be sent, both customValue and <a href="#//api/name/customLabel">customLabel</a> have to be set to non-nil values.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/appMessageDictionary" title="appMessageDictionary"></a>
+	<h3 class="method-title"><code><a href="#//api/name/appMessageDictionary">&nbsp;&nbsp;appMessageDictionary</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates an update <a href="#//api/name/dictionary">dictionary</a> from the receiver, that can be used with
+<a href="../Classes/PBWatch.html#//api/name/sportsAppUpdate:onSent:"><code>[PBWatch sportsAppUpdate:onSent:]</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary&lt;NSNumber*id&gt; *appMessageDictionary</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>You should prefer using <a href="#//api/name/updateWatch:completion:"><code>[PBSportsUpdate updateWatch:completion:]</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/PBWatch.html#//api/name/sportsAppUpdate:onSent:">[PBWatch sportsAppUpdate:onSent:]</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateWatch:completion:" title="updateWatch:completion:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateWatch:completion:">&ndash;&nbsp;updateWatch:completion:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sends an update to the watch.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateWatch:(PBWatch *)<em>watch</em> completion:(void ( ^ __nullable ) ( NSError *__nullable error ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>watch</code></th>
+						<td><p>The watch to send the update to.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>Block that will be called when the update either succeeds
+or fails.</p>
+
+<ul>
+<li><code>error</code>: <code>nil</code> if the operation was successful, or else an
+<code>NSError</code> with more information on why it failed.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The method tries to send the minimal set of changes since the last <a href="#//api/name/time">time</a> the
+method was used, to try to minimize communication with the watch.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/timeStringFromSeconds:" title="timeStringFromSeconds:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/timeStringFromSeconds:">+&nbsp;timeStringFromSeconds:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a formatted <a href="#//api/name/time">time</a> string from a total seconds value, formatted as
+&ldquo;h:mm:ss&rdquo;.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)timeStringFromSeconds:(NSTimeInterval)<em>seconds</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>seconds</code></th>
+						<td><p>The number of seconds from which to create the <a href="#//api/name/time">time</a> string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Formatted <a href="#//api/name/time">time</a> as &ldquo;h:mm:ss&rdquo;</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdquo;.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/decimalStringFromFloat:" title="decimalStringFromFloat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/decimalStringFromFloat:">+&nbsp;decimalStringFromFloat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a formatted decimal string with one decimal number.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)decimalStringFromFloat:(float)<em>decimal</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>decimal</code></th>
+						<td><p>The decimal number to format as a string.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The formatted decimal number.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, supplying the value 13.42f will return @&ldquo;13.4&rdquo;.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">PBWatch+Sports.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Deprecated Methods" name="task_Deprecated Methods"></a>
+						<h2 class="task-title">Deprecated Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="method-title"><code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>General purpose data variable. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer either <code>pace</code> or <code>speed</code>.</span>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) float data</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> The original property design is very broken and it has been deprecated
+in favor of both <a href="#//api/name/pace">pace</a> and <a href="#//api/name/speed">speed</a>. This value will act as <a href="#//api/name/pace">pace</a> from now
+on.</p>
+
+<p>The possible range is currently limited from -3599 to 3599,
+inclusive (±59min 59sec). Values larger or smaller than the limits will be
+transformed into the maximum or minimum, respectively.</p>
+
+<p>It will be presented as a duration string in the UI. Minutes and seconds will
+be separated by colons. The decimal part will be discarded for the
+presentation.</p>
+
+<p>Setting a value in either <a href="#//api/name/pace">pace</a> or <a href="#//api/name/speed">speed</a> will discard the value set through
+data.</p></div>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/PBWatch.html#//api/name/sportsAppSetLabel:onSent:">[PBWatch sportsAppSetLabel:onSent:]</a></p></code></li>
+					
+				</ul>
+			</div>
 			
 
 			
@@ -282,25 +868,47 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Convenience method to create an update object.</p>
+				<p>Creates a new <code>PBSportsUpdate</code> with the given <a href="#//api/name/time">time</a>, <a href="#//api/name/distance">distance</a> and <a href="#//api/name/data">data</a>. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer -[PBSportsUpdate init] and filling the properties.</span>)</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (PBSportsUpdate *)updateWithTime:(NSTimeInterval)<em>time</em> distance:(float)<em>distance</em> data:(float)<em>data</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)updateWithTime:(NSTimeInterval)<em>time</em> distance:(float)<em>distance</em> data:(float)<em>data</em></code></div>
 
 		    
 			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Convenience method to create an update object.</p>
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>time</code></th>
+						<td><p>The current <a href="#//api/name/time">time</a> in seconds.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>distance</code></th>
+						<td><p>The current <a href="#//api/name/distance">distance</a> in kilometers or miles.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>General purpose <a href="#//api/name/data">data</a> variable.</p></td>
+					</tr>
+				
+				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>PBSportsUpdate</code> with the given <a href="#//api/name/time">time</a>, <a href="#//api/name/distance">distance</a> and <a href="#//api/name/data">data</a>.</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -328,7 +936,8 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Creates an update dictionary from the receiver, that can be used with -sportsAppUpdate:onSent:.</p>
+				<p>Creates an update dictionary from the receiver that can be used with
+<a href="../Classes/PBWatch.html#//api/name/sportsAppUpdate:onSent:"><code>[PBWatch sportsAppUpdate:onSent:]</code></a>. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer using -[PBSportsUpdate appMessageDictionary].</span>)</p>
 			</div>
 			
 		    
@@ -343,14 +952,18 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates an update dictionary from the receiver, that can be used with -sportsAppUpdate:onSent:.</p>
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/PBWatch.html#//api/name/sportsAppUpdate:onSent:">[PBWatch sportsAppUpdate:onSent:]</a></p></code></li>
+					
+				</ul>
 			</div>
-			
-
-			
-
 			
 
 			
@@ -374,8 +987,8 @@ The unit of distance is dependent on the current unit setting.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Creates a formatted <a href="#//api/name/time">time</a> string with from a total seconds value, formatted as &ldquo;h:mm:ss&rdquo;.
-For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdquo;</p>
+				<p>Creates a formatted <a href="#//api/name/time">time</a> string from a total seconds value, formatted as
+&ldquo;h:mm:ss&rdquo;. (<b class="deprecated">Deprecated:</b><span class="deprecated"> Prefer +[PBSportsUpdate timeStringFromSeconds:].</span>)</p>
 			</div>
 			
 		    
@@ -409,8 +1022,7 @@ For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdq
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Creates a formatted <a href="#//api/name/time">time</a> string with from a total seconds value, formatted as &ldquo;h:mm:ss&rdquo;.
-For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdquo;</p>
+				<p>For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdquo;.</p>
 			</div>
 			
 
@@ -442,10 +1054,10 @@ For example, supplying the value 3930.0f seconds will return @&ldquo;1:05:30&rdq
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Pebble Technology Corp. All rights reserved. Updated: 2015-12-11</p>
+						<p class="copyright">Copyright &copy; 2016 Pebble Technology Corp. All rights reserved. Updated: 2016-11-23</p>
 						
 						
-						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
 						
 					</div>
 				</footer>

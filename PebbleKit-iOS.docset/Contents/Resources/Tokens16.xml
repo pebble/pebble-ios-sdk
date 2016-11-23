@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSNumber+PBStandardIntegerExtensions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSNumber(PBStandardIntegerExtensions)</TokenIdentifier>
+			<Abstract type="html">This category exposes the capabilities the underlying CFNumber to explicitely
+store the signedness and the width of the storage.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_uint32Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint32_t pb_uint32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_uint32Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint32_t pb_uint32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_uint32Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint32_t pb_uint32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_uint16Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint16_t pb_uint16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_uint16Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint16_t pb_uint16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_uint16Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint16_t pb_uint16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_uint8Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_uint8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_uint8Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_uint8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_uint8Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_uint8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_uint8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_int32Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int32_t pb_int32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_int32Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int32_t pb_int32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_int32Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 32-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int32_t pb_int32Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int32Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_int16Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int16_t pb_int16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_int16Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int16_t pb_int16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_int16Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 16-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int16_t pb_int16Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int16Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_int8Value:</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int8_t pb_int8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_int8Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int8_t pb_int8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_int8Value</TokenIdentifier>
+			<Abstract type="html">Interprets the receiver as a 8-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) int8_t pb_int8Value</Declaration>
+			
+			
+			<Anchor>//api/name/pb_int8Value</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_float:</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a floating pointer number or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isFloat) BOOL pb_float</Declaration>
+			
+			
+			<Anchor>//api/name/pb_float</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_isFloat</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a floating pointer number or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isFloat) BOOL pb_float</Declaration>
+			
+			
+			<Anchor>//api/name/pb_float</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_float</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a floating pointer number or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isFloat) BOOL pb_float</Declaration>
+			
+			
+			<Anchor>//api/name/pb_float</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_signed:</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a signed integer or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isSigned) BOOL pb_signed</Declaration>
+			
+			
+			<Anchor>//api/name/pb_signed</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_isSigned</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a signed integer or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isSigned) BOOL pb_signed</Declaration>
+			
+			
+			<Anchor>//api/name/pb_signed</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_signed</TokenIdentifier>
+			<Abstract type="html">Gets whether the number that is stored by the receiver should be interpreted
+as a signed integer or not.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, getter=pb_isSigned) BOOL pb_signed</Declaration>
+			
+			
+			<Anchor>//api/name/pb_signed</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/setPb_byteWidth:</TokenIdentifier>
+			<Abstract type="html">Gets the width in bytes of the integer that is stored by the receiver.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_byteWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pb_byteWidth</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_byteWidth</TokenIdentifier>
+			<Abstract type="html">Gets the width in bytes of the integer that is stored by the receiver.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_byteWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pb_byteWidth</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/NSNumber/pb_byteWidth</TokenIdentifier>
+			<Abstract type="html">Gets the width in bytes of the integer that is stored by the receiver.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) uint8_t pb_byteWidth</Declaration>
+			
+			
+			<Anchor>//api/name/pb_byteWidth</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithUint32:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 32-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithUint32:(uint32_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithUint32:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithUint16:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 16-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithUint16:(uint16_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithUint16:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithUint8:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 8-bits wide, unsigned integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithUint8:(uint8_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithUint8:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithInt32:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 32-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithInt32:(int32_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithInt32:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithInt16:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 16-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithInt16:(int16_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithInt16:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSNumber/pb_numberWithInt8:</TokenIdentifier>
+			<Abstract type="html">Creates an NSNumber with a 8-bits wide, signed integer.</Abstract>
+			<DeclaredIn>NSNumber+stdint.h</DeclaredIn>
+			
+			<Declaration>+ (NSNumber *)pb_numberWithInt8:(int8_t)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value for the created number.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pb_numberWithInt8:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

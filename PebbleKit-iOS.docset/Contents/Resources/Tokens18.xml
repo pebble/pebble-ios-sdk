@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PBPebbleCentralDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PBPebbleCentralDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBPebbleCentralDelegate/pebbleCentral:watchDidConnect:isNew:</TokenIdentifier>
+			<Abstract type="html">The Pebble Central responsible for calling the delegate method.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (void)pebbleCentral:(PBPebbleCentral *)central watchDidConnect:(PBWatch *)watch isNew:(BOOL)isNew</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>central</Name>
+					<Abstract type="html">The Pebble Central responsible for calling the delegate method.</Abstract>
+				</Parameter><Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The PBWatch object representing the watch that was connected.</Abstract>
+				</Parameter><Parameter>
+					<Name>isNew</Name>
+					<Abstract type="html">YES if the watch has been connected for the first time since the app has been installed or NO if not.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pebbleCentral:watchDidConnect:isNew:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBPebbleCentralDelegate/pebbleCentral:watchDidDisconnect:</TokenIdentifier>
+			<Abstract type="html">The Pebble Central responsible for calling the delegate method.</Abstract>
+			<DeclaredIn>PBPebbleCentral.h</DeclaredIn>
+			
+			<Declaration>- (void)pebbleCentral:(PBPebbleCentral *)central watchDidDisconnect:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>central</Name>
+					<Abstract type="html">The Pebble Central responsible for calling the delegate method.</Abstract>
+				</Parameter><Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The PBWatch object representing the watch that was disconnected.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pebbleCentral:watchDidDisconnect:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

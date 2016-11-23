@@ -6,8 +6,9 @@
 //  Copyright (c) 2012 Pebble Technology. All rights reserved.
 //
 
-#import <PebbleKit/PBDefines.h>
 #import <Foundation/Foundation.h>
+#import "PBDefines.h"
+#import "PBLog+Public.h"
 
 @class PBWatch;
 @class PBDataLoggingService;
@@ -22,23 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 
 /**
- *  Configures which events should be logged via NSLog.
- *  It is advised to call this before making any other calls to PebbleKit,
- *  for example in your AppDelegate's `application:willFinishLaunchingWithOptions:`
- *  before state restoration happens.
- *  @see PBLog
- */
-+ (void)setLogLevel:(PBPebbleKitLogLevel)logLevel;
-
-/**
  The watches that are currently connected. Do not cache the array because it can change over time.
  */
-@property (nonatomic, readonly, copy) PBGeneric(NSArray, PBWatch *) *connectedWatches;
+@property (nonatomic, readonly, copy) NSArray<PBWatch *> *connectedWatches;
 
 /**
  The watches that are stored in the user preferences of the application.
  */
-@property (nonatomic, readonly, copy) PBGeneric(NSArray, PBWatch *) *registeredWatches;
+@property (nonatomic, readonly, copy) NSArray<PBWatch *> *registeredWatches;
 
 /**
  The central's delegate.
@@ -46,26 +38,34 @@ PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 @property (nonatomic, readwrite, weak) id<PBPebbleCentralDelegate> __nullable delegate;
 
 /**
- *  The UUID is used as the identifier of the watch application and is used
- *  to make sure that appMessage and dataLogging communications arrives at its companion app
- *  on the other device (and not in another app).
- *  For most app message methods there is are two variants: one that does not take a UUID parameter and one that does take
- *  a UUID parameter (for example, -appMessagesAddReceiveUpdateHandler: vs appMessagesAddReceiveUpdateHandler:withUUID:).
- *  The methods that do not take a UUID, will use the UUID as set prior to this property.
- *  @param uuid The 16 byte UUID of your app.
- *  @note The UUID needs to be set before using either app message or data logging.
+ * Identifier of the watch application this companion app communicates with.
+ *
+ * The identifier is used to make sure that app message and data logging
+ * communications arrive to the right companion watch app in the watch (and not
+ * to another app).
+ *
+ * For most app message methods there is are two variants: one that does not
+ * take an UUID parameter and one that does (for example,
+ * -appMessagesAddReceiveUpdateHandler: vs
+ * -appMessagesAddReceiveUpdateHandler:withUUID:). The methods that do not take
+ * an UUID, will use the UUID as set prior to this property.
+ *
+ * @note The UUID needs to be set before using either app message or data logging.
  */
 @property (nonatomic, copy) NSUUID * __nullable appUUID;
 
 /**
- *  The list of App-UUIDs this PebbleCentral wants to talk to.
- *  @see addAppUUID:
+ * The list of App-UUIDs this PebbleCentral wants to talk to.
+ * @see addAppUUID:
  */
-@property (nonatomic, copy) PBGeneric(NSSet, NSUUID *) *appUUIDs;
+@property (nonatomic, copy) NSSet<NSUUID *> *appUUIDs;
 
 /**
- *  Registers a new App-UUID with appUUIDs.
- *  @see appUUIDs
+ * Registers a new App-UUID with appUUIDs.
+ *
+ * @param appUUID The app UUID to register.
+ *
+ * @see appUUIDs
  */
 - (void)addAppUUID:(NSUUID *)appUUID;
 
@@ -76,9 +76,13 @@ PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 - (void)run;
 
 /**
- @returns YES if the Pebble iOS app is installed, NO if it is not installed.
- @discussion Since iOS 9.0 you have to add "pebble" to `LSApplicationQueriesSchemes`
-             in your `Info.plist`.
+ Determines if the Pebble iOS app is installed in the device.
+
+ @note Since iOS 9.0 you have to add “pebble” to `LSApplicationQueriesSchemes`
+       in your application `Info.plist` or this method will return `NO` all the
+       time.
+
+ @return `YES` if the Pebble iOS app is installed, `NO` if it is not installed.
  */
 - (BOOL)isMobileAppInstalled;
 
@@ -98,9 +102,11 @@ PB_EXTERN_CLASS @interface PBPebbleCentral : NSObject
 - (PBWatch * __nullable)lastConnectedWatch;
 
 /**
- Returns the DataLoggingService for a (previously registered) appUUID
+ * Returns the DataLoggingService for a (previously registered) appUUID
+ *
+ * @param appUUID The app UUID to recover the data logging service.
  */
-- (PBDataLoggingService * __nullable)dataLoggingServiceForAppUUID:(NSUUID *)appUUID;
+- (PBDataLoggingService *__nullable)dataLoggingServiceForAppUUID:(NSUUID *)appUUID;
 
 @end
 

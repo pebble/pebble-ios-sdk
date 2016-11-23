@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var pebbleCentral: PBPebbleCentral!
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        pebbleCentral = PBPebbleCentral.defaultCentral()
-        pebbleCentral.appUUID = PBGolfUUID
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        pebbleCentral = PBPebbleCentral.default()
+        pebbleCentral.appUUID = PBGolfUUID as UUID
         
         // We don't run just yet.
         // Instead we wait for the ViewController to be presented.

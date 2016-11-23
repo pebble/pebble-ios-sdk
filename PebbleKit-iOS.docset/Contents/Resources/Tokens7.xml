@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBPebbleKitLogging.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBPebbleKitLogging</TokenIdentifier>
+			<Abstract type="html">Every log produced by PebbleKit will be sent through this type.</Abstract>
+			<DeclaredIn>PBLog+Public.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleKitLogging/setLogLevel:</TokenIdentifier>
+			<Abstract type="html">Configures which events should be logged.</Abstract>
+			<DeclaredIn>PBLog+Public.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLogLevel:(PBPebbleKitLogLevel)logLevel</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>logLevel</Name>
+					<Abstract type="html">One of the values in PBPebbleKitLogLevel, which will be the
+maximum level that will be logged. You can use
+PBPebbleKitLogLevelOff to disable all logging.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLogLevel:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleKitLogging/setLoggingCallback:</TokenIdentifier>
+			<Abstract type="html">Sets a new logging callback that will be invoked for each of the log records
+emitted by PebbleKit.</Abstract>
+			<DeclaredIn>PBLog+Public.h</DeclaredIn>
+			
+			<Declaration>+ (void)setLoggingCallback:(nullable PBPebbleKitLoggingCallback)loggingCallback</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>loggingCallback</Name>
+					<Abstract type="html">A block that will be invoked for each of the log
+records emitted by PebbleKit. Set this value to nil
+to return to the default NSLog logging.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setLoggingCallback:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/PBPebbleKitLogging/new</TokenIdentifier>
+			<Abstract type="html">You should not create instances of this type.</Abstract>
+			<DeclaredIn>PBLog+Public.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)new</Declaration>
+			
+			
+			<Anchor>//api/name/new</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBPebbleKitLogging/init</TokenIdentifier>
+			<Abstract type="html">You should not create instances of this type.</Abstract>
+			<DeclaredIn>PBLog+Public.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

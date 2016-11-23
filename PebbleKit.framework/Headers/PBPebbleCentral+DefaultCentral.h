@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Pebble Technology. All rights reserved.
 //
 
-#import <PebbleKit/PBPebbleCentral.h>
+#import "PBPebbleCentral.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

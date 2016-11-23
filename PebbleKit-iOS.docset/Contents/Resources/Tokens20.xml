@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/FirmwareMetadataPlatform.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/FirmwareMetadataPlatform</TokenIdentifier>
+			<Abstract type="html">Values specifying the Pebble hardware platform variant.</Abstract>
+			<DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+			
+			<NodeRef refid="20"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformUnknown</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformUnknown</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneEV1</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneEV1</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneEV2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneEV2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneEV2_3</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneEV2_3</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneEV2_4</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneEV2_4</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOnePointFive</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOnePointFive</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleTwoPointZero</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleTwoPointZero</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSnowyEVT2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSnowyEVT2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSnowyDVT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSnowyDVT</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSpaldingEVT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSpaldingEVT</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleBobbySmilesPVT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleBobbySmilesPVT</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSpalding</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSpalding</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSilkEVT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSilkEVT</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleRobertEVT</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleRobertEVT</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSilk</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSilk</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneBigboard</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneBigboard</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleOneBigboard2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleOneBigboard2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSnowyBigboard</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSnowyBigboard</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSnowyBigboard2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSnowyBigboard2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSpaldingBigboard</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSpaldingBigboard</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSilkBigboard</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSilkBigboard</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleRobertBigboard</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleRobertBigboard</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleSilkBigboard2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleSilkBigboard2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/FirmwareMetadataPlatformPebbleRobertBigboard2</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>FirmwareMetadataPlatformPebbleRobertBigboard2</Declaration>
+            
+            <DeclaredIn>PBFirmwareMetadata.h</DeclaredIn>
+            
+            <NodeRef refid="20"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

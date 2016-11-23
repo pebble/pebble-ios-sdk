@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/PBWatchDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/PBWatchDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+            
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBWatchDelegate/watchDidDisconnect:</TokenIdentifier>
+			<Abstract type="html">Called when the watch got disconnected.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)watchDidDisconnect:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch that was disconnected.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/watchDidDisconnect:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBWatchDelegate/watch:handleError:</TokenIdentifier>
+			<Abstract type="html">Called when the watch caught an error.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)watch:(PBWatch *)watch handleError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch that caught the error.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error catch by the watch.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/watch:handleError:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBWatchDelegate/watchWillResetSession:</TokenIdentifier>
+			<Abstract type="html">Called when an internal session is about to be reset.</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)watchWillResetSession:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch that will reset its session.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/watchWillResetSession:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBWatchDelegate/watchDidOpenSession:</TokenIdentifier>
+			<Abstract type="html">Called when an internal session is opened</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)watchDidOpenSession:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch that opened a session.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/watchDidOpenSession:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/PBWatchDelegate/watchDidCloseSession:</TokenIdentifier>
+			<Abstract type="html">Called when an internal EASession is closed</Abstract>
+			<DeclaredIn>PBWatch.h</DeclaredIn>
+			
+			<Declaration>- (void)watchDidCloseSession:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch that closed its session.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/watchDidCloseSession:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/GolfAppCommand.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/GolfAppCommand</TokenIdentifier>
+			<Abstract type="html">The command IDs that can be sent back by the Golf watch app.</Abstract>
+			<DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+            
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/golfAppAddReceiveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/GolfAppCommandPrevious</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>GolfAppCommandPrevious</Declaration>
+            
+            <DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/GolfAppCommandNext</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>GolfAppCommandNext</Declaration>
+            
+            <DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/GolfAppCommandSelect</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>GolfAppCommandSelect</Declaration>
+            
+            <DeclaredIn>PBWatch+Golf.h</DeclaredIn>
+            
+            <NodeRef refid="21"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

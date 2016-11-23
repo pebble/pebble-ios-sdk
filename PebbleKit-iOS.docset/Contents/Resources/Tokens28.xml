@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SportsAppActivityState.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SportsAppActivityState</TokenIdentifier>
+			<Abstract type="html">The state of the Sports activity.</Abstract>
+			<DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/PBWatch/sportsAppAddReceiveUpdateHandler:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SportsAppActivityStateInit</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SportsAppActivityStateInit</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="28"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SportsAppActivityStateRunning</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SportsAppActivityStateRunning</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="28"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SportsAppActivityStatePaused</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SportsAppActivityStatePaused</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="28"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SportsAppActivityStateEnd</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SportsAppActivityStateEnd</Declaration>
+            
+            <DeclaredIn>PBWatch+Sports.h</DeclaredIn>
+            
+            <NodeRef refid="28"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

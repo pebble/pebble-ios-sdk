@@ -25,7 +25,7 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        pebbleCentral = PBPebbleCentral.defaultCentral()
+        pebbleCentral = PBPebbleCentral.default()
         holes = [
             Hole(par: 2, score: 0),
             Hole(par: 4, score: 0),
@@ -35,18 +35,18 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         ]
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         pebbleCentral.delegate = self
         pebbleCentral.run()
     }
 
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         pebbleCentral.delegate = nil
     }
 
-    func pebbleCentral(central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
+    func pebbleCentral(_ central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
         print("Hello, \(watch.name)!")
 
         guard activeWatch == nil else { return }
@@ -58,14 +58,14 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
             guard let sself = self else { return false }
 
             switch (command) {
-            case .Previous:
+            case .previous:
                 sself.holeIndex = self!.holeIndexStep(-1)
                 break
-            case .Select:
+            case .select:
                 var hole = sself.holes[sself.holeIndex]
-                hole.score++
+                hole.score += 1
                 sself.holes[sself.holeIndex] = hole
-            case .Next:
+            case .next:
                 sself.holeIndex = self!.holeIndexStep(+1)
                 break
             }
@@ -101,7 +101,7 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         }
     }
 
-    func holeIndexStep(diff: Int) -> Int {
+    func holeIndexStep(_ diff: Int) -> Int {
         var newIndex = holeIndex + diff
 
         while (newIndex < 0) {
@@ -111,7 +111,7 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         return newIndex % holes.count
     }
 
-    func pebbleCentral(central: PBPebbleCentral, watchDidDisconnect watch: PBWatch) {
+    func pebbleCentral(_ central: PBPebbleCentral, watchDidDisconnect watch: PBWatch) {
         print("Bye, \(watch.name)!")
         guard activeWatch == watch else { return }
 

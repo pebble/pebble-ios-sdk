@@ -25,17 +25,64 @@ You can also run `pod try PebbleKit` to jump into a simple project right away.
 
 ## Integrating PebbleKit Manually
 
-- Drag `PebbleKit.framework` into your project
-- Link `ExternalAccessory.framework` and `CoreBluetooth.framework`
-- Add `-ObjC` linker flag to your project's build settings
+- Copy `PebbleKit.framework` somewhere in your project folder.
+- On your application target “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop `PebbleKit.framework`.
+- Link `CoreBluetooth.framework`.
+- Add `-ObjC` linker flag to your project's build settings.
 
-## Configure `Info.plist`
+Additionally, since `PebbleKit.framework` is compiled for both the device and the simulator, when you upload your app to iTunes Connect, it might be rejected. To avoid this, you need to strip the simulator architectures from the binary before submitting. You can do this in many ways, but we will recommend using Carthage for simplicity:
 
-- Add the value `com.getpebble.public` to the `UISupportedExternalAccessoryProtocols` ("Supported external accessory protocols") array
-- (Optional) Add the following entries to the `UIBackgroundModes` ("Required background modes") array:
+- Install [Carthage](https://github.com/Carthage/Carthage/releases) or make sure it is up to date
+- On your application target “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following contents:
+
+  ```sh
+  /usr/local/bin/carthage copy-frameworks
+  ```
+
+  and add the paths to the framework under “Input Files”, e.g.:
+
+  ```
+  $(SRCROOT)/path/to/PebbleKit.framework
+  ```
+
+## Integrating with PebbleKit-Static
+
+PebbleKit-Static provides compatibility with iOS 7. We recommend you using PebbleKit, but if you need to provide versions of your app for older iOS version, you can still use this.
+
+You can use PebbleKit-Static either using Cocoapods or manually. Carthage only supports dynamic frameworks, so PebbleKit-Static is not available for Carthage.
+
+Additionally, in every point of the documentation that uses `#import <PebbleKit/PebbleKit.h>` you should use instead `#import <PebbleKit-Static/PebbleKit.h>`.
+
+### Using CocoaPods
+
+- Install [CocoaPods](http://www.cocoapods.org) or make sure it is up to date.
+- Add a Podfile to your project if you don’t have one already (Hint: use `pod init`).
+- Add this line to the Podfile: `pod 'PebbleKit-Static'`
+- Run `pod install`
+
+### Manually
+
+- Copy `PebbleKit-Static.framework` somewhere in your project folder.
+- On your application target “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop `PebbleKit-Static.framework`.
+- Link `CoreBluetooth.framework`.
+- Add `-ObjC` linker flag to your project's build settings.
+
+## Configure `Info.plist` and capabilities
+
+If you want your app to communicate with the Pebble while in the background, you will need to add background modes to your app target `Info.plist`:
+
+- Add the following entries to the `UIBackgroundModes` ("Required background modes") array:
  - `bluetooth-peripheral` ("App shares data using CoreBluetooth")
  - `bluetooth-central` ("App communicates using CoreBluetooth")
- - `external-accessory` ("App communicates with an accessory")
+
+If you use background modes you also need to update your target's `Capabilities` in Xcode. Enable `Background Modes` and select:
+
+- Uses Bluetooth LE accessories
+- Acts as a Bluetooth LE accessory
+
+If you are compiling in Xcode 8 or greater, you must additionally add the following key `Info.plist` (and it is recommended that you do so in older versions):
+
+- `NSBluetoothPeripheralUsageDescription` (“Privacy - Bluetooth Peripheral Usage Description”)
 
 ## Xcode Documentation
 
@@ -56,6 +103,41 @@ If you have completed a Pebble app and would like to learn more about making it 
 please visit [the whitelisting guide](https://developer.getpebble.com/2/distribute/whitelisting.html)
 
 ## Change Log
+
+#### 4.0.0
+
+- Added: Support for Pebble 2.
+- Added: New superclass `PBSemanticVersion`. `PBFirmwareVersion` is now a subtype of `PBSemanticVersion`.
+- Added: New values `SendTextSupported`, `NotificationsFilteringSupported`, `UnreadCoredumpSupport`, and `WeatherApp2` in `PBRemoteProtocolCapabilitiesFlags`.
+- Added: `PBPebbleKitLogging` type to customize the logging callback used by PebbleKit and the log level.
+- Changed: Remove outdated documentation for `PBWatch`. Improved documentation about `-[PBWatch friendlyDescription]`.
+- Changed: Clean up the `PBDataLoggingService` header. Use modern type names and improve nullability annotations.
+- Changed: Added nullability annotations to `NSDictionary+Pebble.h`. Deprecated old methods without `pb_` prefix and added alternative methods with `pb_` prefixes instead.
+- Changed: Added nullability annotations to `NSNumber+stdint.h`. Deprecated old methods without `pb_` prefix and added alternative methods with `pb_`.
+- Changed: Deprecated method for setting the default log level in `PBPebbleCentral` in favor of the new methods in `PBPebbleKitLogging`.
+- Changed: Communication with the watches (both through Classic and through LE) will not longer happen in the main thread. The callbacks will still be invoked in the main thread, and many methods are still documented as needed to be called from the main thread. We might lift those restrictions in the future, but they are still in place.
+- Changed: Clean up the Sports API and document and improve `PBSportUpdate` helper object.
+- Fixed: PebbleKit-Static uses the right header paths for Cocoapods.
+- Fixed: PebbleKit-Static is stripped of its debugs symbols, which should avoid printing some warnings.
+- Fixed: Golf and Sports do not need to add their UUID manually before using their APIs.
+- Fixed: Added correct nullability annotations for `PBWatch (Golf)` and `PBWatch (Sports)`.
+- Fixed: Signature of `appMessagesPushUpdate:withUUID:onSent:` no longer declares a non-nullable `NSError *` named `__nullableerror`.
+- Fixed: Race condition that was making the communication with watch impossible.
+- Fixed: `-[PBFirmwareVersion compare:]` was reporting the wrong results for firmwares released far in the future.
+- Fixed: Connecting through Bluetooth LE should be more reliable.
+- Fixed: Don’t try connecting with devices that are not Pebble.
+- Fixed: Don’t try connecting with Pebble devices that are connected to other mobile devices.
+- Fixed: Added correct nullability annotation for `PBVersionInfoCompletionBlock`.
+- Fixed: Avoid crash while reconnecting to Bluetooth LE devices.
+- Deprecated: `PBFirmwareVersion` `os`, `major`, and `minor`, as well as the convenience initializer `firmwareVersionWithOS:major:minor:suffix:commitHash:timestamp:` has been deprecated. Use instead `majorVersion`, `minorVersion`, `revisionVersion` and `firmwareVersionWithMajor:minor:revision:suffix:commitHash:timestamp:`.
+- Removed: Support for Bluetooth Classic communication. Only Bluetooth LE is available. All devices in 3.x or later should be able to use Bluetooth LE, including the original Pebble and Pebble Steel. This should make communication from several third party apps a lot better.
+
+#### 3.1.1
+
+- Fixed: `-[PBPebbleCentral lastConnectedWatch]` is now properly marked as `nullable`.
+- Fixed: Avoid watches not connecting to the phone in some infrequent scenarios.
+- Fixed: When used from Objective-C++, `-[PBWatch isNew]` property doesn’t have the alias `new` to avoid problems with C++ reserved keywords.
+- Fixed: Added Bitcode to the dynamic frameworks, so apps that wants to use Bitcode can submit properly.
 
 #### 3.1.0
 

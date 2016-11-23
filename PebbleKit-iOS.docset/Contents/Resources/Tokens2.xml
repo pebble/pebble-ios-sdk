@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PBDataLoggingService.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PBDataLoggingService</TokenIdentifier>
+			<Abstract type="html">The data logging service. Assign a delegate object in order to receive
+data from your watchapp.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingService/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The delegate that has the responsility of handling callbacks from the
+data logging service.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (atomic, readwrite, weak) id&lt;PBDataLoggingServiceDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingService/delegate</TokenIdentifier>
+			<Abstract type="html">The delegate that has the responsility of handling callbacks from the
+data logging service.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (atomic, readwrite, weak) id&lt;PBDataLoggingServiceDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PBDataLoggingService/delegate</TokenIdentifier>
+			<Abstract type="html">The delegate that has the responsility of handling callbacks from the
+data logging service.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>@property (atomic, readwrite, weak) id&lt;PBDataLoggingServiceDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingService/setDelegateQueue:</TokenIdentifier>
+			<Abstract type="html">Sets the queue on which delegate methods will be executed.
+Callbacks are intended to be processed in the order as they come in, so it
+you must use a serial queue. If set to nil (default) the main queue is used.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (void)setDelegateQueue:(dispatch_queue_t)delegateQueue</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>delegateQueue</Name>
+					<Abstract type="html">The queue on which the delegate methods will be executed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDelegateQueue:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingService/pollForData</TokenIdentifier>
+			<Abstract type="html">Query the latestConnectedWatch for data logging data. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; Use pollForDataFromWatch:&lt;/span&gt;)</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (void)pollForData</Declaration>
+			
+			
+			<Anchor>//api/name/pollForData</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PBDataLoggingService/pollForDataFromWatch:</TokenIdentifier>
+			<Abstract type="html">Query the watch for data logging data.</Abstract>
+			<DeclaredIn>PBDataLoggingService.h</DeclaredIn>
+			
+			<Declaration>- (void)pollForDataFromWatch:(PBWatch *)watch</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>watch</Name>
+					<Abstract type="html">The watch to query data from.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/pollForDataFromWatch:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
